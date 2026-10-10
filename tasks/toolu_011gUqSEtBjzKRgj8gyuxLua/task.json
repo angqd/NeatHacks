@@ -1,0 +1,18 @@
+{
+  "tool_use_id": "toolu_011gUqSEtBjzKRgj8gyuxLua",
+  "agent_id": "a597d23a3089199b7",
+  "subagent_type": "general-purpose",
+  "task_description": "BM25 sanity check on original bench",
+  "files": [
+    "src/toolprune/eval/sanity_bm25.py"
+  ],
+  "token_usage": {
+    "input_tokens": 12,
+    "cache_creation_tokens": 29708,
+    "cache_read_tokens": 206914,
+    "output_tokens": 4037,
+    "api_call_count": 6
+  },
+  "started_at": "2026-10-11T01:51:36.893247+05:30",
+  "completed_at": "2026-10-11T01:52:10.579013+05:30"
+}

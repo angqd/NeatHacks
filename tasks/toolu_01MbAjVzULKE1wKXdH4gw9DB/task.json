@@ -1,0 +1,15 @@
+{
+  "tool_use_id": "toolu_01MbAjVzULKE1wKXdH4gw9DB",
+  "agent_id": "a119d725b0d5fcb6e",
+  "subagent_type": "general-purpose",
+  "task_description": "Runner for BM25 and embedding systems",
+  "token_usage": {
+    "input_tokens": 12,
+    "cache_creation_tokens": 32089,
+    "cache_read_tokens": 229037,
+    "output_tokens": 713,
+    "api_call_count": 6
+  },
+  "started_at": "2026-10-11T01:51:36.880495+05:30",
+  "completed_at": "2026-10-11T01:52:01.658054+05:30"
+}

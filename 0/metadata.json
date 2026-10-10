@@ -1,0 +1,139 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4KQS0TF3VWB9B5V089NW99P",
+  "session_id": "c5ba5514-6b9c-45ac-a8a8-6c64b13e7f3d",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-10T20:23:55.409241Z",
+  "branch": "main",
+  "checkpoints_count": 3,
+  "save_step_count": 4,
+  "files_touched": [
+    "reports/runs/bm25__name_desc_server.jsonl",
+    "reports/runs/emb__text-embedding-3-small__name_desc_server.jsonl",
+    "src/toolprune/eval/audit.py",
+    "src/toolprune/eval/report.py",
+    "src/toolprune/eval/run.py",
+    "src/toolprune/eval/sanity_bm25.py",
+    "src/toolprune/eval/tokens.py"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-sonnet-5-5",
+  "turn_id": "56111a3271a1",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 242,
+    "cache_creation_tokens": 349480,
+    "cache_read_tokens": 18770203,
+    "output_tokens": 162609,
+    "api_call_count": 121,
+    "subagent_tokens": {
+      "input_tokens": 80,
+      "cache_creation_tokens": 242314,
+      "cache_read_tokens": 1312583,
+      "output_tokens": 23375,
+      "api_call_count": 40
+    }
+  },
+  "skill_events_version": 1,
+  "skill_events": [
+    {
+      "id": "prompt-skill-claude-code-caveman-2026-10-10T12:09:07.707242Z",
+      "event_type": "prompt_invocation",
+      "skill": {
+        "name": "caveman"
+      },
+      "source": {
+        "agent": "claude-code",
+        "signal": "prompt_slash_command",
+        "confidence": "explicit"
+      },
+      "turn_id": "73fec0729fef",
+      "timestamp": "2026-10-10T12:09:07.707242Z",
+      "native": {
+        "command": "/caveman"
+      },
+      "collapse": {
+        "target": "user_message",
+        "label": "/caveman",
+        "default_collapsed": true
+      }
+    }
+  ],
+  "session_metrics": {
+    "turn_count": 41
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-10T20:23:55.331883Z",
+    "agent_lines": 0,
+    "agent_removed": 0,
+    "human_added": 9474,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 9474,
+    "total_lines_changed": 9478,
+    "agent_percentage": 0,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 291,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "src/toolprune/eval/__init__.py": 1,
+        "src/toolprune/eval/run.py": 106,
+        "src/toolprune/eval/score.py": 146,
+        "src/toolprune/eval/tokens.py": 38
+      }
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 971,
+      "user_lines_removed": 0,
+      "agent_lines_added": 264,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "reports/catalog_audit.json": 303,
+        "reports/catalog_audit.md": 114,
+        "reports/sanity_bm25.md": 24,
+        "src/toolprune/eval/__init__.py": 1,
+        "src/toolprune/eval/audit.py": 253,
+        "src/toolprune/eval/sanity_bm25.py": 130,
+        "src/toolprune/eval/score.py": 146
+      }
+    },
+    {
+      "checkpoint_number": 4,
+      "user_lines_added": 588,
+      "user_lines_removed": 0,
+      "agent_lines_added": 647,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "reports/catalog_audit.json": 303,
+        "reports/catalog_audit.md": 114,
+        "reports/sanity_bm25.md": 24,
+        "src/toolprune/eval/__init__.py": 1,
+        "src/toolprune/eval/score.py": 146
+      }
+    },
+    {
+      "checkpoint_number": 5,
+      "user_lines_added": 7372,
+      "user_lines_removed": 0,
+      "agent_lines_added": 647,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "reports/baseline_v0_tables.md": 104,
+        "reports/catalog_audit.json": 303,
+        "reports/catalog_audit.md": 114,
+        "reports/results.json": 6428,
+        "reports/sanity_bm25.md": 24,
+        "src/toolprune/eval/__init__.py": 1,
+        "src/toolprune/eval/report.py": 252,
+        "src/toolprune/eval/score.py": 146
+      }
+    }
+  ]
+}

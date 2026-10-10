@@ -1,0 +1,39 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4KQS0TF3VWB9B5V089NW99P",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 3,
+  "files_touched": [
+    "reports/runs/bm25__name_desc_server.jsonl",
+    "reports/runs/emb__text-embedding-3-small__name_desc_server.jsonl",
+    "src/toolprune/eval/audit.py",
+    "src/toolprune/eval/report.py",
+    "src/toolprune/eval/run.py",
+    "src/toolprune/eval/sanity_bm25.py",
+    "src/toolprune/eval/tokens.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 242,
+    "cache_creation_tokens": 349480,
+    "cache_read_tokens": 18770203,
+    "output_tokens": 162609,
+    "api_call_count": 121,
+    "subagent_tokens": {
+      "input_tokens": 80,
+      "cache_creation_tokens": 242314,
+      "cache_read_tokens": 1312583,
+      "output_tokens": 23375,
+      "api_call_count": 40
+    }
+  }
+}
