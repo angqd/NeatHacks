@@ -3,14 +3,14 @@ requires = ["setuptools>=69"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "counterparty-precheck"
+name = "toolprune"
 version = "0.1.0"
-description = "Cited, confidence-rated pre-check of Indian business counterparties from public sources"
+description = "Hierarchical tool retrieval for MCP/API tools: LLM-enriched annotations, pruned routing"
 requires-python = ">=3.12"
 dependencies = [
     "pydantic>=2.9",
     "httpx>=0.27",
-    "anthropic>=0.40",
+    "openai-agents>=0.2",
 ]
 
 [project.optional-dependencies]

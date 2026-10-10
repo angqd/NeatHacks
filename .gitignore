@@ -26,3 +26,17 @@ cache/
 .DS_Store
 .idea/
 .vscode/
+
+# Data pulled by the pipeline; the SQLite DB is covered by *.sqlite.
+data/raw/
+
+# Regenerable or bulky intermediates (rebuild with the toolprune scripts)
+data/processed/tools.jsonl
+data/processed/tasks_resolved.jsonl
+data/processed/review_queue.jsonl
+data/processed/blind_*.jsonl
+data/processed/adjud_in_*.jsonl
+data/processed/adjud_tools.json
+data/processed/*.html
+data/spot_checks.json
+data/processed/eval_set_draft.jsonl

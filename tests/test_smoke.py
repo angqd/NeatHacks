@@ -1,10 +1,11 @@
 import sys
+from importlib.metadata import version
 
-import anthropic
+import agents
 import httpx
 import pydantic
 
-import precheck
+import toolprune
 
 
 def test_python_is_312_or_newer():
@@ -12,7 +13,8 @@ def test_python_is_312_or_newer():
 
 
 def test_package_imports_and_versions():
-    assert precheck.__version__ == "0.1.0"
+    assert toolprune.__version__ == "0.1.0"
     assert pydantic.VERSION
     assert httpx.__version__
-    assert anthropic.__version__
+    assert version("openai-agents")
+    assert agents.Agent is not None
