@@ -1,0 +1,28 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4KMH6YAV7T2BSK2ZKH0CJ7H",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 30,
+  "files_touched": [
+    "src/toolprune/merge_adjudication.py",
+    "src/toolprune/spot_sheet.py",
+    "src/toolprune/task_features.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 156,
+    "cache_creation_tokens": 256043,
+    "cache_read_tokens": 8762019,
+    "output_tokens": 101346,
+    "api_call_count": 78
+  }
+}
