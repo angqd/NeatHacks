@@ -1,0 +1,1249 @@
+[
+ {
+  "group_type": "domain",
+  "name": "web_search",
+  "description": "Find web pages, news, images, or videos that match a search query.",
+  "n_tools": 3,
+  "tool_ids": [
+   "Bing_CN_MCP::bing_search",
+   "duckduckgo-search MCP Server::duckduckgo_web_search",
+   "Web3 Research MCP::search"
+  ],
+  "servers": [
+   "Bing_CN_MCP",
+   "Web3 Research MCP",
+   "duckduckgo-search MCP Server"
+  ],
+  "summary": "These tools search the web for pages, news, articles, images, and videos, with options to filter results by region and content."
+ },
+ {
+  "group_type": "domain",
+  "name": "webpage_retrieval",
+  "description": "Retrieve readable text, HTML, or formatted content from a specified webpage.",
+  "n_tools": 7,
+  "tool_ids": [
+   "Bing_CN_MCP::fetch_webpage",
+   "Fetch MCP Server::fetch",
+   "Web3 Research MCP::fetch-content",
+   "MCP NPX Fetch::fetch_html",
+   "MCP NPX Fetch::fetch_markdown",
+   "MCP NPX Fetch::fetch_txt",
+   "MCP NPX Fetch::fetch_json"
+  ],
+  "servers": [
+   "Bing_CN_MCP",
+   "Fetch MCP Server",
+   "MCP NPX Fetch",
+   "Web3 Research MCP"
+  ],
+  "summary": "These tools retrieve web pages and URL-hosted content as readable text, HTML, Markdown, or JSON, with options to limit or continue results."
+ },
+ {
+  "group_type": "domain",
+  "name": "sitemap_inspection",
+  "description": "Explore, list, parse, and summarize the pages and structure of website sitemaps.",
+  "n_tools": 4,
+  "tool_ids": [
+   "Sitemap MCP Server::get_sitemap_tree",
+   "Sitemap MCP Server::get_sitemap_pages",
+   "Sitemap MCP Server::get_sitemap_stats",
+   "Sitemap MCP Server::parse_sitemap_content"
+  ],
+  "servers": [
+   "Sitemap MCP Server"
+  ],
+  "summary": "These tools inspect website sitemaps by displaying their hierarchy, listing and filtering pages, summarizing size and structure, and extracting page details from text or XML."
+ },
+ {
+  "group_type": "domain",
+  "name": "stock_market_data",
+  "description": "Look up stock symbols, prices, trading activity, market value, and screening data.",
+  "n_tools": 13,
+  "tool_ids": [
+   "MCP Yahoo Finance::get_current_stock_price",
+   "MCP Yahoo Finance::get_stock_price_by_date",
+   "MCP Yahoo Finance::get_stock_price_date_range",
+   "MCP Yahoo Finance::get_historical_stock_prices",
+   "Yahoo Finance MCP Server::get_top",
+   "Yahoo Finance MCP Server::get_price_history",
+   "kospi-kosdaq-stock-server::load_all_tickers",
+   "kospi-kosdaq-stock-server::get_stock_ohlcv",
+   "kospi-kosdaq-stock-server::get_stock_market_cap",
+   "kospi-kosdaq-stock-server::get_stock_fundamental",
+   "kospi-kosdaq-stock-server::get_stock_trading_volume",
+   "investor-agent: A Financial Analysis MCP Server::get_options",
+   "investor-agent: A Financial Analysis MCP Server::get_price_history"
+  ],
+  "servers": [
+   "MCP Yahoo Finance",
+   "Yahoo Finance MCP Server",
+   "investor-agent: A Financial Analysis MCP Server",
+   "kospi-kosdaq-stock-server"
+  ],
+  "summary": "These tools provide current and historical stock prices, market and valuation data, investor trading breakdowns, sector rankings, Korean ticker listings, and filtered stock option listings."
+ },
+ {
+  "group_type": "domain",
+  "name": "stock_research",
+  "description": "Review company financials, earnings, ownership, insider trades, analyst views, and stock news.",
+  "n_tools": 14,
+  "tool_ids": [
+   "MCP Yahoo Finance::get_dividends",
+   "MCP Yahoo Finance::get_income_statement",
+   "MCP Yahoo Finance::get_cashflow",
+   "MCP Yahoo Finance::get_earning_dates",
+   "MCP Yahoo Finance::get_news",
+   "MCP Yahoo Finance::get_recommendations",
+   "Yahoo Finance MCP Server::get_ticker_info",
+   "Yahoo Finance MCP Server::get_ticker_news",
+   "Yahoo Finance MCP Server::search",
+   "investor-agent: A Financial Analysis MCP Server::get_ticker_data",
+   "investor-agent: A Financial Analysis MCP Server::get_financial_statements",
+   "investor-agent: A Financial Analysis MCP Server::get_institutional_holders",
+   "investor-agent: A Financial Analysis MCP Server::get_earnings_history",
+   "investor-agent: A Financial Analysis MCP Server::get_insider_trades"
+  ],
+  "servers": [
+   "MCP Yahoo Finance",
+   "Yahoo Finance MCP Server",
+   "investor-agent: A Financial Analysis MCP Server"
+  ],
+  "summary": "These tools support stock research through dividend data, financial statements, earnings dates, news, analyst ratings, company metrics, quote searches, and institutional ownership information."
+ },
+ {
+  "group_type": "domain",
+  "name": "market_sentiment",
+  "description": "Check sentiment indicators and their recent history for stock and cryptocurrency markets.",
+  "n_tools": 2,
+  "tool_ids": [
+   "investor-agent: A Financial Analysis MCP Server::get_cnn_fear_greed_index",
+   "investor-agent: A Financial Analysis MCP Server::get_crypto_fear_greed_index"
+  ],
+  "servers": [
+   "investor-agent: A Financial Analysis MCP Server"
+  ],
+  "summary": "Retrieves recent and historical market sentiment readings, including CNN indicators and cryptocurrency Fear and Greed Index data."
+ },
+ {
+  "group_type": "domain",
+  "name": "crypto_market_data",
+  "description": "Look up cryptocurrency and other asset prices, trading venues, volume, and historical performance.",
+  "n_tools": 4,
+  "tool_ids": [
+   "Crypto Price & Market Analysis MCP Server::get-crypto-price",
+   "Crypto Price & Market Analysis MCP Server::get-market-analysis",
+   "Crypto Price & Market Analysis MCP Server::get-historical-analysis",
+   "Asset Price MCP Server (asset-price-mcp)::get_asset_price"
+  ],
+  "servers": [
+   "Asset Price MCP Server (asset-price-mcp)",
+   "Crypto Price & Market Analysis MCP Server"
+  ],
+  "summary": "These tools provide current prices for cryptocurrencies and precious metals, crypto 24-hour statistics, exchange and volume breakdowns, and historical price analysis over selected periods."
+ },
+ {
+  "group_type": "domain",
+  "name": "crypto_research",
+  "description": "Investigate cryptocurrency tokens using selected sources, keywords, and research resources.",
+  "n_tools": 6,
+  "tool_ids": [
+   "Web3 Research MCP::create-research-plan",
+   "Web3 Research MCP::research-with-keywords",
+   "Web3 Research MCP::search-source",
+   "Web3 Research MCP::list-resources",
+   "Web3 Research MCP::research-source",
+   "Web3 Research MCP::research-token"
+  ],
+  "servers": [
+   "Web3 Research MCP"
+  ],
+  "summary": "These tools create research plans, investigate cryptocurrency tokens using keywords or specified sources, search sources for token information, and list available research resources."
+ },
+ {
+  "group_type": "domain",
+  "name": "package_discovery",
+  "description": "Find, compare, and discover software packages, repositories, and developers for a chosen purpose.",
+  "n_tools": 6,
+  "tool_ids": [
+   "NPM Sentinel MCP::npmCompare",
+   "NPM Sentinel MCP::npmSearch",
+   "NPM Sentinel MCP::npmAlternatives",
+   "mcp-github-trending MCP Server::get_github_trending_repositories",
+   "mcp-github-trending MCP Server::get_github_trending_developers",
+   "Context7 MCP - Up-to-date Code Docs For Any Prompt::resolve-library-id"
+  ],
+  "servers": [
+   "Context7 MCP - Up-to-date Code Docs For Any Prompt",
+   "NPM Sentinel MCP",
+   "mcp-github-trending MCP Server"
+  ],
+  "summary": "These tools compare, search, and find similar NPM packages, surface popular GitHub repositories and developers, and locate libraries with documentation references."
+ },
+ {
+  "group_type": "domain",
+  "name": "package_metadata",
+  "description": "Inspect package versions, releases, dependencies, documentation, maintainers, and repository information.",
+  "n_tools": 10,
+  "tool_ids": [
+   "NPM Sentinel MCP::npmVersions",
+   "NPM Sentinel MCP::npmLatest",
+   "NPM Sentinel MCP::npmDeps",
+   "NPM Sentinel MCP::npmTypes",
+   "NPM Sentinel MCP::npmMaintainers",
+   "NPM Sentinel MCP::npmDeprecated",
+   "NPM Sentinel MCP::npmChangelogAnalysis",
+   "Maven Dependencies MCP Server::get_latest_release",
+   "Maven Dependencies MCP Server::check_maven_version_exists",
+   "Maven Dependencies MCP Server::list_maven_versions"
+  ],
+  "servers": [
+   "Maven Dependencies MCP Server",
+   "NPM Sentinel MCP"
+  ],
+  "summary": "These tools inspect NPM and Maven packages, covering versions, releases and changelogs, dependencies, TypeScript support, maintainers, deprecation status, and version availability."
+ },
+ {
+  "group_type": "domain",
+  "name": "package_quality",
+  "description": "Assess package security, maintenance, quality, popularity, size, and license compatibility.",
+  "n_tools": 8,
+  "tool_ids": [
+   "NPM Sentinel MCP::npmSize",
+   "NPM Sentinel MCP::npmVulnerabilities",
+   "NPM Sentinel MCP::npmTrends",
+   "NPM Sentinel MCP::npmScore",
+   "NPM Sentinel MCP::npmLicenseCompatibility",
+   "NPM Sentinel MCP::npmRepoStats",
+   "NPM Sentinel MCP::npmQuality",
+   "NPM Sentinel MCP::npmMaintenance"
+  ],
+  "servers": [
+   "NPM Sentinel MCP"
+  ],
+  "summary": "These tools assess NPM package sizes, security, popularity, repository statistics, license compatibility, and overall quality and maintenance."
+ },
+ {
+  "group_type": "domain",
+  "name": "developer_documentation",
+  "description": "Browse software component catalogs, API references, examples, changelogs, and integration guidance.",
+  "n_tools": 22,
+  "tool_ids": [
+   "NPM Sentinel MCP::npmPackageReadme",
+   "Hugeicons MCP Server::list_icons",
+   "Hugeicons MCP Server::search_icons",
+   "Hugeicons MCP Server::get_platform_usage",
+   "Ant Design Components MCP Service::get-component-docs",
+   "Ant Design Components MCP Service::list-component-examples",
+   "Ant Design Components MCP Service::get-component-changelog",
+   "Ant Design Components MCP Service::list-components",
+   "Context7 MCP - Up-to-date Code Docs For Any Prompt::get-library-docs",
+   "magicuidesign_mcp::getUIComponents",
+   "magicuidesign_mcp::getComponents",
+   "magicuidesign_mcp::getDeviceMocks",
+   "magicuidesign_mcp::getSpecialEffects",
+   "magicuidesign_mcp::getAnimations",
+   "magicuidesign_mcp::getTextAnimations",
+   "magicuidesign_mcp::getButtons",
+   "magicuidesign_mcp::getBackgrounds",
+   "shadcn-ui MCP Server::list_shadcn_components",
+   "shadcn-ui MCP Server::get_component_details",
+   "shadcn-ui MCP Server::get_component_examples",
+   "shadcn-ui MCP Server::search_components",
+   "Deepwiki MCP Server::deepwiki_fetch"
+  ],
+  "servers": [
+   "Ant Design Components MCP Service",
+   "Context7 MCP - Up-to-date Code Docs For Any Prompt",
+   "Deepwiki MCP Server",
+   "Hugeicons MCP Server",
+   "NPM Sentinel MCP",
+   "magicuidesign_mcp",
+   "shadcn-ui MCP Server"
+  ],
+  "summary": "These tools retrieve package and library documentation, search icon collections, explain platform setup, and provide component APIs, examples, changelogs, catalogs, and implementation guidance for UI and device mockups."
+ },
+ {
+  "group_type": "domain",
+  "name": "league_strategy",
+  "description": "Review League of Legends champion performance, builds, counters, rankings, and player leaderboards.",
+  "n_tools": 6,
+  "tool_ids": [
+   "OP.GG MCP Server::lol-champion-leader-board",
+   "OP.GG MCP Server::lol-champion-analysis",
+   "OP.GG MCP Server::lol-champion-meta-data",
+   "OP.GG MCP Server::lol-champion-skin-sale",
+   "OP.GG MCP Server::lol-champion-positions-data",
+   "OP.GG MCP Server::lol-brawl-champion-tier-rank"
+  ],
+  "servers": [
+   "OP.GG MCP Server"
+  ],
+  "summary": "These tools cover League of Legends champion performance, rankings, builds, counters, regional top players, current meta data, and skins on sale across positions and game modes."
+ },
+ {
+  "group_type": "domain",
+  "name": "game_player_analytics",
+  "description": "Look up player profiles, rankings, match histories, and playstyle information across supported games.",
+  "n_tools": 5,
+  "tool_ids": [
+   "OP.GG MCP Server::lol-summoner-search",
+   "OP.GG MCP Server::lol-summoner-game-history",
+   "OP.GG MCP Server::lol-summoner-renewal",
+   "OP.GG MCP Server::valorant-leaderboard",
+   "OP.GG MCP Server::valorant-player-match-history"
+  ],
+  "servers": [
+   "OP.GG MCP Server"
+  ],
+  "summary": "These tools retrieve League of Legends player rankings, win rates, and match histories, refresh OP.GG data, and show Valorant regional leaderboards and player match histories."
+ },
+ {
+  "group_type": "domain",
+  "name": "esports_info",
+  "description": "Check professional League of Legends schedules and league standings.",
+  "n_tools": 2,
+  "tool_ids": [
+   "OP.GG MCP Server::esports-lol-schedules",
+   "OP.GG MCP Server::esports-lol-team-standings"
+  ],
+  "servers": [
+   "OP.GG MCP Server"
+  ],
+  "summary": "These tools show upcoming professional League of Legends matches and team standings for a selected league."
+ },
+ {
+  "group_type": "domain",
+  "name": "tft_strategy",
+  "description": "Explore Teamfight Tactics compositions, item recipes, builds, and champion recommendations.",
+  "n_tools": 5,
+  "tool_ids": [
+   "OP.GG MCP Server::tft-meta-trend-deck-list",
+   "OP.GG MCP Server::tft-meta-item-combinations",
+   "OP.GG MCP Server::tft-champion-item-build",
+   "OP.GG MCP Server::tft-recommend-champion-for-item",
+   "OP.GG MCP Server::tft-play-style-comment"
+  ],
+  "servers": [
+   "OP.GG MCP Server"
+  ],
+  "summary": "Covers TFT meta decks, item recipes and combinations, champion item builds and recommendations, plus player-specific playstyle feedback using region and account ID."
+ },
+ {
+  "group_type": "domain",
+  "name": "valorant_strategy",
+  "description": "Review Valorant agent and map statistics, meta trends, and team compositions.",
+  "n_tools": 4,
+  "tool_ids": [
+   "OP.GG MCP Server::valorant-meta-maps",
+   "OP.GG MCP Server::valorant-meta-characters",
+   "OP.GG MCP Server::valorant-agents-composition-with-map",
+   "OP.GG MCP Server::valorant-characters-statistics"
+  ],
+  "servers": [
+   "OP.GG MCP Server"
+  ],
+  "summary": "These tools provide Valorant map and agent meta information, map-specific team compositions, and character statistics with optional map filters."
+ },
+ {
+  "group_type": "domain",
+  "name": "game_reference",
+  "description": "Search game card, character, skill, and equipment reference information.",
+  "n_tools": 6,
+  "tool_ids": [
+   "Baige (ygocdb.com) MCP Server::search_cards",
+   "Baige (ygocdb.com) MCP Server::get_card_by_id",
+   "Baige (ygocdb.com) MCP Server::get_card_image",
+   "鸣潮 MCP Server::get_artifact_info",
+   "鸣潮 MCP Server::get_character_info",
+   "鸣潮 MCP Server::get_character_profile"
+  ],
+  "servers": [
+   "Baige (ygocdb.com) MCP Server",
+   "鸣潮 MCP Server"
+  ],
+  "summary": "Searches and retrieves Yu-Gi-Oh! card details and images, and looks up Wuthering Waves Echo sets, character skills, development tips, and profiles."
+ },
+ {
+  "group_type": "domain",
+  "name": "news_content_discovery",
+  "description": "Browse current news and popular or trending stories, discussions, videos, books, and other media.",
+  "n_tools": 30,
+  "tool_ids": [
+   "Trends Hub::get-36kr-trending",
+   "Trends Hub::get-9to5mac-news",
+   "Trends Hub::get-bbc-news",
+   "Trends Hub::get-bilibili-rank",
+   "Trends Hub::get-douban-rank",
+   "Trends Hub::get-douyin-trending",
+   "Trends Hub::get-gcores-new",
+   "Trends Hub::get-ifanr-news",
+   "Trends Hub::get-infoq-news",
+   "Trends Hub::get-juejin-article-rank",
+   "Trends Hub::get-netease-news-trending",
+   "Trends Hub::get-nytimes-news",
+   "Trends Hub::get-smzdm-rank",
+   "Trends Hub::get-sspai-rank",
+   "Trends Hub::get-tencent-news-trending",
+   "Trends Hub::get-thepaper-trending",
+   "Trends Hub::get-theverge-news",
+   "Trends Hub::get-toutiao-trending",
+   "Trends Hub::get-weibo-trending",
+   "Trends Hub::get-weread-rank",
+   "Trends Hub::get-zhihu-trending",
+   "Hacker News MCP Server::search",
+   "Hacker News MCP Server::getStory",
+   "Hacker News MCP Server::getStoryWithComments",
+   "Hacker News MCP Server::getStories",
+   "Hacker News MCP Server::getComment",
+   "Hacker News MCP Server::getComments",
+   "Hacker News MCP Server::getCommentTree",
+   "Hacker News MCP Server::getUser",
+   "Hacker News MCP Server::getUserSubmissions"
+  ],
+  "servers": [
+   "Hacker News MCP Server",
+   "Trends Hub"
+  ],
+  "summary": "Tracks trending news, technology, business, entertainment, gaming, books, and videos across Chinese and international media platforms."
+ },
+ {
+  "group_type": "domain",
+  "name": "scholarly_research",
+  "description": "Search, retrieve, download, and read biomedical and academic papers, including arXiv research.",
+  "n_tools": 13,
+  "tool_ids": [
+   "BioMCP: Biomedical Model Context Protocol::search",
+   "BioMCP: Biomedical Model Context Protocol::fetch",
+   "BioMCP: Biomedical Model Context Protocol::think",
+   "BioMCP: Biomedical Model Context Protocol::article_searcher",
+   "BioMCP: Biomedical Model Context Protocol::article_getter",
+   "ArXiv MCP Server::search_papers",
+   "ArXiv MCP Server::download_paper",
+   "ArXiv MCP Server::list_papers",
+   "ArXiv MCP Server::read_paper",
+   "mcp-simple-arxiv::search_papers",
+   "mcp-simple-arxiv::get_paper_data",
+   "mcp-simple-arxiv::list_categories",
+   "mcp-simple-arxiv::update_categories"
+  ],
+  "servers": [
+   "ArXiv MCP Server",
+   "BioMCP: Biomedical Model Context Protocol",
+   "mcp-simple-arxiv"
+  ],
+  "summary": "Search and retrieve biomedical papers, clinical trials, genetic variants, and arXiv research; plan investigations, access abstracts and full text, download papers, and manage stored research resources."
+ },
+ {
+  "group_type": "domain",
+  "name": "clinical_trials",
+  "description": "Find clinical trials and retrieve their designs, eligibility rules, sites, outcomes, and references.",
+  "n_tools": 6,
+  "tool_ids": [
+   "BioMCP: Biomedical Model Context Protocol::trial_searcher",
+   "BioMCP: Biomedical Model Context Protocol::trial_getter",
+   "BioMCP: Biomedical Model Context Protocol::trial_protocol_getter",
+   "BioMCP: Biomedical Model Context Protocol::trial_references_getter",
+   "BioMCP: Biomedical Model Context Protocol::trial_outcomes_getter",
+   "BioMCP: Biomedical Model Context Protocol::trial_locations_getter"
+  ],
+  "servers": [
+   "BioMCP: Biomedical Model Context Protocol"
+  ],
+  "summary": "Find clinical trials by condition and eligibility, then retrieve their designs, status, sponsors, dates, outcomes, results, adverse events, references, and site contacts."
+ },
+ {
+  "group_type": "domain",
+  "name": "genetic_variants",
+  "description": "Search genetic variants, retrieve annotations, and predict potential effects on gene regulation.",
+  "n_tools": 3,
+  "tool_ids": [
+   "BioMCP: Biomedical Model Context Protocol::variant_searcher",
+   "BioMCP: Biomedical Model Context Protocol::variant_getter",
+   "BioMCP: Biomedical Model Context Protocol::alphagenome_predictor"
+  ],
+  "servers": [
+   "BioMCP: Biomedical Model Context Protocol"
+  ],
+  "summary": "These tools search and annotate genetic variants, retrieve their clinical and population details, and predict effects on gene regulation, chromatin, splicing, and promoters."
+ },
+ {
+  "group_type": "domain",
+  "name": "public_dataset_discovery",
+  "description": "Search public datasets and browse their details, groups, and tags.",
+  "n_tools": 4,
+  "tool_ids": [
+   "Data.gov MCP Server::package_search",
+   "Data.gov MCP Server::package_show",
+   "Data.gov MCP Server::group_list",
+   "Data.gov MCP Server::tag_list"
+  ],
+  "servers": [
+   "Data.gov MCP Server"
+  ],
+  "summary": "Search and browse Data.gov datasets, inspect dataset details, and list or search groups and tags with sorting, pagination, and field options."
+ },
+ {
+  "group_type": "domain",
+  "name": "place_discovery",
+  "description": "Find places, addresses, nearby amenities, schools, parking, chargers, and neighborhood features.",
+  "n_tools": 10,
+  "tool_ids": [
+   "OpenStreetMap (OSM) MCP Server::geocode_address",
+   "OpenStreetMap (OSM) MCP Server::reverse_geocode",
+   "OpenStreetMap (OSM) MCP Server::find_nearby_places",
+   "OpenStreetMap (OSM) MCP Server::search_category",
+   "OpenStreetMap (OSM) MCP Server::suggest_meeting_point",
+   "OpenStreetMap (OSM) MCP Server::explore_area",
+   "OpenStreetMap (OSM) MCP Server::find_schools_nearby",
+   "OpenStreetMap (OSM) MCP Server::find_ev_charging_stations",
+   "OpenStreetMap (OSM) MCP Server::analyze_neighborhood",
+   "OpenStreetMap (OSM) MCP Server::find_parking_facilities"
+  ],
+  "servers": [
+   "OpenStreetMap (OSM) MCP Server"
+  ],
+  "summary": "These tools locate addresses and coordinates, discover nearby places and amenities, recommend meeting venues, find schools, EV chargers and parking, and assess neighborhood accessibility and walkability."
+ },
+ {
+  "group_type": "domain",
+  "name": "route_planning",
+  "description": "Plan trips between locations and compare routes, distances, travel times, and commute modes.",
+  "n_tools": 2,
+  "tool_ids": [
+   "OpenStreetMap (OSM) MCP Server::get_route_directions",
+   "OpenStreetMap (OSM) MCP Server::analyze_commute"
+  ],
+  "servers": [
+   "OpenStreetMap (OSM) MCP Server"
+  ],
+  "summary": "These tools provide routes, distances, estimated travel times, and turn-by-turn directions between locations, and compare home-to-work trips across travel modes."
+ },
+ {
+  "group_type": "domain",
+  "name": "rail_travel",
+  "description": "Look up rail stations and codes, search train tickets, and inspect routes and stops.",
+  "n_tools": 7,
+  "tool_ids": [
+   "12306-mcp::get-stations-code-in-city",
+   "12306-mcp::get-station-code-of-citys",
+   "12306-mcp::get-station-code-by-names",
+   "12306-mcp::get-station-by-telecode",
+   "12306-mcp::get-tickets",
+   "12306-mcp::get-interline-tickets",
+   "12306-mcp::get-train-route-stations"
+  ],
+  "servers": [
+   "12306-mcp"
+  ],
+  "summary": "These tools look up Chinese railway stations and codes, find direct or transfer train trips, and show route stops with arrival, departure, and waiting times."
+ },
+ {
+  "group_type": "domain",
+  "name": "weather_forecasting",
+  "description": "Get current weather and forecasts for cities or geographic coordinates.",
+  "n_tools": 2,
+  "tool_ids": [
+   "MCP Weather Free::get_weather",
+   "MCP Weather Free::get_weather_by_city"
+  ],
+  "servers": [
+   "MCP Weather Free"
+  ],
+  "summary": "Provides current weather and forecasts for coordinates or cities, with configurable temperature, wind, and precipitation units and optional country selection."
+ },
+ {
+  "group_type": "domain",
+  "name": "general_conversions",
+  "description": "Look up dates and times, convert time zones, and check currency exchange rates.",
+  "n_tools": 4,
+  "tool_ids": [
+   "Time MCP Server::get_current_time",
+   "Time MCP Server::convert_time",
+   "12306-mcp::get-current-date",
+   "Exchange Rate MCP Server::exchange_rate"
+  ],
+  "servers": [
+   "12306-mcp",
+   "Exchange Rate MCP Server",
+   "Time MCP Server"
+  ],
+  "summary": "These tools provide timezone-aware times and dates, convert times across zones, and retrieve current or historical currency exchange rates."
+ },
+ {
+  "group_type": "domain",
+  "name": "accommodation_search",
+  "description": "Find accommodation by location, dates, guest count, price, and availability.",
+  "n_tools": 2,
+  "tool_ids": [
+   "Airbnb MCP Server::airbnb_search",
+   "Airbnb MCP Server::airbnb_listing_details"
+  ],
+  "servers": [
+   "Airbnb MCP Server"
+  ],
+  "summary": "Find Airbnb stays by location, dates, guests, and price range, then retrieve listing details and availability for selected dates."
+ },
+ {
+  "group_type": "domain",
+  "name": "recipe_planning",
+  "description": "Find recipes, look up cooking instructions, and plan meals around preferences and group size.",
+  "n_tools": 5,
+  "tool_ids": [
+   "HowToCook-MCP Server::mcp_howtocook_getAllRecipes",
+   "HowToCook-MCP Server::mcp_howtocook_getRecipesByCategory",
+   "HowToCook-MCP Server::mcp_howtocook_recommendMeals",
+   "HowToCook-MCP Server::mcp_howtocook_whatToEat",
+   "HowToCook-MCP Server::mcp_howtocook_getRecipeById"
+  ],
+  "servers": [
+   "HowToCook-MCP Server"
+  ],
+  "summary": "These tools list and search recipes, plan weekly meals and shopping lists around dietary needs, suggest dishes for a group size, and provide recipe ingredients and instructions."
+ },
+ {
+  "group_type": "domain",
+  "name": "chinese_calendar",
+  "description": "Calculate Bazi charts, find matching birth dates, and look up traditional Chinese calendar information.",
+  "n_tools": 5,
+  "tool_ids": [
+   "Bazi MCP (八字 MCP) by Cantian AI::getBaziDetail",
+   "Bazi MCP (八字 MCP) by Cantian AI::getSolarTimes",
+   "Bazi MCP (八字 MCP) by Cantian AI::getChineseCalendar",
+   "Bazi MCP (八字 MCP) by Cantian AI::buildBaziFromLunarDatetime",
+   "Bazi MCP (八字 MCP) by Cantian AI::buildBaziFromSolarDatetime"
+  ],
+  "servers": [
+   "Bazi MCP (八字 MCP) by Cantian AI"
+  ],
+  "summary": "These tools calculate or find matching Bazi charts from birth details and provide traditional Chinese calendar information for selected dates."
+ },
+ {
+  "group_type": "domain",
+  "name": "wikipedia_research",
+  "description": "Search Wikipedia and retrieve, summarize, or explore article content, sections, facts, and links.",
+  "n_tools": 9,
+  "tool_ids": [
+   "Wikipedia MCP Server::search_wikipedia",
+   "Wikipedia MCP Server::get_article",
+   "Wikipedia MCP Server::get_summary",
+   "Wikipedia MCP Server::summarize_article_for_query",
+   "Wikipedia MCP Server::summarize_article_section",
+   "Wikipedia MCP Server::extract_key_facts",
+   "Wikipedia MCP Server::get_related_topics",
+   "Wikipedia MCP Server::get_sections",
+   "Wikipedia MCP Server::get_links"
+  ],
+  "servers": [
+   "Wikipedia MCP Server"
+  ],
+  "summary": "These tools search Wikipedia, retrieve and summarize articles or sections, extract key facts, list sections and links, and find related topics, with optional question- or topic-focused analysis."
+ },
+ {
+  "group_type": "domain",
+  "name": "museum_collection",
+  "description": "Browse museum departments and search for collection objects, details, and images.",
+  "n_tools": 3,
+  "tool_ids": [
+   "Met Museum MCP Server::list-departments",
+   "Met Museum MCP Server::search-museum-objects",
+   "Met Museum MCP Server::get-museum-object"
+  ],
+  "servers": [
+   "Met Museum MCP Server"
+  ],
+  "summary": "These tools list Met departments, search collection objects using queries and filters, and retrieve object details with optional images."
+ },
+ {
+  "group_type": "domain",
+  "name": "file_conversion",
+  "description": "Extract, convert, combine, split, clean, format, and compare document and text files.",
+  "n_tools": 18,
+  "tool_ids": [
+   "PDF Reader MCP Server::read_pdf",
+   "Simple Document Processing MCP Server::document_reader",
+   "Simple Document Processing MCP Server::pdf_merger",
+   "Simple Document Processing MCP Server::pdf_splitter",
+   "Simple Document Processing MCP Server::docx_to_pdf",
+   "Simple Document Processing MCP Server::docx_to_html",
+   "Simple Document Processing MCP Server::html_cleaner",
+   "Simple Document Processing MCP Server::html_to_text",
+   "Simple Document Processing MCP Server::html_to_markdown",
+   "Simple Document Processing MCP Server::html_extract_resources",
+   "Simple Document Processing MCP Server::html_formatter",
+   "Simple Document Processing MCP Server::text_diff",
+   "Simple Document Processing MCP Server::text_splitter",
+   "Simple Document Processing MCP Server::text_formatter",
+   "Simple Document Processing MCP Server::text_encoding_converter",
+   "Simple Document Processing MCP Server::format_convert",
+   "MCP OKPPT Server::convert_svg_to_png",
+   "Office-Word-MCP-Server::convert_to_pdf"
+  ],
+  "servers": [
+   "MCP OKPPT Server",
+   "Office-Word-MCP-Server",
+   "PDF Reader MCP Server",
+   "Simple Document Processing MCP Server"
+  ],
+  "summary": "These tools extract and transform document content, manage and convert PDFs, format and convert HTML, retrieve media links, and compare text files."
+ },
+ {
+  "group_type": "domain",
+  "name": "word_document_tools",
+  "description": "Create, read, edit, format, annotate, search, secure, and convert Word documents.",
+  "n_tools": 23,
+  "tool_ids": [
+   "Office-Word-MCP-Server::create_document",
+   "Office-Word-MCP-Server::copy_document",
+   "Office-Word-MCP-Server::get_document_info",
+   "Office-Word-MCP-Server::get_document_text",
+   "Office-Word-MCP-Server::get_document_outline",
+   "Office-Word-MCP-Server::list_available_documents",
+   "Office-Word-MCP-Server::add_paragraph",
+   "Office-Word-MCP-Server::add_heading",
+   "Office-Word-MCP-Server::add_picture",
+   "Office-Word-MCP-Server::add_table",
+   "Office-Word-MCP-Server::add_page_break",
+   "Office-Word-MCP-Server::delete_paragraph",
+   "Office-Word-MCP-Server::search_and_replace",
+   "Office-Word-MCP-Server::create_custom_style",
+   "Office-Word-MCP-Server::format_text",
+   "Office-Word-MCP-Server::format_table",
+   "Office-Word-MCP-Server::protect_document",
+   "Office-Word-MCP-Server::unprotect_document",
+   "Office-Word-MCP-Server::add_footnote_to_document",
+   "Office-Word-MCP-Server::add_endnote_to_document",
+   "Office-Word-MCP-Server::customize_footnote_style",
+   "Office-Word-MCP-Server::get_paragraph_text_from_document",
+   "Office-Word-MCP-Server::find_text_in_document"
+  ],
+  "servers": [
+   "Office-Word-MCP-Server"
+  ],
+  "summary": "These tools create, copy, inspect, list, and edit Word documents by extracting text and managing headings, paragraphs, images, tables, and page breaks."
+ },
+ {
+  "group_type": "domain",
+  "name": "spreadsheet_tools",
+  "description": "Read and write spreadsheet data, manage worksheets, and create or inspect tables.",
+  "n_tools": 6,
+  "tool_ids": [
+   "Simple Document Processing MCP Server::excel_read",
+   "Excel MCP Server::excel_copy_sheet",
+   "Excel MCP Server::excel_create_table",
+   "Excel MCP Server::excel_describe_sheets",
+   "Excel MCP Server::excel_read_sheet",
+   "Excel MCP Server::excel_write_to_sheet"
+  ],
+  "servers": [
+   "Excel MCP Server",
+   "Simple Document Processing MCP Server"
+  ],
+  "summary": "These tools read spreadsheet data and metadata, inspect formulas and styles, copy sheets, create tables, and write values or formulas in Excel files."
+ },
+ {
+  "group_type": "domain",
+  "name": "file_management",
+  "description": "Read, write, search, organize, inspect, and manage files and directories.",
+  "n_tools": 27,
+  "tool_ids": [
+   "MCP OKPPT Server::list_files",
+   "MCP OKPPT Server::get_file_info",
+   "MCP OKPPT Server::save_svg_code",
+   "MCP Text Editor Server::get_text_file_contents",
+   "MCP Text Editor Server::edit_text_file_contents",
+   "Basic Memory::list_directory",
+   "Desktop Commander MCP::read_file",
+   "Desktop Commander MCP::read_multiple_files",
+   "Desktop Commander MCP::write_file",
+   "Desktop Commander MCP::create_directory",
+   "Desktop Commander MCP::list_directory",
+   "Desktop Commander MCP::move_file",
+   "Desktop Commander MCP::search_files",
+   "Desktop Commander MCP::search_code",
+   "Desktop Commander MCP::get_file_info",
+   "Desktop Commander MCP::edit_block",
+   "Filesystem MCP Server::read_file",
+   "Filesystem MCP Server::read_multiple_files",
+   "Filesystem MCP Server::write_file",
+   "Filesystem MCP Server::edit_file",
+   "Filesystem MCP Server::create_directory",
+   "Filesystem MCP Server::list_directory",
+   "Filesystem MCP Server::list_directory_with_sizes",
+   "Filesystem MCP Server::directory_tree",
+   "Filesystem MCP Server::move_file",
+   "Filesystem MCP Server::search_files",
+   "Filesystem MCP Server::get_file_info"
+  ],
+  "servers": [
+   "Basic Memory",
+   "Desktop Commander MCP",
+   "Filesystem MCP Server",
+   "MCP OKPPT Server",
+   "MCP Text Editor Server"
+  ],
+  "summary": "These tools list and inspect files and directories, read local or remote content, create and edit files, save SVGs, apply conflict-checked patches, and move or rename items."
+ },
+ {
+  "group_type": "domain",
+  "name": "data_visualization",
+  "description": "Create charts, statistical graphics, and maps to visualize data, comparisons, distributions, and relationships.",
+  "n_tools": 20,
+  "tool_ids": [
+   "MCP Server Chart::generate_area_chart",
+   "MCP Server Chart::generate_bar_chart",
+   "MCP Server Chart::generate_boxplot_chart",
+   "MCP Server Chart::generate_column_chart",
+   "MCP Server Chart::generate_district_map",
+   "MCP Server Chart::generate_dual_axes_chart",
+   "MCP Server Chart::generate_funnel_chart",
+   "MCP Server Chart::generate_histogram_chart",
+   "MCP Server Chart::generate_line_chart",
+   "MCP Server Chart::generate_liquid_chart",
+   "MCP Server Chart::generate_path_map",
+   "MCP Server Chart::generate_pie_chart",
+   "MCP Server Chart::generate_pin_map",
+   "MCP Server Chart::generate_radar_chart",
+   "MCP Server Chart::generate_sankey_chart",
+   "MCP Server Chart::generate_scatter_chart",
+   "MCP Server Chart::generate_treemap_chart",
+   "MCP Server Chart::generate_venn_chart",
+   "MCP Server Chart::generate_violin_chart",
+   "MCP Server Chart::generate_word_cloud_chart"
+  ],
+  "servers": [
+   "MCP Server Chart"
+  ],
+  "summary": "This group creates charts and maps for comparing categories, tracking trends, showing distributions and proportions, illustrating staged declines, and planning routes."
+ },
+ {
+  "group_type": "domain",
+  "name": "diagramming",
+  "description": "Create or validate process, cause-and-effect, hierarchy, relationship, mind map, and canvas diagrams.",
+  "n_tools": 12,
+  "tool_ids": [
+   "MCP Server Chart::generate_fishbone_diagram",
+   "MCP Server Chart::generate_flow_diagram",
+   "MCP Server Chart::generate_mind_map",
+   "MCP Server Chart::generate_network_graph",
+   "MCP Server Chart::generate_organization_chart",
+   "MCP Server: Mermaid Validator::validateMermaid",
+   "Drawing MCP Server::drawing_generateCanvas",
+   "Drawing MCP Server::drawing_fillRectangle",
+   "Drawing MCP Server::drawing_getCanvasPng",
+   "Drawing MCP Server::drawing_getCanvasData",
+   "Mindmap MCP Server::convert_markdown_to_mindmap",
+   "Basic Memory::canvas"
+  ],
+  "servers": [
+   "Basic Memory",
+   "Drawing MCP Server",
+   "MCP Server Chart",
+   "MCP Server: Mermaid Validator",
+   "Mindmap MCP Server"
+  ],
+  "summary": "The tools create, validate, and render diagrams and mind maps, build connected concept canvases, and draw, color, and export pixel-based images."
+ },
+ {
+  "group_type": "domain",
+  "name": "presentation_management",
+  "description": "Create, load, save, inspect, and configure presentation files and templates.",
+  "n_tools": 17,
+  "tool_ids": [
+   "MCP OKPPT Server::get_pptx_info",
+   "MCP OKPPT Server::svg_prompt",
+   "MCP OKPPT Server::analyze_presentation_layouts",
+   "Office-PowerPoint-MCP-Server::create_presentation",
+   "Office-PowerPoint-MCP-Server::create_presentation_from_template",
+   "Office-PowerPoint-MCP-Server::open_presentation",
+   "Office-PowerPoint-MCP-Server::save_presentation",
+   "Office-PowerPoint-MCP-Server::get_presentation_info",
+   "Office-PowerPoint-MCP-Server::get_template_file_info",
+   "Office-PowerPoint-MCP-Server::set_core_properties",
+   "Office-PowerPoint-MCP-Server::list_slide_templates",
+   "Office-PowerPoint-MCP-Server::create_presentation_from_templates",
+   "Office-PowerPoint-MCP-Server::get_template_info",
+   "Office-PowerPoint-MCP-Server::auto_generate_presentation",
+   "Office-PowerPoint-MCP-Server::manage_slide_masters",
+   "Office-PowerPoint-MCP-Server::list_presentations",
+   "Office-PowerPoint-MCP-Server::switch_presentation"
+  ],
+  "servers": [
+   "MCP OKPPT Server",
+   "Office-PowerPoint-MCP-Server"
+  ],
+  "summary": "These tools inspect and load PowerPoint files, manage templates and metadata, refine slide-design requests, and create, build, and save presentations."
+ },
+ {
+  "group_type": "domain",
+  "name": "slide_editing",
+  "description": "Build and edit slide content, layouts, text, images, tables, charts, links, and transitions.",
+  "n_tools": 27,
+  "tool_ids": [
+   "MCP OKPPT Server::insert_svg",
+   "MCP OKPPT Server::delete_slide",
+   "MCP OKPPT Server::insert_blank_slide",
+   "MCP OKPPT Server::copy_svg_slide",
+   "MCP OKPPT Server::add_slide_with_layout",
+   "MCP OKPPT Server::clear_placeholders_from_slides",
+   "MCP OKPPT Server::set_placeholder_value",
+   "Office-PowerPoint-MCP-Server::add_slide",
+   "Office-PowerPoint-MCP-Server::get_slide_info",
+   "Office-PowerPoint-MCP-Server::populate_placeholder",
+   "Office-PowerPoint-MCP-Server::add_bullet_points",
+   "Office-PowerPoint-MCP-Server::manage_text",
+   "Office-PowerPoint-MCP-Server::manage_image",
+   "Office-PowerPoint-MCP-Server::add_table",
+   "Office-PowerPoint-MCP-Server::format_table_cell",
+   "Office-PowerPoint-MCP-Server::add_shape",
+   "Office-PowerPoint-MCP-Server::add_chart",
+   "Office-PowerPoint-MCP-Server::apply_professional_design",
+   "Office-PowerPoint-MCP-Server::apply_picture_effects",
+   "Office-PowerPoint-MCP-Server::manage_fonts",
+   "Office-PowerPoint-MCP-Server::apply_slide_template",
+   "Office-PowerPoint-MCP-Server::create_slide_from_template",
+   "Office-PowerPoint-MCP-Server::optimize_slide_text",
+   "Office-PowerPoint-MCP-Server::manage_hyperlinks",
+   "Office-PowerPoint-MCP-Server::update_chart_data",
+   "Office-PowerPoint-MCP-Server::add_connector",
+   "Office-PowerPoint-MCP-Server::manage_slide_transitions"
+  ],
+  "servers": [
+   "MCP OKPPT Server",
+   "Office-PowerPoint-MCP-Server"
+  ],
+  "summary": "These tools create, copy, remove, inspect, and edit PowerPoint slides, including layouts, backgrounds, placeholders, text, bullets, and SVG images."
+ },
+ {
+  "group_type": "domain",
+  "name": "browser_automation",
+  "description": "Navigate webpages, interact with page elements, capture content, run scripts, and manage browser sessions.",
+  "n_tools": 32,
+  "tool_ids": [
+   "Playwright MCP Server::start_codegen_session",
+   "Playwright MCP Server::end_codegen_session",
+   "Playwright MCP Server::get_codegen_session",
+   "Playwright MCP Server::clear_codegen_session",
+   "Playwright MCP Server::playwright_navigate",
+   "Playwright MCP Server::playwright_screenshot",
+   "Playwright MCP Server::playwright_click",
+   "Playwright MCP Server::playwright_iframe_click",
+   "Playwright MCP Server::playwright_iframe_fill",
+   "Playwright MCP Server::playwright_fill",
+   "Playwright MCP Server::playwright_select",
+   "Playwright MCP Server::playwright_hover",
+   "Playwright MCP Server::playwright_upload_file",
+   "Playwright MCP Server::playwright_evaluate",
+   "Playwright MCP Server::playwright_console_logs",
+   "Playwright MCP Server::playwright_close",
+   "Playwright MCP Server::playwright_custom_user_agent",
+   "Playwright MCP Server::playwright_get_visible_text",
+   "Playwright MCP Server::playwright_get_visible_html",
+   "Playwright MCP Server::playwright_go_back",
+   "Playwright MCP Server::playwright_go_forward",
+   "Playwright MCP Server::playwright_drag",
+   "Playwright MCP Server::playwright_press_key",
+   "Playwright MCP Server::playwright_save_as_pdf",
+   "Playwright MCP Server::playwright_click_and_switch_tab",
+   "Puppeteer::puppeteer_navigate",
+   "Puppeteer::puppeteer_screenshot",
+   "Puppeteer::puppeteer_click",
+   "Puppeteer::puppeteer_fill",
+   "Puppeteer::puppeteer_select",
+   "Puppeteer::puppeteer_hover",
+   "Puppeteer::puppeteer_evaluate"
+  ],
+  "servers": [
+   "Playwright MCP Server",
+   "Puppeteer"
+  ],
+  "summary": "These tools record and manage Playwright browser sessions, navigate pages, capture screenshots, and interact with page and iframe elements through clicks, typing, dropdown selection, and hovering."
+ },
+ {
+  "group_type": "domain",
+  "name": "http_requests",
+  "description": "Send HTTP requests and track matching responses for web services.",
+  "n_tools": 7,
+  "tool_ids": [
+   "Playwright MCP Server::playwright_get",
+   "Playwright MCP Server::playwright_post",
+   "Playwright MCP Server::playwright_put",
+   "Playwright MCP Server::playwright_patch",
+   "Playwright MCP Server::playwright_delete",
+   "Playwright MCP Server::playwright_expect_response",
+   "Playwright MCP Server::playwright_assert_response"
+  ],
+  "servers": [
+   "Playwright MCP Server"
+  ],
+  "summary": "These tools send HTTP GET, POST, PUT, PATCH, and DELETE requests, and track URL-matched responses for later inspection and text checks."
+ },
+ {
+  "group_type": "domain",
+  "name": "git_management",
+  "description": "Inspect repository changes and history, manage branches, stage files, and create commits.",
+  "n_tools": 13,
+  "tool_ids": [
+   "mcp-server-git: A git MCP server::git_status",
+   "mcp-server-git: A git MCP server::git_diff_unstaged",
+   "mcp-server-git: A git MCP server::git_diff_staged",
+   "mcp-server-git: A git MCP server::git_diff",
+   "mcp-server-git: A git MCP server::git_commit",
+   "mcp-server-git: A git MCP server::git_add",
+   "mcp-server-git: A git MCP server::git_reset",
+   "mcp-server-git: A git MCP server::git_log",
+   "mcp-server-git: A git MCP server::git_create_branch",
+   "mcp-server-git: A git MCP server::git_checkout",
+   "mcp-server-git: A git MCP server::git_show",
+   "mcp-server-git: A git MCP server::git_init",
+   "mcp-server-git: A git MCP server::git_branch"
+  ],
+  "servers": [
+   "mcp-server-git: A git MCP server"
+  ],
+  "summary": "These tools inspect repository status and changes, stage or unstage edits, create commits, review commit history and details, manage branches, and initialize repositories."
+ },
+ {
+  "group_type": "domain",
+  "name": "task_management",
+  "description": "Plan and track multi-step work, inspect or edit tasks, and update request progress.",
+  "n_tools": 11,
+  "tool_ids": [
+   "MCP TaskManager::request_planning",
+   "MCP TaskManager::get_next_task",
+   "MCP TaskManager::mark_task_done",
+   "MCP TaskManager::approve_task_completion",
+   "MCP TaskManager::approve_request_completion",
+   "MCP TaskManager::open_task_details",
+   "MCP TaskManager::list_requests",
+   "MCP TaskManager::add_tasks_to_request",
+   "MCP TaskManager::update_task",
+   "MCP TaskManager::delete_task",
+   "Web3 Research MCP::update-status"
+  ],
+  "servers": [
+   "MCP TaskManager",
+   "Web3 Research MCP"
+  ],
+  "summary": "Manage task requests and research sections by creating, queueing, tracking, approving, editing, removing, and finalizing tasks, while viewing details and updating section status."
+ },
+ {
+  "group_type": "domain",
+  "name": "knowledge_management",
+  "description": "Search, read, write, organize, and manage notes, projects, and linked knowledge.",
+  "n_tools": 26,
+  "tool_ids": [
+   "Knowledge Graph Memory Server::create_entities",
+   "Knowledge Graph Memory Server::create_relations",
+   "Knowledge Graph Memory Server::add_observations",
+   "Knowledge Graph Memory Server::delete_entities",
+   "Knowledge Graph Memory Server::delete_observations",
+   "Knowledge Graph Memory Server::delete_relations",
+   "Knowledge Graph Memory Server::read_graph",
+   "Knowledge Graph Memory Server::search_nodes",
+   "Knowledge Graph Memory Server::open_nodes",
+   "Basic Memory::delete_note",
+   "Basic Memory::read_content",
+   "Basic Memory::build_context",
+   "Basic Memory::recent_activity",
+   "Basic Memory::search_notes",
+   "Basic Memory::read_note",
+   "Basic Memory::view_note",
+   "Basic Memory::write_note",
+   "Basic Memory::edit_note",
+   "Basic Memory::move_note",
+   "Basic Memory::sync_status",
+   "Basic Memory::list_memory_projects",
+   "Basic Memory::switch_project",
+   "Basic Memory::get_current_project",
+   "Basic Memory::set_default_project",
+   "Basic Memory::create_memory_project",
+   "Basic Memory::delete_project"
+  ],
+  "servers": [
+   "Basic Memory",
+   "Knowledge Graph Memory Server"
+  ],
+  "summary": "These tools manage knowledge graph entities, details, and relationships; search and retrieve graph data; and delete, read, or gather related notes and files for context."
+ },
+ {
+  "group_type": "domain",
+  "name": "docker_management",
+  "description": "Create, deploy, list, and inspect Docker containers and Compose stacks.",
+  "n_tools": 4,
+  "tool_ids": [
+   "docker-mcp::create-container",
+   "docker-mcp::deploy-compose",
+   "docker-mcp::get-logs",
+   "docker-mcp::list-containers"
+  ],
+  "servers": [
+   "docker-mcp"
+  ],
+  "summary": "These tools create Docker containers, deploy Compose stacks, retrieve container logs, and list Docker containers."
+ },
+ {
+  "group_type": "domain",
+  "name": "terminal_operations",
+  "description": "Run commands, inspect process output, interact with sessions, and monitor or stop processes.",
+  "n_tools": 5,
+  "tool_ids": [
+   "Desktop Commander MCP::start_process",
+   "Desktop Commander MCP::read_process_output",
+   "Desktop Commander MCP::interact_with_process",
+   "Desktop Commander MCP::force_terminate",
+   "Desktop Commander MCP::list_sessions"
+  ],
+  "servers": [
+   "Desktop Commander MCP"
+  ],
+  "summary": "These tools start and manage terminal processes, including reading output, sending input, checking status, listing active sessions, and forcefully stopping processes."
+ },
+ {
+  "group_type": "domain",
+  "name": "system_administration",
+  "description": "Inspect server settings, access scopes, usage statistics, and feedback options.",
+  "n_tools": 8,
+  "tool_ids": [
+   "Office-PowerPoint-MCP-Server::get_server_info",
+   "Desktop Commander MCP::get_config",
+   "Desktop Commander MCP::set_config_value",
+   "Desktop Commander MCP::list_processes",
+   "Desktop Commander MCP::kill_process",
+   "Desktop Commander MCP::get_usage_stats",
+   "Desktop Commander MCP::give_feedback_to_desktop_commander",
+   "Filesystem MCP Server::list_allowed_directories"
+  ],
+  "servers": [
+   "Desktop Commander MCP",
+   "Filesystem MCP Server",
+   "Office-PowerPoint-MCP-Server"
+  ],
+  "summary": "These tools inspect and configure PowerPoint server settings and access, monitor and terminate processes, report tool performance, open feedback forms, and list permitted directories."
+ },
+ {
+  "group_type": "domain",
+  "name": "chess_play",
+  "description": "Set up chess games, inspect positions and legal moves, and play or search recorded moves.",
+  "n_tools": 6,
+  "tool_ids": [
+   "MCP Chess Server::get_board_visualization",
+   "MCP Chess Server::get_turn",
+   "MCP Chess Server::get_valid_moves",
+   "MCP Chess Server::make_move",
+   "MCP Chess Server::new_game",
+   "MCP Chess Server::find_position_in_pgn"
+  ],
+  "servers": [
+   "MCP Chess Server"
+  ],
+  "summary": "These tools manage chess games by displaying boards, turns, and legal moves; starting games; playing moves and reporting outcomes; and finding pieces in game records."
+ },
+ {
+  "group_type": "domain",
+  "name": "media_processing",
+  "description": "Analyze image and audio content, inspect audio features, retrieve transcripts, and download media.",
+  "n_tools": 13,
+  "tool_ids": [
+   "MCP Image Extractor::extract_image_from_file",
+   "MCP Image Extractor::extract_image_from_url",
+   "MCP Image Extractor::extract_image_from_base64",
+   "YouTube Transcript Server::get_transcript",
+   "MetaTag Genie::writeImageMetadata",
+   "MCP Music Analysis::load",
+   "MCP Music Analysis::get_duration",
+   "MCP Music Analysis::tempo",
+   "MCP Music Analysis::chroma_cqt",
+   "MCP Music Analysis::mfcc",
+   "MCP Music Analysis::beat_track",
+   "MCP Music Analysis::download_from_url",
+   "MCP Music Analysis::download_from_youtube"
+  ],
+  "servers": [
+   "MCP Image Extractor",
+   "MCP Music Analysis",
+   "MetaTag Genie",
+   "YouTube Transcript Server"
+  ],
+  "summary": "These tools analyze images and audio, extract video transcripts, annotate image metadata, and measure audio duration, tempo, spectral properties, note activity, and beat positions, including downloading audio."
+ },
+ {
+  "group_type": "domain",
+  "name": "randomization",
+  "description": "Generate random numbers or tokens, select items, and shuffle lists.",
+  "n_tools": 7,
+  "tool_ids": [
+   "Random Number MCP::random_int",
+   "Random Number MCP::random_float",
+   "Random Number MCP::random_choices",
+   "Random Number MCP::random_shuffle",
+   "Random Number MCP::random_sample",
+   "Random Number MCP::secure_token_hex",
+   "Random Number MCP::secure_random_int"
+  ],
+  "servers": [
+   "Random Number MCP"
+  ],
+  "summary": "These tools generate random numbers, select and shuffle list items, and create cryptographically secure hexadecimal tokens and bounded integers."
+ },
+ {
+  "group_type": "domain",
+  "name": "calculation",
+  "description": "Evaluate mathematical expressions and return numerical results.",
+  "n_tools": 1,
+  "tool_ids": [
+   "Calculator MCP Server::calculate"
+  ],
+  "servers": [
+   "Calculator MCP Server"
+  ],
+  "summary": "Evaluates a mathematical expression and returns its result."
+ },
+ {
+  "group_type": "domain",
+  "name": "internet_registry",
+  "description": "Look up registration and network ownership information for domains, top-level domains, IP addresses, and autonomous systems.",
+  "n_tools": 4,
+  "tool_ids": [
+   "Whois MCP::whois_domain",
+   "Whois MCP::whois_tld",
+   "Whois MCP::whois_ip",
+   "Whois MCP::whois_as"
+  ],
+  "servers": [
+   "Whois MCP"
+  ],
+  "summary": "These tools retrieve domain registration and contact details, top-level domain registry information, and registration and network ownership information for IP addresses and autonomous systems."
+ },
+ {
+  "group_type": "domain",
+  "name": "coding_practice",
+  "description": "Find coding challenges and retrieve problem, contest, profile, submission, and ranking information.",
+  "n_tools": 7,
+  "tool_ids": [
+   "MCP Server LeetCode::get-daily-challenge",
+   "MCP Server LeetCode::get-problem",
+   "MCP Server LeetCode::search-problems",
+   "MCP Server LeetCode::get-user-profile",
+   "MCP Server LeetCode::get-user-submissions",
+   "MCP Server LeetCode::get-contest-details",
+   "MCP Server LeetCode::get-user-contest-ranking"
+  ],
+  "servers": [
+   "MCP Server LeetCode"
+  ],
+  "summary": "These tools retrieve daily challenges, specific and filtered problems, user profiles and submissions, contest details, and user contest rankings from LeetCode."
+ },
+ {
+  "group_type": "domain",
+  "name": "other",
+  "description": "Tools that fit no listed domain.",
+  "n_tools": 1,
+  "tool_ids": [
+   "Sequential Thinking MCP Server::sequentialthinking"
+  ],
+  "servers": [
+   "Sequential Thinking MCP Server"
+  ],
+  "summary": "Helps work through complex problems step by step, revising ideas and exploring alternatives as needed."
+ }
+]

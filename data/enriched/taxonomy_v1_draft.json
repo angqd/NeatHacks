@@ -1,0 +1,227 @@
+{
+ "version": "taxonomy-v1",
+ "model": "gpt-6-luna",
+ "domains": [
+  {
+   "name": "web_search",
+   "description": "Find web pages, news, images, or videos that match a search query."
+  },
+  {
+   "name": "webpage_retrieval",
+   "description": "Retrieve readable text, HTML, or formatted content from a specified webpage."
+  },
+  {
+   "name": "sitemap_inspection",
+   "description": "Explore, list, parse, and summarize the pages and structure of website sitemaps."
+  },
+  {
+   "name": "stock_market_data",
+   "description": "Look up stock symbols, prices, trading activity, market value, and screening data."
+  },
+  {
+   "name": "stock_research",
+   "description": "Review company financials, earnings, ownership, insider trades, analyst views, and stock news."
+  },
+  {
+   "name": "market_sentiment",
+   "description": "Check sentiment indicators and their recent history for stock and cryptocurrency markets."
+  },
+  {
+   "name": "crypto_market_data",
+   "description": "Look up cryptocurrency and other asset prices, trading venues, volume, and historical performance."
+  },
+  {
+   "name": "crypto_research",
+   "description": "Investigate cryptocurrency tokens using selected sources, keywords, and research resources."
+  },
+  {
+   "name": "package_discovery",
+   "description": "Find, compare, and discover software packages, repositories, and developers for a chosen purpose."
+  },
+  {
+   "name": "package_metadata",
+   "description": "Inspect package versions, releases, dependencies, documentation, maintainers, and repository information."
+  },
+  {
+   "name": "package_quality",
+   "description": "Assess package security, maintenance, quality, popularity, size, and license compatibility."
+  },
+  {
+   "name": "developer_documentation",
+   "description": "Browse software component catalogs, API references, examples, changelogs, and integration guidance."
+  },
+  {
+   "name": "league_strategy",
+   "description": "Review League of Legends champion performance, builds, counters, rankings, and player leaderboards."
+  },
+  {
+   "name": "game_player_analytics",
+   "description": "Look up player profiles, rankings, match histories, and playstyle information across supported games."
+  },
+  {
+   "name": "esports_info",
+   "description": "Check professional League of Legends schedules and league standings."
+  },
+  {
+   "name": "tft_strategy",
+   "description": "Explore Teamfight Tactics compositions, item recipes, builds, and champion recommendations."
+  },
+  {
+   "name": "valorant_strategy",
+   "description": "Review Valorant agent and map statistics, meta trends, and team compositions."
+  },
+  {
+   "name": "game_reference",
+   "description": "Search game card, character, skill, and equipment reference information."
+  },
+  {
+   "name": "news_content_discovery",
+   "description": "Browse current news and popular or trending stories, discussions, videos, books, and other media."
+  },
+  {
+   "name": "scholarly_research",
+   "description": "Search, retrieve, download, and read biomedical and academic papers, including arXiv research."
+  },
+  {
+   "name": "clinical_trials",
+   "description": "Find clinical trials and retrieve their designs, eligibility rules, sites, outcomes, and references."
+  },
+  {
+   "name": "genetic_variants",
+   "description": "Search genetic variants, retrieve annotations, and predict potential effects on gene regulation."
+  },
+  {
+   "name": "public_dataset_discovery",
+   "description": "Search public datasets and browse their details, groups, and tags."
+  },
+  {
+   "name": "place_discovery",
+   "description": "Find places, addresses, nearby amenities, schools, parking, chargers, and neighborhood features."
+  },
+  {
+   "name": "route_planning",
+   "description": "Plan trips between locations and compare routes, distances, travel times, and commute modes."
+  },
+  {
+   "name": "rail_travel",
+   "description": "Look up rail stations and codes, search train tickets, and inspect routes and stops."
+  },
+  {
+   "name": "weather_forecasting",
+   "description": "Get current weather and forecasts for cities or geographic coordinates."
+  },
+  {
+   "name": "general_conversions",
+   "description": "Look up dates and times, convert time zones, and check currency exchange rates."
+  },
+  {
+   "name": "accommodation_search",
+   "description": "Find accommodation by location, dates, guest count, price, and availability."
+  },
+  {
+   "name": "recipe_planning",
+   "description": "Find recipes, look up cooking instructions, and plan meals around preferences and group size."
+  },
+  {
+   "name": "chinese_calendar",
+   "description": "Calculate Bazi charts, find matching birth dates, and look up traditional Chinese calendar information."
+  },
+  {
+   "name": "wikipedia_research",
+   "description": "Search Wikipedia and retrieve, summarize, or explore article content, sections, facts, and links."
+  },
+  {
+   "name": "museum_collection",
+   "description": "Browse museum departments and search for collection objects, details, and images."
+  },
+  {
+   "name": "file_conversion",
+   "description": "Extract, convert, combine, split, clean, format, and compare document and text files."
+  },
+  {
+   "name": "word_document_tools",
+   "description": "Create, read, edit, format, annotate, search, secure, and convert Word documents."
+  },
+  {
+   "name": "spreadsheet_tools",
+   "description": "Read and write spreadsheet data, manage worksheets, and create or inspect tables."
+  },
+  {
+   "name": "file_management",
+   "description": "Read, write, search, organize, inspect, and manage files and directories."
+  },
+  {
+   "name": "data_visualization",
+   "description": "Create charts, statistical graphics, and maps to visualize data, comparisons, distributions, and relationships."
+  },
+  {
+   "name": "diagramming",
+   "description": "Create or validate process, cause-and-effect, hierarchy, relationship, mind map, and canvas diagrams."
+  },
+  {
+   "name": "presentation_management",
+   "description": "Create, load, save, inspect, and configure presentation files and templates."
+  },
+  {
+   "name": "slide_editing",
+   "description": "Build and edit slide content, layouts, text, images, tables, charts, links, and transitions."
+  },
+  {
+   "name": "browser_automation",
+   "description": "Navigate webpages, interact with page elements, capture content, run scripts, and manage browser sessions."
+  },
+  {
+   "name": "http_requests",
+   "description": "Send HTTP requests and track matching responses for web services."
+  },
+  {
+   "name": "git_management",
+   "description": "Inspect repository changes and history, manage branches, stage files, and create commits."
+  },
+  {
+   "name": "task_management",
+   "description": "Plan and track multi-step work, inspect or edit tasks, and update request progress."
+  },
+  {
+   "name": "knowledge_management",
+   "description": "Search, read, write, organize, and manage notes, projects, and linked knowledge."
+  },
+  {
+   "name": "docker_management",
+   "description": "Create, deploy, list, and inspect Docker containers and Compose stacks."
+  },
+  {
+   "name": "terminal_operations",
+   "description": "Run commands, inspect process output, interact with sessions, and monitor or stop processes."
+  },
+  {
+   "name": "system_administration",
+   "description": "Inspect server settings, access scopes, usage statistics, and feedback options."
+  },
+  {
+   "name": "chess_play",
+   "description": "Set up chess games, inspect positions and legal moves, and play or search recorded moves."
+  },
+  {
+   "name": "media_processing",
+   "description": "Analyze image and audio content, inspect audio features, retrieve transcripts, and download media."
+  },
+  {
+   "name": "randomization",
+   "description": "Generate random numbers or tokens, select items, and shuffle lists."
+  },
+  {
+   "name": "calculation",
+   "description": "Evaluate mathematical expressions and return numerical results."
+  },
+  {
+   "name": "internet_registry",
+   "description": "Look up registration and network ownership information for domains, top-level domains, IP addresses, and autonomous systems."
+  },
+  {
+   "name": "coding_practice",
+   "description": "Find coding challenges and retrieve problem, contest, profile, submission, and ranking information."
+  }
+ ],
+ "created_at": "2026-10-10T22:22:28.688439+00:00"
+}
