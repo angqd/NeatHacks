@@ -34,7 +34,8 @@ from toolprune.eval.full_catalog import (
     print_summary,
     save_sets,
 )
-from toolprune.models import ROOT, RetrievedSet, Tool, load_eval_set, load_tools, read_jsonl
+from toolprune.eval.sets import SET_NAMES, load_queries, run_suffix
+from toolprune.models import ROOT, RetrievedSet, Tool, load_tools, read_jsonl
 from toolprune.tracing import init_tracing
 
 WORKFLOW = "tool-retrieval-eval"
@@ -124,6 +125,7 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=None, help="run only the first N queries of the eval set")
     parser.add_argument("--no-cache", action="store_true", help="bypass the LLM cache for reads and writes")
     parser.add_argument("--tag", default=None, help="run tag, added to the system name and output file name")
+    parser.add_argument("--eval-set", choices=SET_NAMES, default="frozen", help="query set to run")
     args = parser.parse_args()
 
     if args.tag is not None and not TAG_PATTERN.fullmatch(args.tag):
@@ -135,7 +137,7 @@ def main() -> None:
     tools_by_id = {tool.id: tool for tool in tools}
     cards = load_cards(tools)
     catalog_text = render_catalog(tools, cards)
-    queries = load_eval_set()
+    queries = load_queries(args.eval_set)
     if args.limit is not None:
         queries = queries[: args.limit]
 
@@ -162,7 +164,10 @@ def main() -> None:
         if conn is not None:
             conn.close()
 
-    path = save_sets(system, sets)
+    file_name = f"full_catalog_cards:{MODEL}{run_suffix(args.eval_set)}"
+    if args.tag:
+        file_name = f"{file_name}:{args.tag}"
+    path = save_sets(file_name, sets)
     print_summary(system, sets)
     print(f"  wrote {path}")
 

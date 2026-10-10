@@ -13,8 +13,9 @@ import time
 
 import numpy as np
 
+from toolprune.eval.sets import SET_NAMES, load_queries, run_suffix
 from toolprune.eval.tokens import tool_tokens
-from toolprune.models import ROOT, RetrievedSet, load_eval_set, load_tools
+from toolprune.models import ROOT, RetrievedSet, load_tools
 from toolprune.route.router import HierarchicalRouter
 
 K = 10
@@ -48,6 +49,7 @@ def main() -> None:
     parser.add_argument("--no-cache", action="store_true", help="bypass the LLM cache for reads and writes")
     parser.add_argument("--tag", default=None, help="run tag, added to the system name and output file name")
     parser.add_argument("--annotations", default="pass1", choices=["pass1", "final"], help="tag cards to route over")
+    parser.add_argument("--eval-set", choices=SET_NAMES, default="frozen", help="query set to run")
     args = parser.parse_args()
 
     if args.tag is not None and not TAG_PATTERN.fullmatch(args.tag):
@@ -55,7 +57,7 @@ def main() -> None:
 
     router = HierarchicalRouter(group_by=args.group_by, annotations=args.annotations, use_cache=not args.no_cache)
     tools_by_id = {tool.id: tool for tool in load_tools()}
-    queries = load_eval_set()
+    queries = load_queries(args.eval_set)
     if args.limit is not None:
         queries = queries[: args.limit]
 
@@ -95,7 +97,10 @@ def main() -> None:
             print(f"progress: {index}/{len(queries)} queries")
 
     RUNS_DIR.mkdir(parents=True, exist_ok=True)
-    path = RUNS_DIR / f"{system.replace(':', '__')}.jsonl"
+    file_name = f"{router.name}{run_suffix(args.eval_set)}"
+    if args.tag:
+        file_name = f"{file_name}:{args.tag}"
+    path = RUNS_DIR / f"{file_name.replace(':', '__')}.jsonl"
     with path.open("w", encoding="utf-8") as handle:
         for item in sets:
             handle.write(item.model_dump_json() + "\n")

@@ -12,7 +12,10 @@ from typing import Any
 import numpy as np
 
 from toolprune.eval.score import bootstrap_ci, mean, paired_difference, score_query, top_ids
-from toolprune.models import ROOT, EvalQuery, RetrievedSet, load_eval_set, read_jsonl
+import argparse
+
+from toolprune.eval.sets import SET_NAMES, load_queries, run_suffix
+from toolprune.models import ROOT, EvalQuery, RetrievedSet, read_jsonl
 
 RUNS_DIR = ROOT / "reports" / "runs"
 REPORTS_DIR = ROOT / "reports"
@@ -39,10 +42,18 @@ SPLIT_METRICS = ["slot_recall@5", "full_coverage@5"]
 PAIRED_METRICS = ["slot_recall@5", "full_coverage@5", "r_precision", "mrr"]
 
 
-def load_runs() -> dict[str, dict[str, RetrievedSet]]:
-    """System name -> {query_id: RetrievedSet}, one entry per runs file, in filename order."""
+def load_runs(eval_set: str = "frozen") -> dict[str, dict[str, RetrievedSet]]:
+    """System name -> {query_id: RetrievedSet}, one entry per runs file, in filename order.
+
+    Run files of another query set carry that set's suffix in the file name (see run_suffix) and
+    are kept apart, so frozen and natural runs of the same system never collide."""
     runs: dict[str, dict[str, RetrievedSet]] = {}
+    suffix = run_suffix(eval_set)
+    other = [run_suffix(n) for n in SET_NAMES if n != eval_set and run_suffix(n)]
     for path in sorted(RUNS_DIR.glob("*.jsonl")):
+        stem = path.stem
+        if any(o in stem for o in other) or (suffix and suffix not in stem):
+            continue
         sets = [RetrievedSet(**row) for row in read_jsonl(path)]
         names = {rs.system for rs in sets}
         if len(names) != 1:
@@ -224,8 +235,11 @@ def render_tables(systems: list[str], n_queries: int, agg: dict[str, Any], paire
 
 
 def main() -> None:
-    queries = load_eval_set()
-    runs = load_runs()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--eval-set", choices=SET_NAMES, default="frozen")
+    eval_set = parser.parse_args().eval_set
+    queries = load_queries(eval_set)
+    runs = load_runs(eval_set)
     systems = list(runs)
 
     per_query: dict[str, dict[str, Any]] = {}
@@ -242,10 +256,13 @@ def main() -> None:
         "aggregates": {"by_system": by_system, "paired": paired_res},
     }
     REPORTS_DIR.mkdir(exist_ok=True)
-    RESULTS_PATH.write_text(json.dumps(results, indent=2), encoding="utf-8")
-    TABLES_PATH.write_text(render_tables(systems, len(queries), by_system, paired_res), encoding="utf-8")
-    print(f"wrote {RESULTS_PATH}")
-    print(f"wrote {TABLES_PATH}")
+    suffix = run_suffix(eval_set)
+    results_path = RESULTS_PATH.with_name(f"results{suffix}.json")
+    tables_path = TABLES_PATH.with_name(f"baseline_v0_tables{suffix}.md")
+    results_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
+    tables_path.write_text(render_tables(systems, len(queries), by_system, paired_res), encoding="utf-8")
+    print(f"wrote {results_path}")
+    print(f"wrote {tables_path}")
 
 
 if __name__ == "__main__":

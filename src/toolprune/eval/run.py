@@ -15,8 +15,9 @@ import numpy as np
 
 from toolprune.bm25 import BM25Retriever
 from toolprune.embeddings import EmbeddingRetriever
+from toolprune.eval.sets import SET_NAMES, load_queries, run_suffix
 from toolprune.eval.tokens import tool_tokens
-from toolprune.models import ROOT, EvalQuery, RetrievedSet, Retriever, Tool, load_eval_set, load_tools
+from toolprune.models import ROOT, EvalQuery, RetrievedSet, Retriever, Tool, load_tools
 from toolprune.tracing import init_tracing
 
 RUNS_DIR = ROOT / "reports" / "runs"
@@ -86,18 +87,19 @@ def main() -> None:
     parser.add_argument("--systems", default=DEFAULT_SYSTEMS, help="comma list of: bm25, emb")
     parser.add_argument("--k", type=int, default=10, help="number of tools to return per query")
     parser.add_argument("--split", choices=["dev", "test"], default=None, help="restrict to one split")
+    parser.add_argument("--eval-set", choices=SET_NAMES, default="frozen", help="query set to run")
     args = parser.parse_args()
 
     init_tracing("tool-retrieval-eval")
     names = [name.strip() for name in args.systems.split(",") if name.strip()]
     tools = load_tools()
     tools_by_id = {tool.id: tool for tool in tools}
-    queries = load_eval_set(args.split)
+    queries = load_queries(args.eval_set, args.split)
     retrievers = build_retrievers(names, tools)
 
     for name, retriever in retrievers.items():
         sets = run_system(retriever, queries, tools_by_id, args.k)
-        path = save_sets(retriever.name, sets)
+        path = save_sets(retriever.name + run_suffix(args.eval_set), sets)
         print_summary(retriever.name, sets)
         print(f"  wrote {path}")
 

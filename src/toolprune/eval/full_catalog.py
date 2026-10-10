@@ -27,8 +27,9 @@ import numpy as np
 from agents import Agent, Runner
 from pydantic import BaseModel
 
+from toolprune.eval.sets import SET_NAMES, load_queries, run_suffix
 from toolprune.eval.tokens import tool_tokens
-from toolprune.models import ROOT, EvalQuery, RankedTool, RetrievedSet, Tool, load_eval_set, load_tools
+from toolprune.models import ROOT, EvalQuery, RankedTool, RetrievedSet, Tool, load_tools
 from toolprune.tracing import init_tracing
 
 MODEL = "gpt-6-luna"
@@ -203,6 +204,7 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=None, help="run only the first N queries of the eval set")
     parser.add_argument("--no-cache", action="store_true", help="bypass the LLM cache for reads and writes")
     parser.add_argument("--tag", default=None, help="run tag, added to the system name and output file name")
+    parser.add_argument("--eval-set", choices=SET_NAMES, default="frozen", help="query set to run")
     args = parser.parse_args()
 
     if args.tag is not None and not TAG_PATTERN.fullmatch(args.tag):
@@ -213,7 +215,7 @@ def main() -> None:
     catalog_ids = {tool.id for tool in tools}
     tools_by_id = {tool.id: tool for tool in tools}
     catalog_text = render_catalog(tools)
-    queries = load_eval_set()
+    queries = load_queries(args.eval_set)
     if args.limit is not None:
         queries = queries[: args.limit]
 
@@ -240,7 +242,9 @@ def main() -> None:
         if conn is not None:
             conn.close()
 
-    name = system
+    name = f"full_catalog:{MODEL}{run_suffix(args.eval_set)}"
+    if args.tag:
+        name = f"{name}:{args.tag}"
     path = save_sets(name, sets)
     print_summary(system, sets)
     print(f"  wrote {path}")
