@@ -28,6 +28,12 @@ See `phase_plan.md` for the build order and acceptance criteria.
 - **Determinism:** temperature 0, cache every LLM and embedding call, log the model per call.
 - **Tests:** no unit tests at this scale. One smoke test only.
 
+## Terminology
+
+`glossary.md` defines every term (server, tool, catalog, gold slot, acceptable tools, challenge bucket, task family, facets, taxonomy, domain, returned set, and more). Use those words in code, reports, and commits.
+
+Visibility rule: baselines run on raw tool documents only, as an ordinary MCP client would. Only the enricher and the router touch our taxonomy, facets, and server cards. No system ever sees the eval annotations (gold, challenge bucket, task family, confusers).
+
 ## Data
 
 Source: LiveMCPBench (`ICIP/LiveMCPBench` on Hugging Face). Raw files are fetched by script into `data/raw/` (gitignored) with URL, size, sha256, and fetch time in `data/raw/manifest.json`.

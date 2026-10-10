@@ -18,6 +18,8 @@ Last updated: 2026-10-11 (hackathon day 2).
 | Out-of-scope queries | Known gap. Add synthetic non-matching queries later, in a separate labeled file. |
 | Gold | Candidate set per slot: the pick plus its alternates. Precision and recall are scored against it. Confusers are tracked separately. |
 
+Terms are defined in `glossary.md`. Use them exactly.
+
 ## Working method
 
 The orchestrator (the main Claude Code session) plans, decides, and reviews. Menial scripting, collection, and exploration go to Haiku subagents, one small task each, with an exact file path and function signature. The orchestrator reviews every deliverable by running it and checking its output before moving on. Commit per phase.
