@@ -1,0 +1,124 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4KYRNEQKQWMC61WWNMXQG39",
+  "session_id": "c5ba5514-6b9c-45ac-a8a8-6c64b13e7f3d",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-10T22:26:03.950658Z",
+  "branch": "main",
+  "checkpoints_count": 2,
+  "save_step_count": 3,
+  "files_touched": [
+    "data/enriched/groups_server.json",
+    "src/toolprune/enrich/group.py",
+    "src/toolprune/eval/enriched.py"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-sonnet-5-5",
+  "turn_id": "fc484f1ba076",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 332,
+    "cache_creation_tokens": 440151,
+    "cache_read_tokens": 33658540,
+    "output_tokens": 226319,
+    "api_call_count": 166,
+    "subagent_tokens": {
+      "input_tokens": 36,
+      "cache_creation_tokens": 130638,
+      "cache_read_tokens": 627732,
+      "output_tokens": 14289,
+      "api_call_count": 18
+    }
+  },
+  "skill_events_version": 1,
+  "skill_events": [
+    {
+      "id": "prompt-skill-claude-code-caveman-2026-10-10T12:09:07.707242Z",
+      "event_type": "prompt_invocation",
+      "skill": {
+        "name": "caveman"
+      },
+      "source": {
+        "agent": "claude-code",
+        "signal": "prompt_slash_command",
+        "confidence": "explicit"
+      },
+      "turn_id": "73fec0729fef",
+      "timestamp": "2026-10-10T12:09:07.707242Z",
+      "native": {
+        "command": "/caveman"
+      },
+      "collapse": {
+        "target": "user_message",
+        "label": "/caveman",
+        "default_collapsed": true
+      }
+    }
+  ],
+  "session_metrics": {
+    "turn_count": 53
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-10T22:26:03.843762Z",
+    "agent_lines": 728,
+    "agent_removed": 0,
+    "human_added": 3713,
+    "human_modified": 282,
+    "human_removed": 0,
+    "total_committed": 4582,
+    "total_lines_changed": 4723,
+    "agent_percentage": 15.41393182299386,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 300,
+      "user_lines_removed": 0,
+      "agent_lines_added": 1760,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "reports/runs/bm25__enriched_raw_tag.jsonl": 60,
+        "reports/runs/bm25__enriched_tag.jsonl": 60,
+        "reports/runs/emb__text-embedding-3-small__enriched_raw_tag.jsonl": 60,
+        "reports/runs/emb__text-embedding-3-small__enriched_tag.jsonl": 60,
+        "reports/runs/emb__text-embedding-3-small__enriched_tag_topic.jsonl": 60
+      }
+    },
+    {
+      "checkpoint_number": 4,
+      "user_lines_added": 3457,
+      "user_lines_removed": 144,
+      "agent_lines_added": 1760,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "data/enriched/annotations.jsonl": 527,
+        "data/enriched/grouper_report.md": 116,
+        "data/enriched/groups_domain.json": 1249,
+        "data/enriched/groups_server.json": 141,
+        "data/enriched/taxonomy_v1_draft.json": 227,
+        "reports/runs/bm25__enriched_raw_tag.jsonl": 60,
+        "reports/runs/bm25__enriched_tag.jsonl": 60,
+        "reports/runs/emb__text-embedding-3-small__enriched_raw_tag.jsonl": 60,
+        "reports/runs/emb__text-embedding-3-small__enriched_tag.jsonl": 60,
+        "reports/runs/emb__text-embedding-3-small__enriched_tag_topic.jsonl": 60,
+        "reports/runs/full_catalog_cards__gpt-6-luna.jsonl": 60,
+        "reports/runs/router__server.jsonl": 4,
+        "src/toolprune/enrich/group.py": 497,
+        "src/toolprune/eval/route_run.py": 108,
+        "src/toolprune/route/router.py": 228
+      },
+      "user_removed_per_file": {
+        "data/enriched/groups_server.json": 141,
+        "reports/runs/full_catalog_cards__gpt-6-luna.jsonl": 3
+      }
+    }
+  ]
+}
