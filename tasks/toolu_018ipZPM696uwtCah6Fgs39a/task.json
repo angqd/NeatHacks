@@ -1,0 +1,18 @@
+{
+  "tool_use_id": "toolu_018ipZPM696uwtCah6Fgs39a",
+  "agent_id": "a227111966f23c7c1",
+  "subagent_type": "general-purpose",
+  "task_description": "Full-catalog drop-in baseline",
+  "files": [
+    "src/toolprune/eval/full_catalog.py"
+  ],
+  "token_usage": {
+    "input_tokens": 14,
+    "cache_creation_tokens": 63721,
+    "cache_read_tokens": 288059,
+    "output_tokens": 12152,
+    "api_call_count": 7
+  },
+  "started_at": "2026-10-11T02:45:03.253627+05:30",
+  "completed_at": "2026-10-11T02:46:13.50271+05:30"
+}

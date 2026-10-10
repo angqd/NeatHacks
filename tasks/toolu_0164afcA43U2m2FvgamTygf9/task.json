@@ -1,0 +1,7 @@
+{
+  "tool_use_id": "toolu_0164afcA43U2m2FvgamTygf9",
+  "agent_id": "a36a057f7c641e883",
+  "subagent_type": "general-purpose",
+  "task_description": "BM25 sanity check on original bench",
+  "started_at": "2026-10-11T01:50:22.298671+05:30"
+}

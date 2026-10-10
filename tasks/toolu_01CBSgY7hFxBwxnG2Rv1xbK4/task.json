@@ -1,0 +1,18 @@
+{
+  "tool_use_id": "toolu_01CBSgY7hFxBwxnG2Rv1xbK4",
+  "agent_id": "a22be5c17f1b06fa0",
+  "subagent_type": "general-purpose",
+  "task_description": "Noise-scaling curve",
+  "files": [
+    "src/toolprune/eval/noise.py"
+  ],
+  "token_usage": {
+    "input_tokens": 16,
+    "cache_creation_tokens": 65655,
+    "cache_read_tokens": 371567,
+    "output_tokens": 12032,
+    "api_call_count": 8
+  },
+  "started_at": "2026-10-11T02:45:03.254328+05:30",
+  "completed_at": "2026-10-11T02:46:12.43012+05:30"
+}
