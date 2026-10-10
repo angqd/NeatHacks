@@ -1,0 +1,25 @@
+Get quick context on the hackathon project were working on , our goal in this thread will be agent architecture planning , before we move to the archi we need to do repo setup. I want to use openai for agents sdk is it sutibale , so an agents sdk + pydantic for the main agent hook , what would we need on memeory and other layers given all our research gives us the source list we need
+
+---
+
+/caveman
+
+---
+
+/caveman lite
+
+---
+
+Okay get the update repo context , this thread will be used to plan our hackathon project 
+things that are done 
+1.  idea 
+2. env setup basics to switch focus to poc build 
+3. a sample indian business KYC flow acquired whos minimal set well adapt for our POC
+
+we have a seperate thread i own that runs cheaper models for exploratory and web search based tasks to verify datasources and those kinds of things so , if you need that remember to hand off those taks sand tell me 
+
+what you need to do , read the context and understand the data-source-plan.md , we are currently planning the poc datacollection sourxes and paths for the agent test run
+
+---
+
+lets treat the datasource plan as the updated one , the og plan is like first draft idea at hackathon beginning , point out discrepancies but prioritise the current.  2 more open questions to which u can give rough inputs , what is the input format and output format , otuput whats known is : citations + a scoring rather than asbolute verdict and a LLM generated brief of sorts
