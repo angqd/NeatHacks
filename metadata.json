@@ -1,0 +1,42 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4M0CSRP6A7WPBBTSBF42PRE",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 6,
+  "files_touched": [
+    "reports/runs/bm25__name_desc_server__natural.jsonl",
+    "reports/runs/emb_rerank__gpt-6-luna__raw__n20.jsonl",
+    "reports/tool_set_survey.md",
+    "src/toolprune/eval/build_natural.py",
+    "src/toolprune/eval/emb_rerank.py",
+    "src/toolprune/eval/full_catalog.py",
+    "src/toolprune/eval/full_catalog_cards.py",
+    "src/toolprune/eval/route_run.py",
+    "src/toolprune/eval/run.py",
+    "src/toolprune/eval/sets.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 392,
+    "cache_creation_tokens": 495960,
+    "cache_read_tokens": 45870539,
+    "output_tokens": 262651,
+    "api_call_count": 196,
+    "subagent_tokens": {
+      "input_tokens": 92,
+      "cache_creation_tokens": 270514,
+      "cache_read_tokens": 2622555,
+      "output_tokens": 30961,
+      "api_call_count": 46
+    }
+  }
+}

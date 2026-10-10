@@ -1,0 +1,147 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4M0CSRP6A7WPBBTSBF42PRE",
+  "session_id": "c5ba5514-6b9c-45ac-a8a8-6c64b13e7f3d",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-10T22:54:33.291247Z",
+  "branch": "main",
+  "checkpoints_count": 6,
+  "save_step_count": 4,
+  "files_touched": [
+    "reports/runs/bm25__name_desc_server__natural.jsonl",
+    "reports/runs/emb_rerank__gpt-6-luna__raw__n20.jsonl",
+    "reports/tool_set_survey.md",
+    "src/toolprune/eval/build_natural.py",
+    "src/toolprune/eval/emb_rerank.py",
+    "src/toolprune/eval/full_catalog.py",
+    "src/toolprune/eval/full_catalog_cards.py",
+    "src/toolprune/eval/route_run.py",
+    "src/toolprune/eval/run.py",
+    "src/toolprune/eval/sets.py"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-sonnet-5-5",
+  "turn_id": "fbff65b713f3",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 392,
+    "cache_creation_tokens": 495960,
+    "cache_read_tokens": 45870539,
+    "output_tokens": 262651,
+    "api_call_count": 196,
+    "subagent_tokens": {
+      "input_tokens": 92,
+      "cache_creation_tokens": 270514,
+      "cache_read_tokens": 2622555,
+      "output_tokens": 30961,
+      "api_call_count": 46
+    }
+  },
+  "skill_events_version": 1,
+  "skill_events": [
+    {
+      "id": "prompt-skill-claude-code-caveman-2026-10-10T12:09:07.707242Z",
+      "event_type": "prompt_invocation",
+      "skill": {
+        "name": "caveman"
+      },
+      "source": {
+        "agent": "claude-code",
+        "signal": "prompt_slash_command",
+        "confidence": "explicit"
+      },
+      "turn_id": "73fec0729fef",
+      "timestamp": "2026-10-10T12:09:07.707242Z",
+      "native": {
+        "command": "/caveman"
+      },
+      "collapse": {
+        "target": "user_message",
+        "label": "/caveman",
+        "default_collapsed": true
+      }
+    }
+  ],
+  "session_metrics": {
+    "turn_count": 64
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-10T22:54:33.174559Z",
+    "agent_lines": 0,
+    "agent_removed": 0,
+    "human_added": 64290,
+    "human_modified": 21,
+    "human_removed": 0,
+    "total_committed": 64299,
+    "total_lines_changed": 76690,
+    "agent_percentage": 0,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 619,
+      "user_lines_removed": 72,
+      "agent_lines_added": 32,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "data/processed/natural_set_v1.jsonl": 94,
+        "reports/runs/bm25__name_desc_server.jsonl": 60,
+        "reports/tool_set_survey.md": 54,
+        "src/toolprune/eval/build_natural.py": 78,
+        "src/toolprune/eval/emb_rerank.py": 305,
+        "src/toolprune/eval/full_catalog.py": 7,
+        "src/toolprune/eval/full_catalog_cards.py": 8,
+        "src/toolprune/eval/route_run.py": 8,
+        "src/toolprune/eval/run.py": 5
+      },
+      "user_removed_per_file": {
+        "reports/runs/bm25__name_desc_server.jsonl": 60,
+        "src/toolprune/eval/full_catalog.py": 3,
+        "src/toolprune/eval/full_catalog_cards.py": 3,
+        "src/toolprune/eval/route_run.py": 3,
+        "src/toolprune/eval/run.py": 3
+      }
+    },
+    {
+      "checkpoint_number": 4,
+      "user_lines_added": 345,
+      "user_lines_removed": 3,
+      "agent_lines_added": 654,
+      "agent_lines_removed": 72,
+      "user_added_per_file": {
+        "data/processed/natural_set_v1.jsonl": 94,
+        "reports/runs/emb__text-embedding-3-small__name_desc_server__natural.jsonl": 94,
+        "reports/runs/emb_rerank__gpt-6-luna__raw__n20.jsonl": 60,
+        "reports/runs/emb_rerank__gpt-6-luna__tag__n20.jsonl": 3,
+        "reports/runs/full_catalog__gpt-6-luna__natural.jsonl": 94
+      },
+      "user_removed_per_file": {
+        "reports/runs/emb_rerank__gpt-6-luna__raw__n20.jsonl": 3
+      }
+    },
+    {
+      "checkpoint_number": 5,
+      "user_lines_added": 342,
+      "user_lines_removed": 3,
+      "agent_lines_added": 654,
+      "agent_lines_removed": 72,
+      "user_added_per_file": {
+        "data/processed/natural_set_v1.jsonl": 94,
+        "reports/runs/emb__text-embedding-3-small__name_desc_server__natural.jsonl": 94,
+        "reports/runs/emb_rerank__gpt-6-luna__raw__n20.jsonl": 60,
+        "reports/runs/full_catalog__gpt-6-luna__natural.jsonl": 94
+      },
+      "user_removed_per_file": {
+        "reports/runs/emb_rerank__gpt-6-luna__raw__n20.jsonl": 3
+      }
+    }
+  ]
+}
