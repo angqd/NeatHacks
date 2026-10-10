@@ -1,31 +1,43 @@
 # ToolPrune
 
-Hierarchical tool retrieval for MCP/API tools. An LLM enriches each tool with facet annotations. Queries route through the hierarchy (L0 function family, then L1 domain, then tool), so the agent sees only the few tools it needs.
+Hierarchical tool retrieval for MCP and API tools. An LLM annotates each tool once with facets (function, domain, effect, a "not for" line). At query time a router prunes the catalog so an agent sees a few tools, not hundreds.
 
-Status: Phase 1. Eval set built and frozen; baselines and enricher not yet built. Hypothesis unproven. See `Idea_Draft.md` for the full plan.
+Hypothesis (unproven): on queries where tool names or descriptions collide, routing over enriched annotations makes fewer confusion errors than plain embedding search, and passes far fewer tokens to the agent than loading every tool definition. Most of any gain may come from the enrichment alone, not the hierarchy. The benchmark is built to tell these apart.
 
-## Agent design
+Built for neatHack (Oct 10 to 12, 2026).
 
-- **Agent framework:** OpenAI Agents SDK (`openai-agents`).
-- **Data contracts:** Pydantic models for every tool, query, annotation, and agent output. No untyped dicts cross a module boundary.
-- **Structured output:** agent outputs are Pydantic models validated by the SDK.
-- **Tracing:** neatlogs via its OpenAI Agents processor. Workflow names: `tool-retrieval-eval`, `tool-enrich`, `tool-route`.
-- **Model calls:** temperature 0, cached by content hash, model name logged per call.
+## Status
 
-Pending: `Idea_Draft.md` says "plain code, no agent framework." This README follows the OpenAI Agents SDK decision. Update the draft once confirmed.
+Phase 1, day 2 of the hackathon.
 
-## Dataset (as downloaded)
+- Done: the 60-query eval set is built, reviewed, and frozen. Dataset labeling pipeline and review tools are in the repo.
+- Not built yet: retrievers (BM25, embeddings), the scoring harness, LLM baselines, judges, the enricher, and the router.
+- The first BM25 number is not trusted yet. The reproduction gate (about 31.7 Recall@5 on the original bench) has not been run in this repo.
 
-Source: LiveMCPBench (`ICIP/LiveMCPBench` on Hugging Face). Files are stored unmodified in `data/raw/`, with URL, size, sha256, and fetch time per file in `data/raw/manifest.json`.
+See `phase_plan.md` for the build order and acceptance criteria.
 
-| File | Records | Contents |
-| --- | --- | --- |
-| `tools/tools.json` | 70 servers, 527 tools | Per server: `name`, `category`, `web`, `tools` (tool name, description, inputSchema, annotations) |
-| `tasks/tasks.json` | 95 tasks | `task_id`, `Question`, `answers`, `category`, `file_name`, `Annotator Metadata` (Steps, Tools, Number of tools) |
-| `tools/all_config.json` | 70 entries | Server configs (not used yet) |
+## Decisions in force
 
-Tool categories: Discovery 25, Code 11, File Access 7, Visualization 7, Finance 6, Entertainment 5, Miscellaneous 8, Location 1 (per catalog entry).
-Task categories: Office 31, Lifestyle 15, Leisure 14, Finance 14, Travel 12, Shopping 9.
+- **Model:** `gpt-6-luna` for every baseline, the enricher, and the retriever, so systems stay comparable.
+- **Embeddings:** OpenAI `text-embedding-3-small`, cached on disk by content hash.
+- **OpenAI calls:** only through OpenAI SDKs. The enricher and retriever will use the OpenAI Agents SDK (`openai-agents`).
+- **Judges:** two model families, blind and shuffled. Start with Claude Haiku 5.5 via LiteLLM, then add Claude Sonnet 4.6, then an OpenAI-family judge.
+- **Tracing:** neatlogs. Workflow names: `tool-retrieval-eval`, `tool-enrich`, `tool-route`.
+- **Data contracts:** Pydantic models for tools, queries, annotations, and outputs.
+- **Determinism:** temperature 0, cache every LLM and embedding call, log the model per call.
+- **Tests:** no unit tests at this scale. One smoke test only.
+
+## Data
+
+Source: LiveMCPBench (`ICIP/LiveMCPBench` on Hugging Face). Raw files are fetched by script into `data/raw/` (gitignored) with URL, size, sha256, and fetch time in `data/raw/manifest.json`.
+
+| File | Contents |
+| --- | --- |
+| `tools/tools.json` | 70 servers, 527 tools: name, description, inputSchema, annotations |
+| `tasks/tasks.json` | 95 tasks: question, answer, category, annotator steps, reference tool list |
+| `tools/all_config.json` | Server configs (not used) |
+
+Catalog facts: tool names repeat across servers for 30 tools, 66 tools have a missing or very short description, 12 servers have one tool and 10 have 15 or more, and the full catalog is roughly 97k tokens (estimate).
 
 Fetch with:
 
@@ -34,44 +46,84 @@ Fetch with:
 .venv/bin/python -m toolprune.pipeline --force  # re-download
 ```
 
-## Eval set build (done)
+Check the LiveMCPBench data terms before publishing derived data. This is still an open item.
 
-The 60-query eval set is built and frozen: `data/processed/eval_set.jsonl` (sha256 `305447a1...bf4afc`). Method and stage specs are in `benchmark_plan.md`.
+## Eval set
 
-| Step | Script | Output |
+`data/processed/eval_set.jsonl` is frozen: 60 queries, sha256 `305447a13c3359e40b0193a2857c69d99430414bed2f337976db9d53ff0f4afc`. Do not edit it. A change means a new versioned file.
+
+- **Buckets:** multi_capability 15, semantic_distance 12, ambiguity 10, taxonomy_collision 10, near_duplicate 9, none 4.
+- **Split:** 18 dev, 42 test. Never tune on test.
+- **Derived:** 12 queries are rewrites of bench tasks (ambiguity and semantic distance) and are marked `derived`. They keep the bench gold.
+- **Families:** 15 task families (for example `finance_analysis`, `academic_search`, `geo_location`), capped at 8 queries each. The families are independent of any enricher taxonomy. `data/processed/families_review.md` lists them.
+- **Gold:** each query has slots. A slot has one picked tool and its acceptable alternates. Precision and recall are scored against that candidate set. Confusers (plausible but wrong tools) are tracked separately.
+- **Known gap:** there are no out-of-scope queries (correct answer: no tool). Synthetic ones will be added later in a separate, labeled file.
+
+How the set was built, in order:
+
+| Step | Script or run | Output |
 | --- | --- | --- |
-| Normalize catalog, resolve bench gold names | `toolprune.normalize` | `tools.jsonl`, `tasks_resolved.jsonl` (regenerable, not committed) |
-| Deterministic task features | `toolprune.task_features` | features inside `tasks_tagged.jsonl` |
-| LLM labeling, blind second opinion, adjudication | subagent runs (Haiku, Sonnet) | `tasks_tagged.jsonl`, `review_sonnet_*.jsonl`, `adjudicated_*.jsonl` |
+| Normalize the catalog, resolve bench gold names | `toolprune.normalize` | `tools.jsonl`, `tasks_resolved.jsonl` (regenerable, not committed) |
+| Deterministic task features | `toolprune.task_features` | features in `tasks_tagged.jsonl` |
+| First-pass labels | Haiku subagent | `tasks_tagged.jsonl` |
+| Blind second opinion | Sonnet subagents | `review_sonnet_*.jsonl` |
+| Adjudication of every point | Sonnet subagents | `adjudicated_*.jsonl` |
 | Review sheets | `toolprune.review_sheet`, `toolprune.spot_sheet` | HTML sheets (regenerable) |
+| Human spot check of 20 gold-changing decisions | review sheet | `spot_decisions.json` |
 | Merge and validate | `toolprune.merge_adjudication` | `tasks_reviewed.jsonl` |
-| Families, derived rewrites | subagent run | `families.json`, `task_families.jsonl`, `derived_candidates.jsonl` |
+| Families and derived rewrites | Sonnet subagent | `families.json`, `task_families.jsonl`, `derived_candidates.jsonl` |
 | Select 60, split 30/70 | `toolprune.select_subset` | `eval_set.jsonl`, `selection_report.md` |
 
-The LLM-written labels are checked by a blind second model and an adjudicator. A human reviewed the 20 decisions that change gold (`spot_decisions.json`). The other labels are model-reviewed only. 12 of the 60 queries are derived rewrites of bench tasks (ambiguity and semantic distance) and are marked `derived`. Gold comes from the bench's reference tool lists, adjusted by review.
+Label quality: the labels are LLM-written and model-reviewed. A human checked only the 20 decisions that change what gold means, and restored 8 slots the adjudicator had dropped. The other labels have no human check. Treat gold as a reviewed reference, not ground truth. The blind reviewer flagged 27 tasks whose bench reference tool list misses a needed capability, so the lists are probably incomplete.
 
 ## Benchmark method
 
-- **Baseline:** BM25 (k1=1.5, b=0.75) over tool name, description, and server name. Deterministic: fixed tokenization, sorted query terms, stable tie order. Not yet implemented in this repo.
-- **Gate:** BM25 must reproduce about 31.7 Recall@5 (toolrank, self-reported) within 2 points on the original LiveMCPBench queries before any other number is trusted. An earlier unversioned run gave 37.78, so the gate is not passed.
-- **Confusion rate:** gold tool missed in top k while a labeled confuser ranks in top k. Definition is fixed in `benchmark_plan.md` before the real run.
+Systems compared on the frozen set:
 
-## Neatlogs setup (order)
+1. Full catalog in context: all tool definitions in one prompt, exact token count.
+2. BM25 over tool name, description, and server name (k1=1.5, b=0.75, deterministic).
+3. Embedding top-k, raw text.
+4. Embedding shortlist plus LLM rerank.
+5. Ablation: enriched embeddings, no hierarchy.
+6. The router over enriched annotations.
 
-1. Create a neatlogs API key. Store it as `NEATLOGS_API_KEY` in `.env` (gitignored). Never in code.
-2. Confirm the pipeline exports: run `python -m toolprune.pipeline` with the key set, check spans in the neatlogs dashboard.
-3. Wire the OpenAI Agents processor into the agent code once the agent exists.
-4. Record a before/after trace pair for each change, with the numbers compared.
-5. Record one failing run where an action fails and the agent recovers.
+Metrics:
 
-## Open questions
+- Deterministic: slot recall@k (a slot is hit by its pick or any alternate), full coverage@k, precision@k and size-matched precision, set-F1, MRR, confusion rate (a gold slot missed while a labeled confuser is returned), unjudged rate, returned tokens, p50 latency, cost per query. Bootstrap intervals and paired win/loss per bucket.
+- LLM judges (secondary): sufficiency of the returned set, and labels for unjudged returned tools. Two families, blind, run twice, with agreement reported.
+- Also planned: a catalog audit and a noise-scaling curve (pool sizes 50, 100, 250, 527, gold kept).
 
-1. **Gold for ambiguous names.** 29 tool names exist on several servers (e.g. `search`, `fetch`, `read_file`). Resolve by hand, by server named in task steps, or drop?
-2. **Unresolved gold.** 5 gold names are absent from the catalog (e.g. `ddg-search`, `get_maven_latest_version`). Missing from the snapshot, or renamed?
-3. **Gate failure.** BM25 scores 37.78 vs 31.68. Doc-text mismatch with toolrank, or different query text? Which variant matches?
-4. **Confusers.** Currently 0 queries have confusers because ambiguous names are excluded from gold. Count ambiguous candidates as confusers?
-5. **Human verification.** Who checks queries and gold labels, and how many?
-6. **Agent framework.** Confirm OpenAI Agents SDK over the plain-code plan in `Idea_Draft.md`.
-7. **LLM for enrichment.** Which model, and which API key? None set in the environment yet.
-8. **Collision subset.** Build the ~250-tool collision set from the plan, or use all 527?
-9. **Neatlogs key.** Do you have one for this project?
+Gates:
+
+- Gate 0: BM25 reproduces about 31.7 Recall@5 on the original bench queries within about 2 points before any other number is trusted.
+- Gate 1: baselines miss a meaningful share on the hard buckets.
+- Gate 2: the router matches or beats embedding plus rerank on confusion rate, or ties at lower tokens. If not, the enricher is the product.
+
+At 60 queries, one query is about 1.7 points. Report intervals and never claim state of the art.
+
+## Repo layout
+
+```
+Idea_Draft.md        original idea and hypothesis
+benchmark_plan.md    dataset stage specs and rules
+phase_plan.md        build order, decisions, acceptance criteria
+product_focus.md     product thinking, parked for after the POC
+ui_brief.md          logo and UI brief (logo first)
+src/toolprune/       package: fetch, normalize, features, review tools, selection
+data/raw/            fetched bench files (gitignored)
+data/processed/      labeled data, adjudications, families, frozen eval set
+tests/               smoke test only
+```
+
+## Setup
+
+Python 3.12 and a virtual environment. Install with `pip install -e .`. Put keys in `.env` (gitignored, never committed): `OPENAI_API_KEY`, `NEATLOGS_API_KEY`, `LITELLM_API_KEY`.
+
+## Open items
+
+1. **Gate failure.** An earlier unversioned BM25 run gave 37.78 against the 31.68 reference. Find which document-text variant matches.
+2. **LiteLLM endpoint.** The judges need the LiteLLM base URL.
+3. **Data terms.** Confirm LiveMCPBench terms before publishing derived data.
+4. **Out-of-scope set.** Write synthetic non-matching queries as a labeled extension.
+5. **Enricher design.** Per-server annotation, then a cross-server taxonomy (L1, and L0 only if cluster sizes need it).
+6. **Neatlogs evidence.** Before and after trace pair, plus one failure-and-recovery run.
