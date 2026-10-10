@@ -167,6 +167,8 @@ The two biggest risks are matching the wrong entity and harming a real business 
 | Wrong entity match | A false claim lands on the wrong business | Resolver with a match-confidence score, an explicit "cannot verify" state, and a name-collision test set |
 | A source breaks or blocks us | The demo fails | Adapters with live and cached modes, fixtures for demo entities, no captcha-solving, cached snapshots |
 | Privacy of individuals | Proprietors are individuals, and compiling profiles of private people needs care | Company and LLP data first; synthetic or consenting proprietors only; no personal dossiers; no LinkedIn |
+| API rate limits | Hitting API quota during demo or eval | Check directory.apisetu.gov.in for rate limits per API; test at demo scale; document limits in README |
+| Personal data caching | API Setu requires informed consent and 24-hour breach notification for personal data; uncontrolled cache grows liability | Use fixtures and synthetic data only; set `CACHE_TTL_HOURS` for auto-deletion; document cache retention policy; never cache real personal data beyond test runs |
 | Overclaiming | Loses trust with judges and users | No default prediction; every report lists what was and was not checked |
 | Too much for one person in 48 hours | Missing the deadline | Hour gates and cut lines in the timeline |
 | Existing verification vendors | Weak originality story | Position as affordable, explainable, cited reports for tiny businesses; the moat is a direction, not yet built |
@@ -207,13 +209,19 @@ Two tracks can run in parallel from the start: Track A gets the repo and tooling
 - [ ] Draft the report schema and the wording of risk bands (evidence and confidence, no verdicts)
 - [ ] Pick the name, one-liner and handles; draft the first build-in-public post
 - [ ] List the cfo.ai plan inputs: price per check, cost per check, volume scenarios, bad-debt-avoided case
+- [ ] **[API Setu Compliance]** Check directory.apisetu.gov.in for rate limits on: MCA, IBBI, GST, Crustdata
+- [ ] **[API Setu Compliance]** Read data.gov.in Terms of Use for MCA — confirm automated use is allowed
+- [ ] **[API Setu Compliance]** Read IBBI site terms — confirm caching snapshots is allowed
+- [ ] **[API Setu Compliance]** Document in repo: which APIs are tested live vs. fixtures; use synthetic/fixture data only for proprietor demos
+- [ ] **[API Setu Compliance]** Add to `.env.example`: `CACHE_TTL_HOURS=24` with cache deletion policy
 
 ## Open questions to verify first
 
 These decide whether the connector plan holds, so settle them before the hour-3 gate.
 
 - Does the data.gov.in company master include LLPs, or is there a separate LLP dataset?
-- Do the data.gov.in terms and the IBBI site's terms allow our automated use, and for how much volume?
+- **[API Setu Terms]** Do the data.gov.in terms and the IBBI site's terms allow our automated use, and for how much volume? (Check their ToU and API Setu prohibitions.)
+- **[API Setu Terms]** What are the rate limits per API on directory.apisetu.gov.in for MCA, IBBI, GST, Crustdata?
 - Which GST route do we use, and what does a lookup cost beyond the free ones?
 - Does Crustdata return useful data for small Indian businesses, or do we drop it?
 - Does cfo.ai accept the inputs we need for the plan (per-check cost, volume scenarios), and when do the organizer credits arrive?

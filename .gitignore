@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Local data and caches
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+cache/
+
+# Local Claude Code settings
+.claude/settings.local.json
+
+# OS and editor
+.DS_Store
+.idea/
+.vscode/
