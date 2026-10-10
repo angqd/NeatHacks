@@ -1,0 +1,15 @@
+{
+  "tool_use_id": "toolu_01UGjh9tJnSC1mG84daMnao4",
+  "agent_id": "a9c5cfec941ff4b1d",
+  "subagent_type": "general-purpose",
+  "task_description": "Fetch and review API terms and prohibitions",
+  "token_usage": {
+    "input_tokens": 44,
+    "cache_creation_tokens": 25526,
+    "cache_read_tokens": 92375,
+    "output_tokens": 1834,
+    "api_call_count": 5
+  },
+  "started_at": "2026-10-10T13:37:33.472901+05:30",
+  "completed_at": "2026-10-10T13:38:49.992397+05:30"
+}

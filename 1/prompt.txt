@@ -1,0 +1,62 @@
+https://docs.apisetu.gov.in/document-central/terms-of-use/API%20Prohibitions.html can u read this and other rules with respect to this api wrt to this hackathon project
+
+---
+
+<task-notification>
+<task-id>a9c5cfec941ff4b1d</task-id>
+<tool-use-id>toolu_01UGjh9tJnSC1mG84daMnao4</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-angadbawa-Development-NeatHacks/bcea5998-fa57-4f57-a2de-789f590598c5/tasks/a9c5cfec941ff4b1d.output</output-file>
+<status>completed</status>
+<summary>Agent "Fetch and review API terms and prohibitions" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>## Summary: API Setu Prohibitions &amp; Terms for Hackathon Projects
+
+### 1. **Key Prohibitions &amp; Restrictions**
+- **No sublicensing**: Cannot sublicense APIs or use them to create competing services without prior approval
+- **No high-risk deployments**: APIs cannot be used in safety-critical systems (medical, industrial, environmental) where failure could cause injury or death—liability is on the user
+- **Platform compliance**: Must comply with all usage policies or face access restrictions or temporary suspension
+
+### 2. **Rate Limiting &amp; Quotas**
+- **No specific published limits**: The API Usage Limits page states that "API Setu may impose limits on the number and frequency of API calls" but does not specify actual numbers
+- **Action needed**: Must check the API Setu Directory (directory.apisetu.gov.in) for actual rate limits per API or contact API Setu support for tier-specific quotas
+
+### 3. **Intellectual Property &amp; Attribution**
+- **Ownership**: Government of India/its agencies own all IP in the APIs, documentation, and System
+- **User rights**: Limited, non-exclusive, non-transferable right to use APIs "strictly as provided"
+- **Non-personal data**: Data licensed under NDSAP allows free reuse without IP claims
+- **No attribution requirements explicitly stated** for using the APIs themselves
+- **No modification/redistribution rights** granted for the APIs or their outputs
+
+### 4. **Data Handling &amp; Privacy Restrictions**
+- **Informed consent required**: Must get explicit consent from data subjects before accessing personal data
+- **Breach notification**: 24-hour reporting requirement for any data breaches
+- **Data retention**: Keep personal data only as long as necessary
+- **Legal compliance**: Must follow India's Information Technology Act, 2000, and applicable privacy laws
+- **DigiLocker compliance**: If using DigiLocker-integrated APIs, must follow their OTP/eSign consent flows
+- **No sharing without consent signals**: API Setu will not return personal data without valid consent embedded in the transaction
+
+### 5. **Hackathon Project Impact**
+**Key restrictions for student projects:**
+- ✅ Can build a proof-of-concept or educational demo
+- ❌ Cannot position it as a competing service to API Setu without approval
+- ❌ Cannot deploy it for safety-critical use cases
+- ⚠️ If handling personal data, must implement proper consent flows (critical if integrating DigiLocker)
+- ⚠️ Must look up actual API rate limits per endpoint before planning scale/load
+- ✅ Can freely use and reuse non-personal data under NDSAP
+- ⚠️ Must comply with data retention and breach reporting requirements if personal data is involved
+
+**Before building, check**: API-specific rate limits in the API Directory and determine if your hackathon project will handle personal or non-personal data to understand which consent/data policies apply.</result>
+<usage><subagent_tokens>26377</subagent_tokens><tool_uses>6</tool_uses><duration_ms>76910</duration_ms></usage>
+</task-notification>
+
+---
+
+Look at the project scope md in this repo adn cross verify what we need to keep in mind
+
+---
+
+add them in
+
+---
+
+What im seeing is data.gov.in doesnt have any apis accessible , but there is an api setu platform , can you quantify what exact sources i need and i can figure whats the datasource or connector we need for that
