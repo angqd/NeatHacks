@@ -1,0 +1,15 @@
+{
+  "tool_use_id": "toolu_015TPsyxb7th63zDepZrXANu",
+  "agent_id": "a717cc7f98634202b",
+  "subagent_type": "claude-code-guide",
+  "task_description": "How to upgrade Claude Code CLI to a specific version",
+  "token_usage": {
+    "input_tokens": 18,
+    "cache_creation_tokens": 17676,
+    "cache_read_tokens": 16534,
+    "output_tokens": 180,
+    "api_call_count": 2
+  },
+  "started_at": "2026-10-10T13:22:51.530782+05:30",
+  "completed_at": "2026-10-10T13:23:03.418156+05:30"
+}
