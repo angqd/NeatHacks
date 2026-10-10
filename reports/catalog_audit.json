@@ -1,0 +1,303 @@
+{
+  "1_counts": {
+    "servers": 70,
+    "tools": 527,
+    "tools_per_server": {
+      "min": 1,
+      "median": 4.0,
+      "max": 35
+    },
+    "single_tool_servers": 12,
+    "servers_with_15_plus_tools": 10,
+    "largest_servers": [
+      {
+        "server": "Office-PowerPoint-MCP-Server",
+        "tools": 35
+      },
+      {
+        "server": "Playwright MCP Server",
+        "tools": 32
+      },
+      {
+        "server": "MCP Server Chart",
+        "tools": 25
+      },
+      {
+        "server": "Office-Word-MCP-Server",
+        "tools": 24
+      },
+      {
+        "server": "OP.GG MCP Server",
+        "tools": 22
+      }
+    ]
+  },
+  "2_name_collisions": {
+    "shared_names": 13,
+    "tools_involved": 30,
+    "top_shared_names": [
+      {
+        "name": "search",
+        "tools": 4,
+        "servers": [
+          "BioMCP: Biomedical Model Context Protocol",
+          "Hacker News MCP Server",
+          "Web3 Research MCP",
+          "Yahoo Finance MCP Server"
+        ]
+      },
+      {
+        "name": "get_file_info",
+        "tools": 3,
+        "servers": [
+          "Desktop Commander MCP",
+          "Filesystem MCP Server",
+          "MCP OKPPT Server"
+        ]
+      },
+      {
+        "name": "list_directory",
+        "tools": 3,
+        "servers": [
+          "Basic Memory",
+          "Desktop Commander MCP",
+          "Filesystem MCP Server"
+        ]
+      },
+      {
+        "name": "add_table",
+        "tools": 2,
+        "servers": [
+          "Office-PowerPoint-MCP-Server",
+          "Office-Word-MCP-Server"
+        ]
+      },
+      {
+        "name": "create_directory",
+        "tools": 2,
+        "servers": [
+          "Desktop Commander MCP",
+          "Filesystem MCP Server"
+        ]
+      },
+      {
+        "name": "fetch",
+        "tools": 2,
+        "servers": [
+          "BioMCP: Biomedical Model Context Protocol",
+          "Fetch MCP Server"
+        ]
+      },
+      {
+        "name": "get_price_history",
+        "tools": 2,
+        "servers": [
+          "Yahoo Finance MCP Server",
+          "investor-agent: A Financial Analysis MCP Server"
+        ]
+      },
+      {
+        "name": "move_file",
+        "tools": 2,
+        "servers": [
+          "Desktop Commander MCP",
+          "Filesystem MCP Server"
+        ]
+      },
+      {
+        "name": "read_file",
+        "tools": 2,
+        "servers": [
+          "Desktop Commander MCP",
+          "Filesystem MCP Server"
+        ]
+      },
+      {
+        "name": "read_multiple_files",
+        "tools": 2,
+        "servers": [
+          "Desktop Commander MCP",
+          "Filesystem MCP Server"
+        ]
+      }
+    ]
+  },
+  "3_descriptions": {
+    "missing_or_under_30_chars": 66,
+    "missing_or_under_30_chars_examples": [
+      "Bing_CN_MCP::fetch_webpage",
+      "MCP Yahoo Finance::get_earning_dates",
+      "OP.GG MCP Server::valorant-meta-maps",
+      "OP.GG MCP Server::valorant-meta-characters",
+      "HowToCook-MCP Server::mcp_howtocook_getAllRecipes",
+      "HowToCook-MCP Server::mcp_howtocook_whatToEat",
+      "HowToCook-MCP Server::mcp_howtocook_getRecipeById",
+      "Baige (ygocdb.com) MCP Server::search_cards",
+      "Baige (ygocdb.com) MCP Server::get_card_by_id",
+      "Baige (ygocdb.com) MCP Server::get_card_image"
+    ],
+    "median_chars": 61,
+    "max_chars": 3866,
+    "with_cjk": 62
+  },
+  "4_tokens": {
+    "encoding": "o200k_base",
+    "total_tokens": 100496,
+    "median_tokens_per_tool": 118,
+    "heaviest_tools": [
+      {
+        "id": "OP.GG MCP Server::tft-recommend-champion-for-item",
+        "tokens": 1932
+      },
+      {
+        "id": "BioMCP: Biomedical Model Context Protocol::search",
+        "tokens": 1742
+      },
+      {
+        "id": "OP.GG MCP Server::lol-champion-analysis",
+        "tokens": 1296
+      },
+      {
+        "id": "MCP Server Chart::generate_district_map",
+        "tokens": 1239
+      },
+      {
+        "id": "BioMCP: Biomedical Model Context Protocol::trial_searcher",
+        "tokens": 1061
+      }
+    ]
+  },
+  "5_near_duplicates": {
+    "count": 1,
+    "min_jaccard": 0.8,
+    "min_tokens_each": 6,
+    "examples": [
+      {
+        "a": "Playwright MCP Server::playwright_screenshot",
+        "b": "Puppeteer::puppeteer_screenshot",
+        "jaccard": 1.0
+      }
+    ]
+  },
+  "6_instruction_like_heuristic": {
+    "label": "HEURISTIC: candidates for review, not confirmed injections",
+    "count": 38,
+    "examples": [
+      {
+        "id": "OP.GG MCP Server::lol-champion-analysis",
+        "matched": [
+          "always ",
+          "you must",
+          "you should"
+        ]
+      },
+      {
+        "id": "OP.GG MCP Server::lol-summoner-search",
+        "matched": [
+          "always "
+        ]
+      },
+      {
+        "id": "OP.GG MCP Server::lol-summoner-game-history",
+        "matched": [
+          "always "
+        ]
+      },
+      {
+        "id": "OP.GG MCP Server::lol-summoner-renewal",
+        "matched": [
+          "always "
+        ]
+      },
+      {
+        "id": "BioMCP: Biomedical Model Context Protocol::search",
+        "matched": [
+          "do not",
+          "important"
+        ]
+      },
+      {
+        "id": "BioMCP: Biomedical Model Context Protocol::fetch",
+        "matched": [
+          "always ",
+          "ignore"
+        ]
+      },
+      {
+        "id": "BioMCP: Biomedical Model Context Protocol::think",
+        "matched": [
+          "important",
+          "use this tool",
+          "you must"
+        ]
+      },
+      {
+        "id": "BioMCP: Biomedical Model Context Protocol::article_searcher",
+        "matched": [
+          "important",
+          "use this tool"
+        ]
+      },
+      {
+        "id": "BioMCP: Biomedical Model Context Protocol::variant_searcher",
+        "matched": [
+          "important"
+        ]
+      },
+      {
+        "id": "Sequential Thinking MCP Server::sequentialthinking",
+        "matched": [
+          "don't",
+          "ignore",
+          "use this tool",
+          "you should"
+        ]
+      },
+      {
+        "id": "Context7 MCP - Up-to-date Code Docs For Any Prompt::resolve-library-id",
+        "matched": [
+          "you must"
+        ]
+      },
+      {
+        "id": "Context7 MCP - Up-to-date Code Docs For Any Prompt::get-library-docs",
+        "matched": [
+          "use this tool",
+          "you must"
+        ]
+      },
+      {
+        "id": "MCP Text Editor Server::edit_text_file_contents",
+        "matched": [
+          "before using",
+          "don't",
+          "important",
+          "you must"
+        ]
+      },
+      {
+        "id": "MCP TaskManager::request_planning",
+        "matched": [
+          "always ",
+          "do not",
+          "important",
+          "you must"
+        ]
+      },
+      {
+        "id": "MCP TaskManager::get_next_task",
+        "matched": [
+          "before calling",
+          "do not",
+          "you must"
+        ]
+      }
+    ]
+  },
+  "7_schema": {
+    "annotations_present_share": 0.0835,
+    "readOnlyHint_set_share": 0.0835,
+    "destructiveHint_set_share": 0.0417,
+    "median_input_parameters": 2
+  }
+}

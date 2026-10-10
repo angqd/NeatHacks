@@ -11,9 +11,9 @@ Built for neatHack (Oct 10 to 12, 2026).
 Phase 1, day 2 of the hackathon.
 
 - Done: the 60-query eval set is built, reviewed, and frozen. Dataset labeling pipeline and review tools are in the repo.
-- Done: BM25 and OpenAI-embedding retrievers (`bm25.py`, `embeddings.py`), shared models and tokenizer, env loader, neatlogs init.
-- Not built yet: the scoring harness, LLM baselines, judges, the enricher, and the router.
-- No benchmark number is trusted yet. The BM25 sanity check against the self-reported 31.7 Recall@5 on the original bench has not been run in this repo.
+- Done: BM25 and OpenAI-embedding retrievers, shared models and tokenizer, neatlogs init, the deterministic scorer, runner and report script, BM25 sanity check, catalog audit, and the first baseline numbers (`reports/baseline_v0.md`).
+- Not built yet: noise-scaling curve, LLM baselines, judges, the enricher, and the router.
+- First numbers (60 queries, wide intervals): BM25 slot recall@5 0.41, embeddings 0.52; full coverage@5 is 0.25 and 0.28. BM25 on the original bench scores 36.1 Recall@5 against a self-reported 31.7 (sanity check, not tuned).
 
 See `phase_plan.md` for the build order and acceptance criteria.
 
