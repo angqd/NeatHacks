@@ -1,0 +1,126 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4KMGY710JYCGGWW6NNEZ1EQ",
+  "session_id": "bd26c5e3-2c6d-43b6-be6f-d0d198333a82",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-10T19:27:06.502047Z",
+  "branch": "main",
+  "checkpoints_count": 4,
+  "save_step_count": 4,
+  "files_touched": [
+    ".gitignore",
+    "counterparty-precheck-plan.md",
+    "pyproject.toml",
+    "src/precheck/__init__.py",
+    "tests/test_smoke.py"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-haiku-5-5",
+  "turn_id": "3b3d3cecc43e",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 50,
+    "cache_creation_tokens": 73436,
+    "cache_read_tokens": 1817450,
+    "output_tokens": 32218,
+    "api_call_count": 25
+  },
+  "skill_events_version": 1,
+  "skill_events": [
+    {
+      "id": "claude-skill-toolu_01V6Zw9goKKzzz4L58uMeFTJ",
+      "event_type": "tool_invocation",
+      "skill": {
+        "name": "caveman"
+      },
+      "source": {
+        "agent": "claude-code",
+        "signal": "skill_tool_use",
+        "confidence": "explicit"
+      },
+      "turn_id": "3b3d3cecc43e",
+      "transcript_anchor": {
+        "unit": "line",
+        "start": 35,
+        "end": 36,
+        "entry_ids": [
+          "74c53a95-a3a3-4b46-884d-abf9b3124df5"
+        ],
+        "tool_use_id": "toolu_01V6Zw9goKKzzz4L58uMeFTJ"
+      },
+      "native": {
+        "tool_name": "Skill",
+        "tool_use_id": "toolu_01V6Zw9goKKzzz4L58uMeFTJ"
+      },
+      "collapse": {
+        "target": "tool_pair",
+        "label": "Skill: caveman",
+        "default_collapsed": true
+      }
+    }
+  ],
+  "session_metrics": {
+    "turn_count": 4
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-10T19:27:06.482669Z",
+    "agent_lines": 0,
+    "agent_removed": 1,
+    "human_added": 0,
+    "human_modified": 17,
+    "human_removed": 219,
+    "total_committed": 0,
+    "total_lines_changed": 237,
+    "agent_percentage": 0.42194092827004215,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 1121,
+      "user_lines_removed": 252,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".gitignore": 3,
+        "Idea_Draft.md": 115,
+        "data/poc/queries.jsonl": 95,
+        "data/poc/stats.json": 44,
+        "data/poc/tools.jsonl": 527,
+        "pyproject.toml": 1,
+        "src/toolprune/__init__.py": 1,
+        "src/toolprune/dataset.py": 179,
+        "src/toolprune/fetch.py": 36,
+        "src/toolprune/pipeline.py": 116,
+        "tests/test_smoke.py": 4
+      },
+      "user_removed_per_file": {
+        "README.md": 20,
+        "counterparty-precheck-plan.md": 229,
+        "pyproject.toml": 1,
+        "tests/test_smoke.py": 2
+      }
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 1121,
+      "agent_lines_removed": 252
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 1173,
+      "agent_lines_removed": 244
+    },
+    {
+      "checkpoint_number": 4,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 1173,
+      "agent_lines_removed": 244
+    }
+  ]
+}

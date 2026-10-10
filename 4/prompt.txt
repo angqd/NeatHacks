@@ -1,0 +1,17 @@
+Familarise yourself with the repo , let target ability to create the first POC dataset , store it , and then annotate. For this track what agent scrapes , enriches with neatlogs. Do not need to plan the archtiecutre of the agent , enrichment or enricher , goal is to to obtain the dataset right now. /caveman lite in this session only
+
+---
+
+summarise what youve done till now? How are we setting up the base benchmark
+
+---
+
+order of tasks help me complete neaatlogs setup , how are you benchmarking , the bm25 is detemrinstic right , i want the global readme to clarify the agent design should be openaiskd + pydantic , then frame pending open questions
+
+---
+
+okay i imported the neatlogs api key , now lets put that aside until its time to build the agent . I think you went a little too far in dataset construction , recall to me exactly how we got to the dataset we have now , where did it come from what are the parameters , what is the gold set whats its source , why this is the relevant set for us , whats missing . I think your taks was jsut to obtain the dataset to prep it to be the confusing minimal set was stage 2 , so well deal with that once the base questions are answered.
+
+---
+
+Strip the dataset back to its original benchmark state and then we will begin its adaptation. For now take me back to the MCP benchmark , adn tool set as per what u would get after downloading
