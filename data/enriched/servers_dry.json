@@ -1,0 +1,16 @@
+[
+ {
+  "server": "Trends Hub",
+  "server_summary": "Aggregates popular stories, rankings, and trends from news, technology, social, entertainment, shopping, and reading platforms.",
+  "n_tools": 21,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "12306-mcp",
+  "server_summary": "Provides China Railway 12306 (中国铁路12306) date, station, train ticket availability, transfer, and route information.",
+  "n_tools": 8,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ }
+]

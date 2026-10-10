@@ -1,0 +1,28 @@
+{
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2",
+  "workflow": "tool-enrich",
+  "dry_run": true,
+  "servers_requested": [
+    "Trends Hub",
+    "12306-mcp"
+  ],
+  "n_servers": 2,
+  "n_servers_ok": 2,
+  "n_source_tools": 29,
+  "n_tools_tagged": 29,
+  "retries": 0,
+  "unresolved_servers": [],
+  "unmatched_tools": [],
+  "failed_servers": {},
+  "llm_calls": 2,
+  "cache_hits": 0,
+  "total_input_tokens": 8202,
+  "total_output_tokens": 3672,
+  "fresh_input_tokens": 8202,
+  "fresh_output_tokens": 3672,
+  "workers": 4,
+  "no_cache": false,
+  "run_seconds": 18.55,
+  "created_at": "2026-10-10T22:16:31.056669+00:00"
+}

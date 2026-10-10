@@ -1,0 +1,492 @@
+[
+ {
+  "server": "Bing_CN_MCP",
+  "server_summary": "Searches Bing for Chinese-language queries and retrieves the contents of selected web pages.",
+  "n_tools": 2,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "MCP Yahoo Finance",
+  "server_summary": "Provides Yahoo Finance stock prices, company financial data, earnings dates, news, and analyst opinions.",
+  "n_tools": 10,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "NPM Sentinel MCP",
+  "server_summary": "Provides information and analysis to help developers assess NPM package versions, security, dependencies, quality, and popularity.",
+  "n_tools": 19,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Hugeicons MCP Server",
+  "server_summary": "Provides icon discovery and platform-specific usage guidance for integrating Hugeicons into applications.",
+  "n_tools": 3,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "OP.GG MCP Server",
+  "server_summary": "Provides OP.GG game statistics, player information, esports schedules, and strategy data for League of Legends, Teamfight Tactics, and Valorant.",
+  "n_tools": 22,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "PDF Reader MCP Server",
+  "server_summary": "Reads PDF files from local paths or URLs and retrieves their text, metadata, and page counts.",
+  "n_tools": 1,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "HowToCook-MCP Server",
+  "server_summary": "Provides recipes, meal suggestions, weekly meal plans, and shopping lists to help users decide what to cook.",
+  "n_tools": 5,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "BioMCP: Biomedical Model Context Protocol",
+  "server_summary": "BioMCP searches and retrieves biomedical literature, clinical trial information, genetic variant records, and predictions of variant effects.",
+  "n_tools": 14,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "duckduckgo-search MCP Server",
+  "server_summary": "Searches the web with DuckDuckGo for general information, news, articles, and other online content.",
+  "n_tools": 1,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Baige (ygocdb.com) MCP Server",
+  "server_summary": "Provides tools for searching and retrieving Yu-Gi-Oh! card details and images from the Baige (白鸽) card database.",
+  "n_tools": 3,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "MCP Image Extractor",
+  "server_summary": "Extracts and analyzes images from local files, web URLs, or base64 data, including visual content and text.",
+  "n_tools": 3,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Trends Hub",
+  "server_summary": "Aggregates popular stories, rankings, and trends from news, technology, social, entertainment, shopping, and reading platforms.",
+  "n_tools": 21,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "OpenStreetMap (OSM) MCP Server",
+  "server_summary": "Provides OpenStreetMap location lookup, nearby place discovery, route planning, and area analysis.",
+  "n_tools": 12,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Sequential Thinking MCP Server",
+  "server_summary": "Provides structured, flexible reasoning support for breaking down complex problems, exploring alternatives, and revising plans.",
+  "n_tools": 1,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Bazi MCP (八字 MCP) by Cantian AI",
+  "server_summary": "Provides Chinese Bazi chart calculations, date conversions, and traditional calendar information.",
+  "n_tools": 5,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Maven Dependencies MCP Server",
+  "server_summary": "Provides Maven Central lookups for checking dependency versions and finding recent releases.",
+  "n_tools": 3,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Met Museum MCP Server",
+  "server_summary": "Search The Metropolitan Museum of Art collection, browse its departments, and retrieve details about individual artworks.",
+  "n_tools": 3,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "mcp-github-trending MCP Server",
+  "server_summary": "Provides trending GitHub repositories and developer profiles, with filters for programming language, time period, and spoken language.",
+  "n_tools": 2,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Simple Document Processing MCP Server",
+  "server_summary": "This server reads, compares, splits, cleans, formats, and converts documents and text across common file types.",
+  "n_tools": 16,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "MCP Server Chart",
+  "server_summary": "Creates AntV charts, diagrams, and maps from user-provided data and place names.",
+  "n_tools": 25,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "鸣潮 MCP Server",
+  "server_summary": "Provides Wuthering Waves (鸣潮) character and Echo information from Kuro Community (库街区).",
+  "n_tools": 3,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Yahoo Finance MCP Server",
+  "server_summary": "Provides Yahoo Finance stock information, market news, search results, sector rankings, and historical prices.",
+  "n_tools": 5,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Wikipedia MCP Server",
+  "server_summary": "Retrieves and summarizes Wikipedia content, facts, sections, links, and related topics for research and reference.",
+  "n_tools": 9,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "MCP OKPPT Server",
+  "server_summary": "This server helps create and edit PowerPoint presentations using SVG images, and inspect presentation files and layouts.",
+  "n_tools": 14,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Time MCP Server",
+  "server_summary": "Provides current local times and converts times between IANA timezones.",
+  "n_tools": 2,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "kospi-kosdaq-stock-server",
+  "server_summary": "Provides historical ticker lists and stock market data for KOSPI and KOSDAQ companies.",
+  "n_tools": 5,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "MCP Server: Mermaid Validator",
+  "server_summary": "This server checks Mermaid diagrams for validity and renders valid diagrams as SVG.",
+  "n_tools": 1,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Playwright MCP Server",
+  "server_summary": "This server automates browser sessions with Playwright, including page navigation, interaction, content capture, and HTTP requests.",
+  "n_tools": 32,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "investor-agent: A Financial Analysis MCP Server",
+  "server_summary": "Provides market sentiment, stock prices, options, company financials, ownership, earnings, insider activity, news, and analyst information.",
+  "n_tools": 9,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "MCP Server LeetCode",
+  "server_summary": "Provides access to LeetCode problems, user profiles and activity, and contest information.",
+  "n_tools": 7,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "YouTube Transcript Server",
+  "server_summary": "Retrieves captions and subtitles from YouTube videos.",
+  "n_tools": 1,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Data.gov MCP Server",
+  "server_summary": "Provides search and information tools for discovering Data.gov datasets, groups, and tags.",
+  "n_tools": 4,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Airbnb MCP Server",
+  "server_summary": "Search Airbnb stays by location and filters, or retrieve details for a specific listing.",
+  "n_tools": 2,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Knowledge Graph Memory Server",
+  "server_summary": "Stores user information in a local knowledge graph and supports adding, retrieving, and removing entities, observations, and relations.",
+  "n_tools": 9,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Hacker News MCP Server",
+  "server_summary": "Access Hacker News stories, discussions, search results, and user profiles.",
+  "n_tools": 9,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Office-PowerPoint-MCP-Server",
+  "server_summary": "Creates, edits, styles, and manages PowerPoint presentations, slides, charts, images, and related presentation content.",
+  "n_tools": 35,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Calculator MCP Server",
+  "server_summary": "Provides precise numerical calculations by evaluating mathematical expressions.",
+  "n_tools": 1,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Ant Design Components MCP Service",
+  "server_summary": "Provides Ant Design component documentation, code examples, change histories, and component listings.",
+  "n_tools": 4,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Context7 MCP - Up-to-date Code Docs For Any Prompt",
+  "server_summary": "Finds current, version-specific library documentation and code examples for use in prompts.",
+  "n_tools": 2,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "MCP Text Editor Server",
+  "server_summary": "Provides line-based access to text files for reading selected sections and applying edits with conflict checks.",
+  "n_tools": 2,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Crypto Price & Market Analysis MCP Server",
+  "server_summary": "Provides current cryptocurrency prices, market activity, and historical price trends.",
+  "n_tools": 3,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "MCP Weather Free",
+  "server_summary": "Provides current weather and forecast data from Open-Meteo for locations specified by coordinates or city name.",
+  "n_tools": 2,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Fetch MCP Server",
+  "server_summary": "Fetches web pages and returns their content as readable text or raw HTML.",
+  "n_tools": 1,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "MCP TaskManager",
+  "server_summary": "Manages task requests and queued work, including planning, progress tracking, task updates, and completion approvals.",
+  "n_tools": 10,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Sitemap MCP Server",
+  "server_summary": "Fetches and analyzes website sitemaps to show site structure, page lists, and sitemap statistics.",
+  "n_tools": 4,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "mcp-server-git: A git MCP server",
+  "server_summary": "Provides tools to inspect Git repositories, compare changes, and manage commits, branches, and repository setup.",
+  "n_tools": 13,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Drawing MCP Server",
+  "server_summary": "Provides tools to create drawing canvases, fill rectangular areas, and retrieve canvas images or pixel data.",
+  "n_tools": 4,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "magicuidesign_mcp",
+  "server_summary": "Provides a catalog of Magic UI components and implementation details for UI elements, device mockups, effects, animations, buttons, and backgrounds.",
+  "n_tools": 8,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Office-Word-MCP-Server",
+  "server_summary": "Provides tools to create, read, edit, format, protect, and convert Microsoft Word documents.",
+  "n_tools": 24,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Random Number MCP",
+  "server_summary": "This server creates pseudorandom values, random selections and arrangements, and cryptographically secure numbers and tokens.",
+  "n_tools": 7,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Mindmap MCP Server",
+  "server_summary": "Converts Markdown content into interactive mindmaps and returns the generated HTML or its file path.",
+  "n_tools": 1,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Web3 Research MCP",
+  "server_summary": "This server supports local cryptocurrency research through web searches, source lookups, token research planning, and access to research resources.",
+  "n_tools": 9,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Basic Memory",
+  "server_summary": "Basic Memory helps manage a local Markdown knowledge base, including its notes, projects, and connections between ideas.",
+  "n_tools": 19,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "docker-mcp",
+  "server_summary": "Manage Docker containers and Compose stacks, including creation, deployment, log retrieval, and container listing.",
+  "n_tools": 4,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "12306-mcp",
+  "server_summary": "Provides China Railway 12306 (中国铁路12306) date, station, train ticket availability, transfer, and route information.",
+  "n_tools": 8,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "shadcn-ui MCP Server",
+  "server_summary": "Provides reference information, details, examples, and search for shadcn/ui components.",
+  "n_tools": 4,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Desktop Commander MCP",
+  "server_summary": "Desktop Commander helps inspect and edit local files, manage settings and processes, search code, and provide product feedback.",
+  "n_tools": 21,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Puppeteer",
+  "server_summary": "Automates a real browser to open web pages, interact with page elements, capture screenshots, and run JavaScript.",
+  "n_tools": 7,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "MetaTag Genie",
+  "server_summary": "A macOS service for adding image metadata to improve Spotlight search.",
+  "n_tools": 1,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "MCP NPX Fetch",
+  "server_summary": "Fetches web pages and JSON files, returning their contents in formats such as HTML, Markdown, plain text, or JSON.",
+  "n_tools": 4,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Exchange Rate MCP Server",
+  "server_summary": "Provides exchange rate data from the Norges Bank API.",
+  "n_tools": 1,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Filesystem MCP Server",
+  "server_summary": "Provides tools to read, organize, search, and manage files and directories within approved locations.",
+  "n_tools": 12,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "ArXiv MCP Server",
+  "server_summary": "Search arXiv for research papers, download papers into available resources, and read their full content.",
+  "n_tools": 4,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "MCP Chess Server",
+  "server_summary": "This server lets users play chess against an LLM, check the board and legal moves, and find positions in recorded games.",
+  "n_tools": 6,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Whois MCP",
+  "server_summary": "Provides registration and network ownership details for domains, top-level domains, IP addresses, and autonomous systems.",
+  "n_tools": 4,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Excel MCP Server",
+  "server_summary": "This server reads and updates data, sheets, and tables in Excel files.",
+  "n_tools": 5,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Deepwiki MCP Server",
+  "server_summary": "Fetches Deepwiki repository pages and returns their contents as Markdown documents.",
+  "n_tools": 1,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "MCP Music Analysis",
+  "server_summary": "This server loads or downloads audio and analyzes its duration, tempo, beats, and musical features.",
+  "n_tools": 8,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "mcp-simple-arxiv",
+  "server_summary": "Provides access to arXiv paper search, paper details, categories, and category updates.",
+  "n_tools": 4,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ },
+ {
+  "server": "Asset Price MCP Server (asset-price-mcp)",
+  "server_summary": "Retrieves current price information for assets, including precious metals and cryptocurrencies.",
+  "n_tools": 1,
+  "model": "gpt-6-luna",
+  "prompt_version": "pass1-v2"
+ }
+]
