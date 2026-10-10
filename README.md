@@ -12,14 +12,15 @@ Phase 1, day 2 of the hackathon.
 
 - Done: the 60-query eval set is built, reviewed, and frozen. Dataset labeling pipeline and review tools are in the repo.
 - Done: BM25 and OpenAI-embedding retrievers, shared models and tokenizer, neatlogs init, the deterministic scorer, runner and report script, BM25 sanity check, catalog audit, and the first baseline numbers (`reports/baseline_v0.md`).
-- Not built yet: noise-scaling curve, LLM baselines, judges, the enricher, and the router.
-- First numbers (60 queries, wide intervals): BM25 slot recall@5 0.41, embeddings 0.52; full coverage@5 is 0.25 and 0.28. BM25 on the original bench scores 36.1 Recall@5 against a self-reported 31.7 (sanity check, not tuned).
+- Done: noise-scaling curve (`reports/noise_scaling.md`) and the full-catalog drop-in baseline (`reports/full_catalog_v0.md`).
+- Not built yet: embedding plus rerank baseline, judges, the enricher, and the router.
+- First numbers (60 queries, wide intervals): BM25 slot recall@5 0.41, embeddings 0.52; full coverage@5 is 0.25 and 0.28. BM25 on the original bench scores 36.1 Recall@5 against a self-reported 31.7 (sanity check, not tuned). Loading the whole 105k-token catalog into `gpt-6-luna` gets slot recall@5 around 0.60 to 0.64 and R-precision 0.61 to 0.64, ahead of both retrievers, at about 4 seconds per query. That is the bar the router has to meet at far fewer tokens.
 
 See `phase_plan.md` for the build order and acceptance criteria.
 
 ## Decisions in force
 
-- **Model:** `gpt-6-luna` for every baseline, the enricher, and the retriever, so systems stay comparable.
+- **Model:** `gpt-6-luna` for every baseline, the enricher, and the retriever, so systems stay comparable. It rejects the `temperature` parameter, so its calls are not strictly deterministic. Calls are cached by content hash, and runs are repeated to measure stability.
 - **Embeddings:** OpenAI `text-embedding-3-small`, cached on disk by content hash.
 - **OpenAI calls:** only through OpenAI SDKs. The enricher and retriever will use the OpenAI Agents SDK (`openai-agents`).
 - **Judges:** two model families, blind and shuffled. Start with Claude Haiku 5.5 via LiteLLM, then add Claude Sonnet 4.6, then an OpenAI-family judge.

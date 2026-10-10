@@ -93,5 +93,5 @@ Acceptance: a `reports/` table with per-bucket numbers for both retrievers, with
 - Done: Phase A. BM25 and embedding retrievers run on the frozen set, embeddings are cached (588 texts, about 39k tokens), neatlogs initialises. Neatlogs span arrival in the dashboard is not yet confirmed by eye.
 - Done: Phase B first numbers. Scorer, runner, report script, BM25 sanity check, catalog audit, and `reports/baseline_v0.md` are in. Still to do from Phase B: noise-scaling curve, cold-latency pass, miss-cause analysis.
 - Post-todo (run in parallel with the enricher build): cold-latency pass for the embedding system.
-- In progress: full-catalog drop-in run with gpt-6-luna (Phase C item 10), then the noise-scaling curve.
-- Next: miss-cause analysis, embedding plus rerank, then the enricher.
+- Done: noise-scaling curve and the full-catalog drop-in run (Phase C item 10). See reports/full_catalog_v0.md.
+- Next: embedding plus rerank baseline (Phase C item 11), miss-cause analysis, then the enricher.
