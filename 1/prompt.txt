@@ -1,0 +1,9 @@
+why are we using antrhopic i want to use openai for the agent sdk , and pydantic for the type safety to form the main agentic loop
+
+---
+
+yes do that change , neatlogs supports openai dont worry
+
+---
+
+we need to purge the repo for anything except the venv and tech stack stuff were changing the ideas so can burn all md and all
