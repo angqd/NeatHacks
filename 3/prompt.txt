@@ -1,0 +1,28 @@
+Make a markdown called data-source-plan.md , this will be used to work through our datasources options and then finally get to our final list , the currnt gov sites we explore are under quantative KYC , and then well have the qwualtative kyc we can find
+
+---
+
+I want you to go through the pdf i just placed thats a sample kyc form by a known SMB in india , i want u to tell me how much of that process we could have an agent do with our current dataset ( NO NOC PROVIDED)  and then how much with an NOC
+
+---
+
+1. lets edit the plan to include personal dossiers , if working with a propietar their personal background and public image may present an obvious kyc risk if not researched before hand , how to do it lets figure 
+2. Refactor the table then and get rid of the SOP Check steps that arent feasible with the agent regardless of NOC. 
+3. Then restructure into a logical flow and subdivision of qualtative vs quanitative checks
+
+---
+
+Lets go over the track b items
+
+---
+
+1. Done and not relevant to this doc 
+Major update API Setu is not usable for individuals only registered entities , we need a work-around , based on the sample steps we got are their websites we can target with websearch based tools?
+
+---
+
+what do you mean by sandbox for MCA ?
+
+---
+
+does using sandbox comprehensively solve our issues , can we pivot to somethig we could get from crustdata / cfo.ai? Maybe a similar concept for the US market , aim the quantative there and the qualatative in the same way ? Not sure
