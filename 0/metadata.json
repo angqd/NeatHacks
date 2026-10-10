@@ -1,0 +1,108 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4KYXCY049C4HR05AY7AN2M9",
+  "session_id": "c5ba5514-6b9c-45ac-a8a8-6c64b13e7f3d",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-10T22:28:38.898698Z",
+  "branch": "main",
+  "checkpoints_count": 2,
+  "save_step_count": 3,
+  "files_touched": [
+    "reports/runs/full_catalog_cards__gpt-6-luna.jsonl",
+    "src/toolprune/eval/full_catalog_cards.py",
+    "src/toolprune/eval/route_run.py",
+    "src/toolprune/route/__init__.py",
+    "src/toolprune/route/models.py",
+    "src/toolprune/route/prompts.py",
+    "src/toolprune/route/router.py"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-sonnet-5-5",
+  "turn_id": "99ff2560ae35",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 342,
+    "cache_creation_tokens": 448435,
+    "cache_read_tokens": 35576184,
+    "output_tokens": 230874,
+    "api_call_count": 171,
+    "subagent_tokens": {
+      "input_tokens": 232,
+      "cache_creation_tokens": 141214,
+      "cache_read_tokens": 10419636,
+      "output_tokens": 27640,
+      "api_call_count": 114
+    }
+  },
+  "skill_events_version": 1,
+  "skill_events": [
+    {
+      "id": "prompt-skill-claude-code-caveman-2026-10-10T12:09:07.707242Z",
+      "event_type": "prompt_invocation",
+      "skill": {
+        "name": "caveman"
+      },
+      "source": {
+        "agent": "claude-code",
+        "signal": "prompt_slash_command",
+        "confidence": "explicit"
+      },
+      "turn_id": "73fec0729fef",
+      "timestamp": "2026-10-10T12:09:07.707242Z",
+      "native": {
+        "command": "/caveman"
+      },
+      "collapse": {
+        "target": "user_message",
+        "label": "/caveman",
+        "default_collapsed": true
+      }
+    }
+  ],
+  "session_metrics": {
+    "turn_count": 55
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-10T22:28:38.800445Z",
+    "agent_lines": 646,
+    "agent_removed": 0,
+    "human_added": 184,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 830,
+    "total_lines_changed": 830,
+    "agent_percentage": 77.83132530120483,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 64,
+      "user_lines_removed": 0,
+      "agent_lines_added": 646,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "reports/runs/full_catalog_cards__gpt-6-luna__run2.jsonl": 60,
+        "reports/runs/router__server.jsonl": 4
+      }
+    },
+    {
+      "checkpoint_number": 4,
+      "user_lines_added": 120,
+      "user_lines_removed": 0,
+      "agent_lines_added": 646,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "reports/runs/full_catalog_cards__gpt-6-luna__run2.jsonl": 60,
+        "reports/runs/router__server.jsonl": 60
+      }
+    }
+  ]
+}

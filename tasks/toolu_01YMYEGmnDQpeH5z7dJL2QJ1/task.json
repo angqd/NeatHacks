@@ -1,0 +1,19 @@
+{
+  "tool_use_id": "toolu_01YMYEGmnDQpeH5z7dJL2QJ1",
+  "agent_id": "a9bed1db3680af036",
+  "subagent_type": "general-purpose",
+  "task_description": "Write hierarchical router and runner",
+  "files": [
+    "src/toolprune/eval/route_run.py",
+    "src/toolprune/route/router.py"
+  ],
+  "token_usage": {
+    "input_tokens": 22,
+    "cache_creation_tokens": 107433,
+    "cache_read_tokens": 536536,
+    "output_tokens": 18426,
+    "api_call_count": 11
+  },
+  "started_at": "2026-10-11T03:50:22.210817+05:30",
+  "completed_at": "2026-10-11T03:58:19.873008+05:30"
+}

@@ -1,0 +1,39 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4KYXCY049C4HR05AY7AN2M9",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 2,
+  "files_touched": [
+    "reports/runs/full_catalog_cards__gpt-6-luna.jsonl",
+    "src/toolprune/eval/full_catalog_cards.py",
+    "src/toolprune/eval/route_run.py",
+    "src/toolprune/route/__init__.py",
+    "src/toolprune/route/models.py",
+    "src/toolprune/route/prompts.py",
+    "src/toolprune/route/router.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 342,
+    "cache_creation_tokens": 448435,
+    "cache_read_tokens": 35576184,
+    "output_tokens": 230874,
+    "api_call_count": 171,
+    "subagent_tokens": {
+      "input_tokens": 232,
+      "cache_creation_tokens": 141214,
+      "cache_read_tokens": 10419636,
+      "output_tokens": 27640,
+      "api_call_count": 114
+    }
+  }
+}
