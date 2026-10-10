@@ -1,0 +1,8 @@
+Familarise yourself with the repo , this is a plan only thread we wont perform outright code in this thread. The goal is for you to understand the project , and help me define the enrichment architecture , tell me what you understand and ask any clarifying jobs
+
+---
+
+1. Yes tool prune is the only project
+2. Openai Models with Openai sdk , for now , additionally we have credits in LiteLLM we can explore later to adapt for that 
+3. Hierarchy and Taxonomy are decided after the dataset is built , i think the current dataset is not the ideal sota we will use for work. Lets wait on this , im refetching and manually reconstructing what the dataset is and the gold benchmarks are. If you have advice on how to score benchmarks to measure our tool prune agaisnt , including existign tools / apis let me know give me that advice. 
+4. Keep /caveman lite active in this session
