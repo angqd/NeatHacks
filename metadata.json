@@ -3,9 +3,10 @@
   "checkpoint_id": "01M4KMH5WSRFVPTXB1HNXKH3SD",
   "strategy": "manual-commit",
   "branch": "main",
-  "checkpoints_count": 4,
+  "checkpoints_count": 34,
   "files_touched": [
     "src/toolprune/fetch.py",
+    "src/toolprune/normalize.py",
     "src/toolprune/pipeline.py"
   ],
   "sessions": [
@@ -15,13 +16,20 @@
       "compact_transcript": "/0/transcript.jsonl",
       "content_hash": "/0/content_hash.txt",
       "prompt": "/0/prompt.txt"
+    },
+    {
+      "metadata": "/1/metadata.json",
+      "transcript": "/1/full.jsonl",
+      "compact_transcript": "/1/transcript.jsonl",
+      "content_hash": "/1/content_hash.txt",
+      "prompt": "/1/prompt.txt"
     }
   ],
   "token_usage": {
-    "input_tokens": 50,
-    "cache_creation_tokens": 73436,
-    "cache_read_tokens": 1817450,
-    "output_tokens": 32218,
-    "api_call_count": 25
+    "input_tokens": 206,
+    "cache_creation_tokens": 329479,
+    "cache_read_tokens": 10579469,
+    "output_tokens": 133564,
+    "api_call_count": 103
   }
 }
