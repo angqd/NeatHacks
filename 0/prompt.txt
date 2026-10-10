@@ -1,0 +1,13 @@
+- Push 
+- lets go with openai as the text embedding model you can setup the python script to generate and store those embedding for us to benchmark 
+- before we even begin our actual benchmarking and eval harness build , id say lets keep a model baseline at first : im thinking gpt-6-luna or 5.6-luna works as we need to run multiple iterations and tests to finalise our tool including multiple benchmarks across the board. IF we feel we need a smarter model we can pivot later , thoughts?
+- the metric graders : can use a 2 experts and combine their scores we can have one claude family eval , one openai family eval so that we get the diversity 
+Lets move with the gap known there are no false positive cases to get to 15 , we can later add synthetic non matching NL queries to build those. 
+Whats the scope of and ordering of the work now tell me before executing.
+
+---
+
+Save the phase plan to an aptly named markdown , update the globally readme to the current state of the repo : for which this claude code session is the most updated source of truth 
+1. gpt-6-luna for baselines of all things enricher and retrieval included. Claude well take the LiteLLM sonnet 4.6 as a judge and or haiku 5.5 as the first judge befroe we introduce more experts 
+2. once readme is done , keep yourslef as an orchestrator and hand out menial coding / collection / exploration tasks esp at scripting and basic python levle to the haiku subagents and review their work when their done , for this session lets avoid unit tests only keep e2e tests if even needed ( i think at this hackathon scale not needed no tests imo ) 
+3. OPENAI CALLS ONLY THROUGH OPENAI SDKS , WE WILL WRITE THE ENRICHER ADN THE RETRIEVER LATER WITH THAT AGENTS SDK . ALSO IF ANY PHASE A TAKSS COULD USE NEATLOGS LETS INIT IT CORRECTLY IF NOT NEEDED , WELL DEAL WITH IT AT PHASE B.
