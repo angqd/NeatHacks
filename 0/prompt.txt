@@ -245,3 +245,13 @@ drop the not_for key for now , its noise generally too many tags are confusi. Go
   
   The per-server summaries and sampled tags (name, topic, summary, intents, effect, flags, effect_source) were printed in the bash output above, not in this report. Quality was not interpreted.
 </agent-message>
+
+---
+
+<task-notification>
+<task-id>b7i14cmch</task-id>
+<tool-use-id>toolu_01YK58D63C7PQhCrfFECamRW</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-angadbawa-Development-NeatHacks/c5ba5514-6b9c-45ac-a8a8-6c64b13e7f3d/tasks/b7i14cmch.output</output-file>
+<status>completed</status>
+<summary>Background command ".venv/bin/python -m toolprune.enrich.pass1 --workers 6 &gt; /private/tmp/claude-501/-Users-angadbawa-Development-NeatHacks/c5ba5514-6b9c-45ac-a8a8-6c64b13e7f3d/scratchpad/pass1_full.log 2&gt;&amp;1; tail -12 /private/tmp/claude-501/-Users-angadbawa-Development-NeatHacks/c5ba5514-6b9c-45ac-a8a8-6c64b13e7f3d/scratchpad/pass1_full.log" completed (exit code 0)</summary>
+</task-notification>
