@@ -117,3 +117,27 @@ After tagging, print counts per bucket and per primary bucket. Write `review_que
 - Bucket quotas for the 60: set in stage 3 after seeing the tag counts, but before any retriever runs.
 - Dev/test split 30/70, frozen before the enricher exists.
 - Derived rewrites (ambiguity and semantic distance) keep the original bench gold and are labeled `derived`.
+
+## Stage 6 spec: deterministic metrics
+
+Scored per system, per query, from the returned set. The scorer is plain code. No LLM computes any number.
+
+Definitions (acceptable tools = a slot's pick plus its alternates; listed confusers are in the eval set):
+
+- **Slot recall@k:** for one query, the share of its slots with at least one acceptable tool in the top k. A slot counts once however many of its acceptable tools are returned. Averaged over queries.
+- **Full coverage@k:** share of queries where every slot is hit.
+- **Precision@k:** returned tools in the top k that are acceptable for any slot, divided by the returned tools (up to k).
+- **R-precision:** precision at k equal to the query's number of slots. The fair fixed-size precision.
+- **MRR:** reciprocal rank of the first acceptable tool, averaged over queries (0 if none in the list).
+- **Confusion rate@k:** queries with at least one missed slot and at least one listed confuser in the top k, divided by queries that list a confuser.
+- **Confuser-first rate@k:** queries where a listed confuser ranks above the first acceptable tool (or an acceptable tool is absent and a confuser is present), divided by queries that list a confuser. A looser companion to the confusion rate.
+- **Unjudged rate:** returned tools that are neither acceptable nor a listed confuser, divided by returned tools.
+- **Tokens:** tokens in the returned tools' definitions (name, description, input schema), counted with tiktoken `o200k_base`. This is a proxy for the model's own tokenizer.
+- **Latency:** wall-clock time of one retrieve call for one query, reported as p50 and p95 in milliseconds. For embedding systems it includes the query-embedding API call.
+
+Reporting: per challenge bucket and per task family, macro average (mean of group means) and micro average (mean over queries). Intervals by 10,000 bootstrap resamples of queries, seed 0, 95% percentile. Paired differences between systems with win, loss, and tie counts.
+
+Sanity check, not a gate: BM25 on the original LiveMCPBench tasks, using the bench reference tool names as gold matched by tool name, reported across a grid of document-text variants next to the self-reported 31.68. No variant is tuned to hit it.
+
+LLM-judge scores (sufficiency, labels for unjudged tools) are a separate, later step (Phase D) and are reported next to these numbers, never mixed into them.
+

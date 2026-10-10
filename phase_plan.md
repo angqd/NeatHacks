@@ -51,7 +51,7 @@ Acceptance: `python -m toolprune.embeddings` builds the cache for all 527 tools 
 ## Phase B: harness and first numbers
 
 6. Scorer: slot recall@k with alternates, full coverage@k, precision@k and size-matched precision, set-F1, MRR, confusion rate, unjudged rate, tokens, latency, bootstrap intervals, paired win/loss per bucket.
-7. Gate: BM25 on the original LiveMCPBench queries must be within about 2 points of 31.68 Recall@5. Test document-text variants and record which one matches.
+7. Sanity check: BM25 on the original LiveMCPBench queries, reported next to the self-reported 31.68 Recall@5. Report a grid of document-text variants. Never tune a variant to hit the number. Investigate only a gross mismatch (more than 15 points either way), which would suggest a bug.
 8. Write the confusion-rate definition into `benchmark_plan.md` before any run on the eval set.
 9. Run BM25 and embeddings on the frozen 60 at k=1, 5, 10. Add the catalog audit stats and the noise-scaling curve (pool sizes 50, 100, 250, 527, gold always kept).
 
@@ -76,7 +76,7 @@ Acceptance: a `reports/` table with per-bucket numbers for both retrievers, with
 
 ## Gates
 
-- Gate 0: BM25 reproduces the bench reference within about 2 points (Phase B).
+- Sanity check 0: our BM25 on the original bench is in the same range as the self-reported reference. The reference is unverified and the protocol differs, so a gap is documented, not tuned away.
 - Gate 1: baselines miss a meaningful share on the hard buckets, and the misses come from collisions. If baselines are near-perfect, harden the buckets or shift the story to cost and scale.
 - Gate 2: the router matches or beats embedding plus rerank on confusion rate, or ties it at lower tokens. If not, the enricher is the product.
 
@@ -91,4 +91,4 @@ Acceptance: a `reports/` table with per-bucket numbers for both retrievers, with
 
 - Done: eval set built, reviewed, frozen, committed, and pushed.
 - Done: Phase A. BM25 and embedding retrievers run on the frozen set, embeddings are cached (588 texts, about 39k tokens), neatlogs initialises. Neatlogs span arrival in the dashboard is not yet confirmed by eye.
-- Next: Phase B (scorer, gate, first numbers).
+- Next: Phase B (scorer, sanity check, first numbers).

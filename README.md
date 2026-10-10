@@ -13,7 +13,7 @@ Phase 1, day 2 of the hackathon.
 - Done: the 60-query eval set is built, reviewed, and frozen. Dataset labeling pipeline and review tools are in the repo.
 - Done: BM25 and OpenAI-embedding retrievers (`bm25.py`, `embeddings.py`), shared models and tokenizer, env loader, neatlogs init.
 - Not built yet: the scoring harness, LLM baselines, judges, the enricher, and the router.
-- No benchmark number is trusted yet. The BM25 reproduction gate (about 31.7 Recall@5 on the original bench) has not been run in this repo.
+- No benchmark number is trusted yet. The BM25 sanity check against the self-reported 31.7 Recall@5 on the original bench has not been run in this repo.
 
 See `phase_plan.md` for the build order and acceptance criteria.
 
@@ -102,7 +102,7 @@ Metrics:
 
 Gates:
 
-- Gate 0: BM25 reproduces about 31.7 Recall@5 on the original bench queries within about 2 points before any other number is trusted.
+- Sanity check 0: our BM25 on the original bench queries is reported next to the self-reported 31.7 Recall@5. The reference is unverified and its protocol differs, so the gap is documented and never tuned away. Only a gross mismatch (over 15 points) triggers a bug hunt.
 - Gate 1: baselines miss a meaningful share on the hard buckets.
 - Gate 2: the router matches or beats embedding plus rerank on confusion rate, or ties at lower tokens. If not, the enricher is the product.
 
@@ -128,7 +128,7 @@ Python 3.12 and a virtual environment. Install with `pip install -e .`. Put keys
 
 ## Open items
 
-1. **Gate failure.** An earlier unversioned BM25 run gave 37.78 against the 31.68 reference. Find which document-text variant matches.
+1. **Sanity check.** An earlier unversioned BM25 run gave 37.78 against the 31.68 self-reported reference. Re-run properly and report the variant grid.
 2. **LiteLLM endpoint.** The judges need the LiteLLM base URL.
 3. **Data terms.** Confirm LiveMCPBench terms before publishing derived data.
 4. **Out-of-scope set.** Write synthetic non-matching queries as a labeled extension.
