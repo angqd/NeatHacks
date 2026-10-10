@@ -1,0 +1,121 @@
+[
+  {
+    "task_id": "5a2720cd-20f1-49e7-a3fc-8e74af2217f6",
+    "gold_name": "reverse_geocode",
+    "pick": "OpenStreetMap (OSM) MCP Server::reverse_geocode",
+    "keep": true
+  },
+  {
+    "task_id": "afd60e13-2448-4c0f-9aae-2054b91f1ac1",
+    "gold_name": "reverse_geocode",
+    "pick": "OpenStreetMap (OSM) MCP Server::reverse_geocode",
+    "keep": true
+  },
+  {
+    "task_id": "88ccea26-01f6-4db6-ba95-6b2a73c0488b",
+    "gold_name": "get_news",
+    "pick": "MCP Yahoo Finance::get_news",
+    "keep": true
+  },
+  {
+    "task_id": "88ccea26-01f6-4db6-ba95-6b2a73c0488b",
+    "gold_name": "get_recommendations",
+    "pick": null,
+    "keep": false
+  },
+  {
+    "task_id": "6b7fc66e-fe96-4403-9a52-df5afa53ab68",
+    "gold_name": "trial_references",
+    "pick": "BioMCP: Biomedical Model Context Protocol::trial_references_getter",
+    "keep": true
+  },
+  {
+    "task_id": "567c79c3-3afb-4979-90cf-88ca49cb701d",
+    "gold_name": "list-component-examples",
+    "pick": "Ant Design Components MCP Service::list-component-examples",
+    "keep": true
+  },
+  {
+    "task_id": "a984d31b-f3e9-47d4-8726-19a06e6babc5",
+    "gold_name": "ddg-search",
+    "pick": "duckduckgo-search MCP Server::duckduckgo_web_search",
+    "keep": true
+  },
+  {
+    "task_id": "2bf318d4-754d-43f3-a1b5-cb2f50a7d144",
+    "gold_name": "variant_searcher",
+    "pick": null,
+    "keep": false
+  },
+  {
+    "task_id": "10b5dbf7-0bac-4b25-835f-e806967ad340",
+    "gold_name": "reverse_geocode",
+    "pick": "OpenStreetMap (OSM) MCP Server::reverse_geocode",
+    "keep": true
+  },
+  {
+    "task_id": "37d72d03-29ae-48d1-9a48-66c9294d82fa",
+    "gold_name": "get_current_time",
+    "pick": null,
+    "keep": false
+  },
+  {
+    "task_id": "3819a831-8e12-49e6-adb1-df40f512d774",
+    "gold_name": "playwright_screenshot",
+    "pick": "Playwright MCP Server::playwright_screenshot",
+    "keep": true
+  },
+  {
+    "task_id": "4d7582c4-5013-4275-9621-1e7fbb5fb0c1",
+    "gold_name": "execute_command",
+    "pick": "Desktop Commander MCP::start_process",
+    "keep": true
+  },
+  {
+    "task_id": "de75630e-b91e-4cc7-85b1-5d02c2455392",
+    "gold_name": "get_maven_latest_version",
+    "pick": "Maven Dependencies MCP Server::get_latest_release",
+    "keep": true
+  },
+  {
+    "task_id": "04282571-1610-4436-9888-4cffecc6d92e",
+    "gold_name": "reverse_geocode",
+    "pick": null,
+    "keep": false
+  },
+  {
+    "task_id": "ea6e95fa-2791-4f66-b897-2244a17f9b51",
+    "gold_name": "playwright_screenshot",
+    "pick": null,
+    "keep": false
+  },
+  {
+    "task_id": "71a7a42a-54af-4552-ad9b-d36f4912cc1c",
+    "gold_name": "open_document",
+    "pick": "Office-Word-MCP-Server::create_document",
+    "keep": true
+  },
+  {
+    "task_id": "c4d6c051-e2d4-4f52-b897-e945f402b858",
+    "gold_name": null,
+    "needs_clarification": false
+  },
+  {
+    "task_id": "1f6a6db5-05b5-4a8d-a6ef-fbb5d823ad1d",
+    "gold_name": "reverse_geocode",
+    "pick": "OpenStreetMap (OSM) MCP Server::reverse_geocode",
+    "keep": true
+  },
+  {
+    "task_id": "cf6ea2ca-5011-46ec-96a6-a15c46178de9",
+    "gold_name": "get-juejin-article-rank",
+    "pick": null,
+    "keep": false
+  },
+  {
+    "task_id": "2293b5eb-3af1-4f5f-9eaf-138c27885544",
+    "gold_name": "reverse_geocode",
+    "pick": "OpenStreetMap (OSM) MCP Server::reverse_geocode",
+    "keep": true
+  }
+]
