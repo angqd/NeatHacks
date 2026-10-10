@@ -11,8 +11,9 @@ Built for neatHack (Oct 10 to 12, 2026).
 Phase 1, day 2 of the hackathon.
 
 - Done: the 60-query eval set is built, reviewed, and frozen. Dataset labeling pipeline and review tools are in the repo.
-- Not built yet: retrievers (BM25, embeddings), the scoring harness, LLM baselines, judges, the enricher, and the router.
-- The first BM25 number is not trusted yet. The reproduction gate (about 31.7 Recall@5 on the original bench) has not been run in this repo.
+- Done: BM25 and OpenAI-embedding retrievers (`bm25.py`, `embeddings.py`), shared models and tokenizer, env loader, neatlogs init.
+- Not built yet: the scoring harness, LLM baselines, judges, the enricher, and the router.
+- No benchmark number is trusted yet. The BM25 reproduction gate (about 31.7 Recall@5 on the original bench) has not been run in this repo.
 
 See `phase_plan.md` for the build order and acceptance criteria.
 
@@ -109,7 +110,7 @@ benchmark_plan.md    dataset stage specs and rules
 phase_plan.md        build order, decisions, acceptance criteria
 product_focus.md     product thinking, parked for after the POC
 ui_brief.md          logo and UI brief (logo first)
-src/toolprune/       package: fetch, normalize, features, review tools, selection
+src/toolprune/       package: fetch, normalize, features, review tools, selection, models, text, bm25, embeddings, tracing
 data/raw/            fetched bench files (gitignored)
 data/processed/      labeled data, adjudications, families, frozen eval set
 tests/               smoke test only

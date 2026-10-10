@@ -88,4 +88,5 @@ Acceptance: a `reports/` table with per-bucket numbers for both retrievers, with
 ## Status
 
 - Done: eval set built, reviewed, frozen, committed, and pushed.
-- Next: Phase A.
+- Done: Phase A. BM25 and embedding retrievers run on the frozen set, embeddings are cached (588 texts, about 39k tokens), neatlogs initialises. Neatlogs span arrival in the dashboard is not yet confirmed by eye.
+- Next: Phase B (scorer, gate, first numbers).
