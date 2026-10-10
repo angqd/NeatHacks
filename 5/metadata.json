@@ -1,0 +1,568 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4KMGY710JYCGGWW6NNEZ1EQ",
+  "session_id": "c5ba5514-6b9c-45ac-a8a8-6c64b13e7f3d",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-10T19:27:09.166054Z",
+  "branch": "main",
+  "checkpoints_count": 30,
+  "save_step_count": 30,
+  "files_touched": [
+    ".gitignore",
+    "counterparty-precheck-plan.md",
+    "pyproject.toml",
+    "src/precheck/__init__.py",
+    "tests/test_smoke.py"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-sonnet-5-5",
+  "turn_id": "b26aa64bd7d3",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 156,
+    "cache_creation_tokens": 256043,
+    "cache_read_tokens": 8762019,
+    "output_tokens": 101346,
+    "api_call_count": 78,
+    "subagent_tokens": {
+      "input_tokens": 310,
+      "cache_creation_tokens": 1356272,
+      "cache_read_tokens": 16270907,
+      "output_tokens": 23738,
+      "api_call_count": 155
+    }
+  },
+  "skill_events_version": 1,
+  "skill_events": [
+    {
+      "id": "prompt-skill-claude-code-caveman-2026-10-10T12:09:07.707242Z",
+      "event_type": "prompt_invocation",
+      "skill": {
+        "name": "caveman"
+      },
+      "source": {
+        "agent": "claude-code",
+        "signal": "prompt_slash_command",
+        "confidence": "explicit"
+      },
+      "turn_id": "73fec0729fef",
+      "timestamp": "2026-10-10T12:09:07.707242Z",
+      "native": {
+        "command": "/caveman"
+      },
+      "collapse": {
+        "target": "user_message",
+        "label": "/caveman",
+        "default_collapsed": true
+      }
+    }
+  ],
+  "session_metrics": {
+    "turn_count": 30
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-10T19:27:09.05432Z",
+    "agent_lines": 0,
+    "agent_removed": 0,
+    "human_added": 0,
+    "human_modified": 17,
+    "human_removed": 220,
+    "total_committed": 0,
+    "total_lines_changed": 237,
+    "agent_percentage": 0,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 244,
+      "user_lines_removed": 244,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".gitignore": 3,
+        "Idea_Draft.md": 115,
+        "README.md": 57,
+        "pyproject.toml": 1,
+        "src/toolprune/__init__.py": 1,
+        "src/toolprune/fetch.py": 41,
+        "src/toolprune/pipeline.py": 22,
+        "tests/test_smoke.py": 4
+      },
+      "user_removed_per_file": {
+        "README.md": 11,
+        "counterparty-precheck-plan.md": 229,
+        "pyproject.toml": 1,
+        "src/precheck/__init__.py": 1,
+        "tests/test_smoke.py": 2
+      }
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 244,
+      "agent_lines_removed": 244
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 244,
+      "agent_lines_removed": 244
+    },
+    {
+      "checkpoint_number": 4,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 244,
+      "agent_lines_removed": 244
+    },
+    {
+      "checkpoint_number": 5,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 299,
+      "agent_lines_removed": 244
+    },
+    {
+      "checkpoint_number": 6,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 299,
+      "agent_lines_removed": 244
+    },
+    {
+      "checkpoint_number": 7,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 299,
+      "agent_lines_removed": 244
+    },
+    {
+      "checkpoint_number": 8,
+      "user_lines_added": 1084,
+      "user_lines_removed": 0,
+      "agent_lines_added": 418,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/review_queue.jsonl": 61,
+        "data/processed/tasks_resolved.jsonl": 95,
+        "data/processed/tasks_tagged.jsonl": 95,
+        "data/processed/tools.jsonl": 527,
+        "src/toolprune/normalize.py": 136,
+        "src/toolprune/task_features.py": 170
+      }
+    },
+    {
+      "checkpoint_number": 9,
+      "user_lines_added": 778,
+      "user_lines_removed": 0,
+      "agent_lines_added": 724,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/review_queue.jsonl": 61,
+        "data/processed/tasks_resolved.jsonl": 95,
+        "data/processed/tasks_tagged.jsonl": 95,
+        "data/processed/tools.jsonl": 527
+      }
+    },
+    {
+      "checkpoint_number": 10,
+      "user_lines_added": 778,
+      "user_lines_removed": 0,
+      "agent_lines_added": 724,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/review_queue.jsonl": 61,
+        "data/processed/tasks_resolved.jsonl": 95,
+        "data/processed/tasks_tagged.jsonl": 95,
+        "data/processed/tools.jsonl": 527
+      }
+    },
+    {
+      "checkpoint_number": 11,
+      "user_lines_added": 893,
+      "user_lines_removed": 29,
+      "agent_lines_added": 724,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/review_queue.jsonl": 63,
+        "data/processed/tasks_resolved.jsonl": 95,
+        "data/processed/tasks_tagged.jsonl": 95,
+        "data/processed/tools.jsonl": 527,
+        "src/toolprune/task_features.py": 113
+      },
+      "user_removed_per_file": {
+        "src/toolprune/task_features.py": 29
+      }
+    },
+    {
+      "checkpoint_number": 12,
+      "user_lines_added": 1468,
+      "user_lines_removed": 0,
+      "agent_lines_added": 808,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/blind_input.jsonl": 95,
+        "data/processed/blind_slice_0.jsonl": 19,
+        "data/processed/blind_slice_1.jsonl": 19,
+        "data/processed/blind_slice_2.jsonl": 19,
+        "data/processed/blind_slice_3.jsonl": 19,
+        "data/processed/blind_slice_4.jsonl": 19,
+        "data/processed/review_queue.jsonl": 63,
+        "data/processed/review_sheet.html": 148,
+        "data/processed/review_sonnet_3.jsonl": 19,
+        "data/processed/tasks_resolved.jsonl": 95,
+        "data/processed/tasks_tagged.jsonl": 95,
+        "data/processed/tools.jsonl": 527,
+        "src/toolprune/review_sheet.py": 331
+      }
+    },
+    {
+      "checkpoint_number": 13,
+      "user_lines_added": 1468,
+      "user_lines_removed": 0,
+      "agent_lines_added": 827,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/blind_input.jsonl": 95,
+        "data/processed/blind_slice_0.jsonl": 19,
+        "data/processed/blind_slice_1.jsonl": 19,
+        "data/processed/blind_slice_2.jsonl": 19,
+        "data/processed/blind_slice_3.jsonl": 19,
+        "data/processed/blind_slice_4.jsonl": 19,
+        "data/processed/review_queue.jsonl": 63,
+        "data/processed/review_sheet.html": 148,
+        "data/processed/review_sonnet_3.jsonl": 19,
+        "data/processed/tasks_resolved.jsonl": 95,
+        "data/processed/tasks_tagged.jsonl": 95,
+        "data/processed/tools.jsonl": 527,
+        "src/toolprune/review_sheet.py": 331
+      }
+    },
+    {
+      "checkpoint_number": 14,
+      "user_lines_added": 1506,
+      "user_lines_removed": 0,
+      "agent_lines_added": 827,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/blind_input.jsonl": 95,
+        "data/processed/blind_slice_0.jsonl": 19,
+        "data/processed/blind_slice_1.jsonl": 19,
+        "data/processed/blind_slice_2.jsonl": 19,
+        "data/processed/blind_slice_3.jsonl": 19,
+        "data/processed/blind_slice_4.jsonl": 19,
+        "data/processed/review_queue.jsonl": 63,
+        "data/processed/review_sheet.html": 148,
+        "data/processed/review_sonnet_1.jsonl": 19,
+        "data/processed/review_sonnet_2.jsonl": 19,
+        "data/processed/review_sonnet_3.jsonl": 19,
+        "data/processed/tasks_resolved.jsonl": 95,
+        "data/processed/tasks_tagged.jsonl": 95,
+        "data/processed/tools.jsonl": 527,
+        "src/toolprune/review_sheet.py": 331
+      }
+    },
+    {
+      "checkpoint_number": 15,
+      "user_lines_added": 1506,
+      "user_lines_removed": 0,
+      "agent_lines_added": 827,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/blind_input.jsonl": 95,
+        "data/processed/blind_slice_0.jsonl": 19,
+        "data/processed/blind_slice_1.jsonl": 19,
+        "data/processed/blind_slice_2.jsonl": 19,
+        "data/processed/blind_slice_3.jsonl": 19,
+        "data/processed/blind_slice_4.jsonl": 19,
+        "data/processed/review_queue.jsonl": 63,
+        "data/processed/review_sheet.html": 148,
+        "data/processed/review_sonnet_1.jsonl": 19,
+        "data/processed/review_sonnet_2.jsonl": 19,
+        "data/processed/review_sonnet_3.jsonl": 19,
+        "data/processed/tasks_resolved.jsonl": 95,
+        "data/processed/tasks_tagged.jsonl": 95,
+        "data/processed/tools.jsonl": 527,
+        "src/toolprune/review_sheet.py": 331
+      }
+    },
+    {
+      "checkpoint_number": 16,
+      "user_lines_added": 1525,
+      "user_lines_removed": 0,
+      "agent_lines_added": 827,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/blind_input.jsonl": 95,
+        "data/processed/blind_slice_0.jsonl": 19,
+        "data/processed/blind_slice_1.jsonl": 19,
+        "data/processed/blind_slice_2.jsonl": 19,
+        "data/processed/blind_slice_3.jsonl": 19,
+        "data/processed/blind_slice_4.jsonl": 19,
+        "data/processed/review_queue.jsonl": 63,
+        "data/processed/review_sheet.html": 148,
+        "data/processed/review_sonnet_0.jsonl": 19,
+        "data/processed/review_sonnet_1.jsonl": 19,
+        "data/processed/review_sonnet_2.jsonl": 19,
+        "data/processed/review_sonnet_3.jsonl": 19,
+        "data/processed/tasks_resolved.jsonl": 95,
+        "data/processed/tasks_tagged.jsonl": 95,
+        "data/processed/tools.jsonl": 527,
+        "src/toolprune/review_sheet.py": 331
+      }
+    },
+    {
+      "checkpoint_number": 17,
+      "user_lines_added": 1520,
+      "user_lines_removed": 0,
+      "agent_lines_added": 827,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/blind_input.jsonl": 95,
+        "data/processed/blind_slice_0.jsonl": 19,
+        "data/processed/blind_slice_1.jsonl": 19,
+        "data/processed/blind_slice_2.jsonl": 19,
+        "data/processed/blind_slice_3.jsonl": 19,
+        "data/processed/blind_slice_4.jsonl": 19,
+        "data/processed/review_queue.jsonl": 63,
+        "data/processed/review_sheet.html": 148,
+        "data/processed/review_sonnet_0.jsonl": 19,
+        "data/processed/review_sonnet_1.jsonl": 19,
+        "data/processed/review_sonnet_2.jsonl": 19,
+        "data/processed/review_sonnet_3.jsonl": 19,
+        "data/processed/tasks_resolved.jsonl": 95,
+        "data/processed/tasks_tagged.jsonl": 95,
+        "data/processed/tools.jsonl": 527,
+        "src/toolprune/review_sheet.py": 326
+      }
+    },
+    {
+      "checkpoint_number": 18,
+      "user_lines_added": 1520,
+      "user_lines_removed": 0,
+      "agent_lines_added": 827,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/blind_input.jsonl": 95,
+        "data/processed/blind_slice_0.jsonl": 19,
+        "data/processed/blind_slice_1.jsonl": 19,
+        "data/processed/blind_slice_2.jsonl": 19,
+        "data/processed/blind_slice_3.jsonl": 19,
+        "data/processed/blind_slice_4.jsonl": 19,
+        "data/processed/review_queue.jsonl": 63,
+        "data/processed/review_sheet.html": 148,
+        "data/processed/review_sonnet_0.jsonl": 19,
+        "data/processed/review_sonnet_1.jsonl": 19,
+        "data/processed/review_sonnet_2.jsonl": 19,
+        "data/processed/review_sonnet_3.jsonl": 19,
+        "data/processed/tasks_resolved.jsonl": 95,
+        "data/processed/tasks_tagged.jsonl": 95,
+        "data/processed/tools.jsonl": 527,
+        "src/toolprune/review_sheet.py": 326
+      }
+    },
+    {
+      "checkpoint_number": 19,
+      "user_lines_added": 1520,
+      "user_lines_removed": 0,
+      "agent_lines_added": 827,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/blind_input.jsonl": 95,
+        "data/processed/blind_slice_0.jsonl": 19,
+        "data/processed/blind_slice_1.jsonl": 19,
+        "data/processed/blind_slice_2.jsonl": 19,
+        "data/processed/blind_slice_3.jsonl": 19,
+        "data/processed/blind_slice_4.jsonl": 19,
+        "data/processed/review_queue.jsonl": 63,
+        "data/processed/review_sheet.html": 148,
+        "data/processed/review_sonnet_0.jsonl": 19,
+        "data/processed/review_sonnet_1.jsonl": 19,
+        "data/processed/review_sonnet_2.jsonl": 19,
+        "data/processed/review_sonnet_3.jsonl": 19,
+        "data/processed/tasks_resolved.jsonl": 95,
+        "data/processed/tasks_tagged.jsonl": 95,
+        "data/processed/tools.jsonl": 527,
+        "src/toolprune/review_sheet.py": 326
+      }
+    },
+    {
+      "checkpoint_number": 20,
+      "user_lines_added": 1520,
+      "user_lines_removed": 0,
+      "agent_lines_added": 827,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/blind_input.jsonl": 95,
+        "data/processed/blind_slice_0.jsonl": 19,
+        "data/processed/blind_slice_1.jsonl": 19,
+        "data/processed/blind_slice_2.jsonl": 19,
+        "data/processed/blind_slice_3.jsonl": 19,
+        "data/processed/blind_slice_4.jsonl": 19,
+        "data/processed/review_queue.jsonl": 63,
+        "data/processed/review_sheet.html": 148,
+        "data/processed/review_sonnet_0.jsonl": 19,
+        "data/processed/review_sonnet_1.jsonl": 19,
+        "data/processed/review_sonnet_2.jsonl": 19,
+        "data/processed/review_sonnet_3.jsonl": 19,
+        "data/processed/tasks_resolved.jsonl": 95,
+        "data/processed/tasks_tagged.jsonl": 95,
+        "data/processed/tools.jsonl": 527,
+        "src/toolprune/review_sheet.py": 326
+      }
+    },
+    {
+      "checkpoint_number": 21,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 2433,
+      "agent_lines_removed": 244
+    },
+    {
+      "checkpoint_number": 22,
+      "user_lines_added": 19,
+      "user_lines_removed": 0,
+      "agent_lines_added": 2529,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/adjudicated_1.jsonl": 19
+      }
+    },
+    {
+      "checkpoint_number": 23,
+      "user_lines_added": 38,
+      "user_lines_removed": 0,
+      "agent_lines_added": 2529,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/adjudicated_1.jsonl": 19,
+        "data/processed/adjudicated_3.jsonl": 19
+      }
+    },
+    {
+      "checkpoint_number": 24,
+      "user_lines_added": 57,
+      "user_lines_removed": 0,
+      "agent_lines_added": 2529,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/adjudicated_0.jsonl": 19,
+        "data/processed/adjudicated_1.jsonl": 19,
+        "data/processed/adjudicated_3.jsonl": 19
+      }
+    },
+    {
+      "checkpoint_number": 25,
+      "user_lines_added": 76,
+      "user_lines_removed": 0,
+      "agent_lines_added": 2529,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/adjudicated_0.jsonl": 19,
+        "data/processed/adjudicated_1.jsonl": 19,
+        "data/processed/adjudicated_2.jsonl": 19,
+        "data/processed/adjudicated_3.jsonl": 19
+      }
+    },
+    {
+      "checkpoint_number": 26,
+      "user_lines_added": 76,
+      "user_lines_removed": 0,
+      "agent_lines_added": 2548,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/adjudicated_0.jsonl": 19,
+        "data/processed/adjudicated_1.jsonl": 19,
+        "data/processed/adjudicated_2.jsonl": 19,
+        "data/processed/adjudicated_3.jsonl": 19
+      }
+    },
+    {
+      "checkpoint_number": 27,
+      "user_lines_added": 76,
+      "user_lines_removed": 0,
+      "agent_lines_added": 2702,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/adjudicated_0.jsonl": 19,
+        "data/processed/adjudicated_1.jsonl": 19,
+        "data/processed/adjudicated_2.jsonl": 19,
+        "data/processed/adjudicated_3.jsonl": 19
+      }
+    },
+    {
+      "checkpoint_number": 28,
+      "user_lines_added": 401,
+      "user_lines_removed": 0,
+      "agent_lines_added": 3220,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/adjudicated_0.jsonl": 19,
+        "data/processed/adjudicated_1.jsonl": 19,
+        "data/processed/adjudicated_2.jsonl": 19,
+        "data/processed/adjudicated_3.jsonl": 19,
+        "data/processed/derived_candidates.jsonl": 14,
+        "data/processed/eval_set_draft.jsonl": 60,
+        "data/processed/selection_report.md": 60,
+        "src/toolprune/select_subset.py": 191
+      }
+    },
+    {
+      "checkpoint_number": 29,
+      "user_lines_added": 522,
+      "user_lines_removed": 0,
+      "agent_lines_added": 3220,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/adjudicated_0.jsonl": 19,
+        "data/processed/adjudicated_1.jsonl": 19,
+        "data/processed/adjudicated_2.jsonl": 19,
+        "data/processed/adjudicated_3.jsonl": 19,
+        "data/processed/derived_candidates.jsonl": 14,
+        "data/processed/eval_set_draft.jsonl": 60,
+        "data/processed/selection_report.md": 60,
+        "data/spot_checks.json": 121,
+        "src/toolprune/select_subset.py": 191
+      }
+    },
+    {
+      "checkpoint_number": 30,
+      "user_lines_added": 544,
+      "user_lines_removed": 0,
+      "agent_lines_added": 3502,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/adjudicated_0.jsonl": 19,
+        "data/processed/adjudicated_1.jsonl": 19,
+        "data/processed/adjudicated_2.jsonl": 19,
+        "data/processed/adjudicated_3.jsonl": 19,
+        "data/processed/derived_candidates.jsonl": 14,
+        "data/processed/eval_set_draft.jsonl": 60,
+        "data/processed/selection_report.md": 82,
+        "data/spot_checks.json": 121,
+        "src/toolprune/select_subset.py": 191
+      }
+    },
+    {
+      "checkpoint_number": 31,
+      "user_lines_added": 544,
+      "user_lines_removed": 0,
+      "agent_lines_added": 3562,
+      "agent_lines_removed": 244,
+      "user_added_per_file": {
+        "data/processed/adjudicated_0.jsonl": 19,
+        "data/processed/adjudicated_1.jsonl": 19,
+        "data/processed/adjudicated_2.jsonl": 19,
+        "data/processed/adjudicated_3.jsonl": 19,
+        "data/processed/derived_candidates.jsonl": 14,
+        "data/processed/eval_set_draft.jsonl": 60,
+        "data/processed/selection_report.md": 82,
+        "data/spot_checks.json": 121,
+        "src/toolprune/select_subset.py": 191
+      }
+    }
+  ]
+}

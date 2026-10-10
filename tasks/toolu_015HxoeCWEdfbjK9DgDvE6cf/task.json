@@ -1,0 +1,15 @@
+{
+  "tool_use_id": "toolu_015HxoeCWEdfbjK9DgDvE6cf",
+  "agent_id": "ae991636aae781f89",
+  "subagent_type": "general-purpose",
+  "task_description": "Blind review slice 0",
+  "token_usage": {
+    "input_tokens": 20,
+    "cache_creation_tokens": 89836,
+    "cache_read_tokens": 441311,
+    "output_tokens": 419,
+    "api_call_count": 10
+  },
+  "started_at": "2026-10-10T23:01:37.426782+05:30",
+  "completed_at": "2026-10-10T23:03:41.331037+05:30"
+}

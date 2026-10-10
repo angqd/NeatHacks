@@ -1,0 +1,15 @@
+{
+  "tool_use_id": "toolu_017kivaQZP5TFTqYjHUdTxD6",
+  "agent_id": "a15448ee3503b11bc",
+  "subagent_type": "general-purpose",
+  "task_description": "Blind review slice 4",
+  "token_usage": {
+    "input_tokens": 12,
+    "cache_creation_tokens": 57783,
+    "cache_read_tokens": 182560,
+    "output_tokens": 125,
+    "api_call_count": 6
+  },
+  "started_at": "2026-10-10T23:01:37.432819+05:30",
+  "completed_at": "2026-10-10T23:02:58.88239+05:30"
+}

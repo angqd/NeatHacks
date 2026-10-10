@@ -1,0 +1,15 @@
+{
+  "tool_use_id": "toolu_018aTpdmo4b89QLhMJZGzu2v",
+  "agent_id": "a44f6eec9947e9a4c",
+  "subagent_type": "general-purpose",
+  "task_description": "Adjudicate slice 0",
+  "token_usage": {
+    "input_tokens": 16,
+    "cache_creation_tokens": 84986,
+    "cache_read_tokens": 412342,
+    "output_tokens": 578,
+    "api_call_count": 8
+  },
+  "started_at": "2026-10-10T23:44:27.166064+05:30",
+  "completed_at": "2026-10-10T23:45:46.347059+05:30"
+}

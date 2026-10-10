@@ -1,0 +1,15 @@
+{
+  "tool_use_id": "toolu_01DknZVWrTxZpL93nMfqiPXf",
+  "agent_id": "adf35e1558756eeed",
+  "subagent_type": "general-purpose",
+  "task_description": "Adjudicate slice 2",
+  "token_usage": {
+    "input_tokens": 16,
+    "cache_creation_tokens": 78203,
+    "cache_read_tokens": 349159,
+    "output_tokens": 999,
+    "api_call_count": 8
+  },
+  "started_at": "2026-10-10T23:44:27.152306+05:30",
+  "completed_at": "2026-10-10T23:45:54.504999+05:30"
+}
