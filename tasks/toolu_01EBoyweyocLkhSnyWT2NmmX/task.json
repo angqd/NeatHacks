@@ -1,0 +1,18 @@
+{
+  "tool_use_id": "toolu_01EBoyweyocLkhSnyWT2NmmX",
+  "agent_id": "ab6234b6b0c757bf4",
+  "subagent_type": "general-purpose",
+  "task_description": "Write BM25 retriever",
+  "files": [
+    "src/toolprune/bm25.py"
+  ],
+  "token_usage": {
+    "input_tokens": 8,
+    "cache_creation_tokens": 19458,
+    "cache_read_tokens": 113554,
+    "output_tokens": 1844,
+    "api_call_count": 4
+  },
+  "started_at": "2026-10-11T01:12:27.515775+05:30",
+  "completed_at": "2026-10-11T01:12:49.336116+05:30"
+}

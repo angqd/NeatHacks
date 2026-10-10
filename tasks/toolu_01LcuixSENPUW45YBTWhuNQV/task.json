@@ -1,0 +1,19 @@
+{
+  "tool_use_id": "toolu_01LcuixSENPUW45YBTWhuNQV",
+  "agent_id": "acf64171022c6beca",
+  "subagent_type": "general-purpose",
+  "task_description": "Write env loader and neatlogs tracing",
+  "files": [
+    "src/toolprune/env.py",
+    "src/toolprune/tracing.py"
+  ],
+  "token_usage": {
+    "input_tokens": 32,
+    "cache_creation_tokens": 60688,
+    "cache_read_tokens": 764750,
+    "output_tokens": 2324,
+    "api_call_count": 16
+  },
+  "started_at": "2026-10-11T01:11:23.988309+05:30",
+  "completed_at": "2026-10-11T01:12:26.80319+05:30"
+}
