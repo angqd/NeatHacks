@@ -8,15 +8,14 @@ Built for neatHack (Oct 10 to 12, 2026).
 
 ## Status
 
-Phase 1, day 2 of the hackathon.
+The Phase 1 POC is concluded for now. `reports/conclusion.md` has the full summary. In short:
 
-- Done: the 60-query eval set is built, reviewed, and frozen. Dataset labeling pipeline and review tools are in the repo.
-- Done: BM25 and OpenAI-embedding retrievers, shared models and tokenizer, neatlogs init, the deterministic scorer, runner and report script, BM25 sanity check, catalog audit, and the first baseline numbers (`reports/baseline_v0.md`).
-- Done: noise-scaling curve (`reports/noise_scaling.md`) and the full-catalog drop-in baseline (`reports/full_catalog_v0.md`).
-- Not built yet: embedding plus rerank baseline, judges, the enricher, and the router.
-- First numbers (60 queries, wide intervals): BM25 slot recall@5 0.41, embeddings 0.52; full coverage@5 is 0.25 and 0.28. BM25 on the original bench scores 36.1 Recall@5 against a self-reported 31.7 (sanity check, not tuned). Loading the whole 105k-token catalog into `gpt-6-luna` gets slot recall@5 around 0.60 to 0.64 and R-precision 0.61 to 0.64, ahead of both retrievers, at about 4 seconds per query. That is the bar the router has to meet at far fewer tokens.
+- A frozen 60-query eval set and a 94-task natural set, a deterministic scorer, and the baselines (BM25, embeddings, enriched embeddings, full catalog raw and as cards, embedding plus rerank) are built and scored.
+- The enricher (one tag per tool), a draft taxonomy, and a three-stage router are built and scored.
+- Findings: enriched cards cut the catalog from 104,840 to 32,698 tokens with no accuracy loss we can detect. The router matches the full-catalog baselines at about 8.5k to 8.9k tokens, but is slower (5 to 6 s). Embedding plus rerank is a strong, cheaper competitor with lower recall. Grouping by server does as well as the taxonomy. At 527 tools everything fits in context, so the case for pruning at scale is untested.
+- Not shown: a confusion-rate win, an accuracy win over the full catalog, anything at registry scale. All numbers have wide intervals (n=60).
 
-See `phase_plan.md` for the build order and acceptance criteria.
+See `phase_plan.md` for the to-do list and `reports/` for every result.
 
 ## Decisions in force
 
@@ -127,11 +126,15 @@ tests/               smoke test only
 
 Python 3.12 and a virtual environment. Install with `pip install -e .`. Put keys in `.env` (gitignored, never committed): `OPENAI_API_KEY`, `NEATLOGS_API_KEY`, `LITELLM_API_KEY`.
 
-## Open items
+## To do
 
-1. **Sanity check.** An earlier unversioned BM25 run gave 37.78 against the 31.68 self-reported reference. Re-run properly and report the variant grid.
-2. **LiteLLM endpoint.** The judges need the LiteLLM base URL.
-3. **Data terms.** Confirm LiveMCPBench terms before publishing derived data.
-4. **Out-of-scope set.** Write synthetic non-matching queries as a labeled extension.
-5. **Enricher design.** Per-server annotation, then a cross-server taxonomy (L1, and L0 only if cluster sizes need it).
-6. **Neatlogs evidence.** Before and after trace pair, plus one failure-and-recovery run.
+1. **Scale test.** Add MCP-Zero tools (about 2,800, 318 MB download, mostly embeddings) as distractors to the 527-tool catalog and run embeddings, rerank, and the router (server and domain groups) at about 527, 1.5k, and 3.3k tools. Needs the Drive file, schema reconstruction, bulk enrichment, and OpenAI credits. See `reports/tool_set_survey.md`.
+2. **OpenAI credits.** The key ran out of quota. Blocked: cards and router on the natural set, the rerank tag variant, a router stability rerun.
+3. **Cold latency** for the embedding system (query-embedding API call not cached).
+4. **LLM judges** (two families): sufficiency and labels for unjudged tools. Needs the LiteLLM base URL.
+5. **Out-of-scope queries** (correct answer: no tool), as a separate labeled file.
+6. **Taxonomy decision.** Approve, merge the over-split domains, or drop domains in favour of server groups.
+7. **Miss-cause analysis** (collision, vocabulary gap, slot count above k).
+8. **Data terms.** Confirm LiveMCPBench terms before redistributing derived data.
+9. **Hackathon evidence.** Confirm neatlogs spans in the dashboard, a before and after trace pair, and one failure-and-recovery run.
+10. **Logo, UI, demo video, business plan, X post** (`ui_brief.md`, `product_focus.md`).

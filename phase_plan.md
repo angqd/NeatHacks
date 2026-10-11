@@ -95,3 +95,13 @@ Acceptance: a `reports/` table with per-bucket numbers for both retrievers, with
 - Post-todo (run in parallel with the enricher build): cold-latency pass for the embedding system.
 - Done: noise-scaling curve and the full-catalog drop-in run (Phase C item 10). See reports/full_catalog_v0.md.
 - Next: embedding plus rerank baseline (Phase C item 11), miss-cause analysis, then the enricher.
+
+## To do (as of the end of the first POC)
+
+- Scale test with MCP-Zero tools as distractors (parked, needs the Drive download and OpenAI credits). Test embeddings, rerank, and the router with server groups and domain groups at about 527, 1.5k, and 3.3k tools. Expect domain groups to matter once the server-card plan step grows past about 25k tokens.
+- Refill OpenAI credits, then: cards and router on the natural set, the rerank tag variant, a router stability rerun.
+- Cold-latency pass for the embedding system.
+- Two-family LLM judges, out-of-scope query set, taxonomy decision, miss-cause analysis.
+- Hackathon evidence: neatlogs dashboard check, before and after trace pair, a failure-and-recovery run.
+- Logo, UI, demo video, business plan, X post.
+
